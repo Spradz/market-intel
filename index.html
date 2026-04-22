@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Intelligence Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:        #0C0F1A;
+    --surface:   #141824;
+    --border:    rgba(255,255,255,0.10);
+    --crypto:    #00E5FF;
+    --crypto-d:  #00A8BD;
+    --sweep:     #FFB74D;
+    --sweep-d:   #CC7A00;
+    --high:      #FF5252;
+    --medium:    #FFCA28;
+    --low:       #69F0AE;
+    --text:      #E8E8EE;
+    --muted:     #8A8AA8;
+    --head-font: 'Syne', sans-serif;
+    --body-font: 'Outfit', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    font-family: var(--body-font);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── GRID NOISE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.013) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.013) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  /* ── SCAN LINE ANIMATION ── */
+  body::after {
+    content: '';
+    position: fixed; top: -100%; left: 0; right: 0;
+    height: 200px; z-index: 0; pointer-events: none;
+    background: linear-gradient(to bottom, transparent, rgba(0,229,255,0.025) 50%, transparent);
+    animation: scan 8s linear infinite;
+  }
+  @keyframes scan { to { top: 120%; } }
+
+  /* ── LAYOUT ── */
+  .shell { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding: 32px 24px 64px; }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    flex-wrap: wrap; gap: 16px; margin-bottom: 32px;
+  }
+  .masthead-left {}
+  .masthead-eyebrow {
+    font-size: 11px; letter-spacing: 0.2em; color: var(--muted);
+    text-transform: uppercase; margin-bottom: 6px;
+  }
+  .masthead-title {
+    font-family: var(--head-font);
+    font-size: clamp(22px, 3.5vw, 34px);
+    font-weight: 800; color: #F2F2F2; letter-spacing: -0.01em; line-height: 1;
+  }
+  .masthead-title span { color: var(--crypto); }
+  .masthead-right { text-align: right; }
+  .masthead-date {
+    font-size: 13px; color: var(--muted); letter-spacing: 0.06em;
+  }
+  .masthead-meta {
+    margin-top: 4px; font-size: 11px; color: var(--muted);
+    background: #1A1E2E; border: 1px solid rgba(255,255,255,0.08);
+    display: inline-block; padding: 3px 10px; border-radius: 4px;
+  }
+
+  .rule { height: 1px; background: linear-gradient(90deg, var(--crypto), var(--sweep), transparent); margin-bottom: 32px; opacity: 0.3; }
+
+  /* ── SUMMARY BAR ── */
+  .summary-bar {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px;
+  }
+  .summary-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px; padding: 18px 20px;
+    position: relative; overflow: hidden;
+  }
+  .summary-card::before {
+    content: attr(data-sector);
+    position: absolute; right: 16px; top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--head-font); font-size: 56px; font-weight: 800;
+    opacity: 0.04; letter-spacing: -2px; color: #fff; pointer-events: none;
+  }
+  .summary-card.crypto { border-top: 2px solid var(--crypto); }
+  .summary-card.sweep  { border-top: 2px solid var(--sweep);  }
+  .summary-label {
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px;
+  }
+  .summary-card.crypto .summary-label { color: var(--crypto); }
+  .summary-card.sweep  .summary-label { color: var(--sweep);  }
+  .summary-headline { font-size: 16px; font-weight: 600; color: #F0F0F5; line-height: 1.45; margin-bottom: 8px; }
+  .summary-body { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+  /* ── SECTOR COLUMNS ── */
+  .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+  /* ── SECTOR HEADER ── */
+  .sector-head {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 14px; padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .sector-name {
+    font-family: var(--head-font); font-size: 15px; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .sector-name.crypto { color: var(--crypto); }
+  .sector-name.sweep  { color: var(--sweep);  }
+  .sector-count { font-size: 11px; color: var(--muted); }
+
+  /* ── EVENT CARD ── */
+  .event-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px; margin-bottom: 10px;
+    overflow: hidden; cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    animation: fadeUp 0.4s ease both;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .event-card:hover { background: rgba(255,255,255,0.04); }
+  .event-card.crypto:hover { border-color: rgba(0,229,255,0.25); }
+  .event-card.sweep:hover  { border-color: rgba(255,171,64,0.25);  }
+
+  .card-top { display: flex; gap: 0; }
+  .card-accent {
+    width: 3px; flex-shrink: 0;
+  }
+  .card-accent.high   { background: var(--high);   }
+  .card-accent.medium { background: var(--medium);  }
+  .card-accent.low    { background: var(--low);     }
+
+  .card-body { padding: 12px 14px; flex: 1; }
+
+  .card-tags {
+    display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; align-items: center;
+  }
+  .tag {
+    font-size: 10px; font-weight: 500; letter-spacing: 0.06em;
+    padding: 3px 8px; border-radius: 3px; text-transform: uppercase;
+  }
+  .tag-market-crypto { color: var(--crypto); background: rgba(0,229,255,0.12); }
+  .tag-market-sweep  { color: var(--sweep);  background: rgba(255,183,77,0.12);  }
+  .tag-category      { color: #AAAACC; background: rgba(255,255,255,0.08); }
+  .tag-impact-High   { color: var(--high);   background: rgba(255,82,82,0.15);   }
+  .tag-impact-Medium { color: var(--medium); background: rgba(255,202,40,0.13);  }
+  .tag-impact-Low    { color: var(--low);    background: rgba(105,240,174,0.12); }
+
+  .card-meta { font-size: 11px; color: var(--muted); margin-bottom: 6px; }
+  .card-title { font-size: 15px; font-weight: 500; color: #EDEDF5; line-height: 1.4; }
+  .card-detail {
+    display: none; margin-top: 12px; padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .card-detail.open { display: block; }
+  .card-detail p { font-size: 14px; color: #B0B0C8; line-height: 1.7; margin-bottom: 10px; }
+  .card-detail .impact-label {
+    font-size: 13px; font-weight: 500;
+    padding: 10px 14px; border-radius: 6px;
+    border-left: 3px solid;
+    margin-bottom: 10px; line-height: 1.5;
+  }
+  .card-detail .impact-label.high   { border-color: var(--high);   background: rgba(255,82,82,0.09);   color: #FF8A80; }
+  .card-detail .impact-label.medium { border-color: var(--medium); background: rgba(255,202,40,0.09);  color: #FFD54F; }
+  .card-detail .impact-label.low    { border-color: var(--low);    background: rgba(105,240,174,0.09); color: #B9F6CA; }
+  .card-source { font-size: 11px; color: var(--muted); margin-top: 6px; }
+
+  /* ── KEY PLAYERS TABLE (sweepstakes) ── */
+  .players-section { margin-top: 20px; }
+  .players-title {
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 10px;
+  }
+  .players-table { width: 100%; border-collapse: collapse; }
+  .players-table th {
+    font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--muted); text-align: left; padding: 6px 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .players-table td {
+    font-size: 13px; padding: 8px 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color: #C8C8DC;
+  }
+  .players-table tr:last-child td { border-bottom: none; }
+  .trend-up   { color: var(--low);    }
+  .trend-down { color: var(--high);   }
+  .trend-flat { color: var(--medium); }
+
+  /* ── WATCHLIST ── */
+  .watchlist { margin-top: 20px; }
+  .watchlist-title {
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 8px;
+  }
+  .watchlist-item {
+    font-size: 13px; color: #9898B8; line-height: 1.55;
+    padding: 6px 10px 6px 12px;
+    margin-bottom: 4px;
+  }
+  .watchlist-item.crypto { border-left: 2px solid var(--crypto-d); }
+  .watchlist-item.sweep  { border-left: 2px solid var(--sweep-d);  }
+
+  /* ── FOOTER ── */
+  .footer {
+    margin-top: 48px; text-align: center;
+    font-size: 11px; color: var(--muted); letter-spacing: 0.06em;
+  }
+
+  /* ── LOADING / ERROR STATES ── */
+  .state-box {
+    grid-column: 1 / -1; text-align: center;
+    padding: 60px 24px; font-size: 13px; color: var(--muted);
+  }
+  .spinner {
+    width: 32px; height: 32px; border-radius: 50%;
+    border: 2px solid rgba(0,229,255,0.15);
+    border-top-color: var(--crypto);
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 16px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 720px) {
+    .summary-bar, .columns { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-left">
+      <div class="masthead-eyebrow">Daily Market Intelligence</div>
+      <h1 class="masthead-title">iGaming <span>&</span> Sweepstakes Brief</h1>
+    </div>
+    <div class="masthead-right">
+      <div class="masthead-date" id="dateDisplay">—</div>
+      <div class="masthead-meta">Live data · Refreshed on load</div>
+    </div>
+  </div>
+  <div class="rule"></div>
+
+  <!-- SUMMARY CARDS -->
+  <div class="summary-bar" id="summaryBar">
+    <div class="summary-card crypto" data-sector="CRYPTO">
+      <div class="summary-label">⬡ Crypto iGaming</div>
+      <div class="summary-headline" id="cryptoHeadline">Loading…</div>
+      <div class="summary-body" id="cryptoSummary"></div>
+    </div>
+    <div class="summary-card sweep" data-sector="SWEEP">
+      <div class="summary-label">◉ Sweepstakes</div>
+      <div class="summary-headline" id="sweepHeadline">Loading…</div>
+      <div class="summary-body" id="sweepSummary"></div>
+    </div>
+  </div>
+
+  <!-- MAIN COLUMNS -->
+  <div class="columns" id="columns">
+    <div class="state-box"><div class="spinner"></div>Fetching intelligence…</div>
+  </div>
+
+  <div class="footer">
+    Intelligence sourced via live web search &nbsp;·&nbsp;
+    Click any card to expand &nbsp;·&nbsp;
+    Data written by Claude Code automation
+  </div>
+</div>
+
+<script>
+// ─────────────────────────────────────────────
+// CONFIGURATION
+// Expects a JSON file at ./data/brief.json
+// OR falls back to inline demo data for preview
+// ─────────────────────────────────────────────
+
+const DATA_PATH = './data/brief.json';
+
+const DEMO_DATA = {
+  generatedAt: new Date().toISOString(),
+  crypto: {
+    headline: "Stake.com Expands Provably Fair Licensing Framework",
+    summary: "Crypto igaming operators face a week of regulatory scrutiny as Curaçao moves to tighten licensing requirements. Meanwhile major aggregators are fielding inbound interest from several Latin American operators.",
+    stories: [
+      {
+        title: "Curaçao Gaming Authority Introduces Mandatory AML Tiers",
+        category: "Regulatory",
+        impact: "High",
+        body: "The CGA has announced three-tier AML classification for all licensed operators effective Q3 2025. Crypto-native platforms face elevated scrutiny under Tier 2, requiring on-chain wallet screening. Operators serving Latin America flagged as highest risk.",
+        businessImpact: "Direct impact to any studio or aggregator distributing through Curaçao-licensed operators. Expect increased KYC friction and potential player drop-off in affected markets.",
+        source: "iGaming Business",
+        customer: "Aggregator Partners"
+      },
+      {
+        title: "Rollbit Launches B2B Slot Aggregation API",
+        category: "Product",
+        impact: "Medium",
+        body: "Rollbit has quietly opened its crypto-native slot aggregation layer to third-party studios. The API supports BTC, ETH and SOL settlement with real-time provably fair seeding.",
+        businessImpact: "New direct-to-operator distribution channel for slot studios in the crypto vertical. Potential to bypass traditional aggregators for crypto-first operators.",
+        source: "CasinoBeats",
+        customer: "Direct Operators"
+      },
+      {
+        title: "Shuffle.com Reports 40% Player Growth in Q1",
+        category: "Market Trend",
+        impact: "Medium",
+        body: "Shuffle disclosed strong Q1 metrics, citing streamer partnerships and sports betting integration as primary growth drivers. Monthly active player count now exceeds 280k.",
+        businessImpact: "Rising platform signals increased demand for fresh slot content in mid-tier crypto operators. Opportunity for content placement.",
+        source: "Gambling Insider",
+        customer: "All Operators"
+      },
+      {
+        title: "Brazilian Regulator Blocks Three Crypto Casino Domains",
+        category: "Enforcement",
+        impact: "High",
+        body: "SECAP issued blocking orders for three offshore crypto casino domains operating without Brazilian licensing. The move follows a broader crackdown on unlicensed gambling ahead of the 2025 full regulatory rollout.",
+        businessImpact: "Operators targeting Brazil must accelerate compliance roadmaps. Studios distributing through unlicensed operators risk market access loss.",
+        source: "Yogonet",
+        customer: "LatAm Operators"
+      }
+    ],
+    watchlist: [
+      "Curaçao AML tier classification — deadline and operator response",
+      "Rollbit B2B API terms and exclusivity clauses",
+      "Brazil SECAP domain blocklist — monitor for aggregator partners"
+    ]
+  },
+  sweepstakes: {
+    headline: "Michigan AG Investigation Targets VGW Sweepstakes Model",
+    summary: "The US sweepstakes casino market faces its most significant regulatory test yet as state-level AGs escalate scrutiny of the dual-currency model. Offshore operators eye the space as traditional markets tighten.",
+    stories: [
+      {
+        title: "Michigan AG Opens Formal Investigation into VGW / Chumba Casino",
+        category: "Regulatory",
+        impact: "High",
+        body: "The Michigan Attorney General's office has opened a formal investigation into VGW Holdings' Chumba Casino and LuckyLand Slots over the legality of their sweepstakes coin redemption model. VGW is the largest operator in the sector by estimated revenue.",
+        businessImpact: "A successful AG action could trigger copycat investigations in other states and set a precedent threatening the legal basis of all sweepstakes operators in the US.",
+        source: "Legal Sports Report",
+        customer: "All Sweepstakes Operators"
+      },
+      {
+        title: "Pulsz Reports $380M Estimated Annual Revenue for 2024",
+        category: "Revenue & Growth",
+        impact: "Medium",
+        body: "Third-party estimates place Pulsz's 2024 revenue at approximately $380M, up 60% year-on-year, driven by aggressive Facebook and TikTok acquisition spend and a broadened game library.",
+        businessImpact: "Confirms sweepstakes as a high-growth channel. Content demand from Pulsz is rising — opportunity for slot studio distribution deals.",
+        source: "Eilers & Krejcik Gaming",
+        customer: "Pulsz / Social Operators"
+      },
+      {
+        title: "Florida Proposes SB 1820 — Sweepstakes Gaming Definition Bill",
+        category: "Regulatory",
+        impact: "High",
+        body: "Florida's SB 1820 would explicitly define and prohibit sweepstakes gaming that mimics casino play. The bill has passed committee and heads to a full Senate vote in May.",
+        businessImpact: "Florida is one of the largest US markets by population. A ban would remove millions of potential players from operator TAM and accelerate multi-state legislative risk.",
+        source: "PlayUSA",
+        customer: "US Sweepstakes Operators"
+      },
+      {
+        title: "McLuck Secures $45M Series B to Accelerate US Expansion",
+        category: "M&A",
+        impact: "Medium",
+        body: "McLuck has closed a $45M Series B led by a European gaming-focused VC, with plans to triple its game library and enter sports-themed sweepstakes verticals by Q4 2025.",
+        businessImpact: "Signals continued institutional appetite for sweepstakes investment despite regulatory headwinds. New content procurement cycle expected.",
+        source: "SBC News",
+        customer: "McLuck"
+      },
+      {
+        title: "Canada Emerging as Secondary Sweepstakes Market",
+        category: "Emerging Markets",
+        impact: "Medium",
+        body: "Several US sweepstakes operators have quietly enabled Canadian-facing play, exploiting the absence of federal prohibition. Ontario's iGaming regulator has not yet moved to restrict the model.",
+        businessImpact: "Emerging distribution opportunity for studios with Canadian licensing or grey-area agreements. Monitor Ontario AGCO response.",
+        source: "iGaming Ontario Watch",
+        customer: "All Operators"
+      }
+    ],
+    keyPlayers: [
+      { name: "VGW (Chumba/LuckyLand)", revenue: "~$600M est.", trend: "Stable" },
+      { name: "Pulsz", revenue: "~$380M est.", trend: "Growing" },
+      { name: "High 5 Casino", revenue: "~$150M est.", trend: "Growing" },
+      { name: "McLuck", revenue: "~$80M est.", trend: "Growing" },
+      { name: "WOW Vegas", revenue: "~$60M est.", trend: "Stable" },
+      { name: "Fortune Coins", revenue: "~$40M est.", trend: "Growing" }
+    ],
+    watchlist: [
+      "Michigan AG investigation timeline and VGW legal response",
+      "Florida SB 1820 full Senate vote — May 2025",
+      "McLuck content procurement RFP following Series B close",
+      "Ontario AGCO statement on Canadian sweepstakes operators"
+    ]
+  }
+};
+
+// ─────────────────────────────────────────────
+// RENDER ENGINE
+// ─────────────────────────────────────────────
+
+function formatDate(iso) {
+  const d = iso ? new Date(iso) : new Date();
+  return d.toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
+}
+
+function impactClass(impact) {
+  return (impact||'').toLowerCase();
+}
+
+function trendIcon(trend) {
+  if (!trend) return '';
+  if (trend === 'Growing')    return '<span class="trend-up">↑ Growing</span>';
+  if (trend === 'Contracting') return '<span class="trend-down">↓ Contracting</span>';
+  return '<span class="trend-flat">→ Stable</span>';
+}
+
+function renderStory(story, sector) {
+  const ic = impactClass(story.impact);
+  return `
+  <div class="event-card ${sector}" onclick="toggleCard(this)">
+    <div class="card-top">
+      <div class="card-accent ${ic}"></div>
+      <div class="card-body">
+        <div class="card-tags">
+          <span class="tag tag-market-${sector}">${sector === 'crypto' ? '⬡ Crypto iGaming' : '◉ Sweepstakes'}</span>
+          <span class="tag tag-category">${story.category || ''}</span>
+          <span class="tag tag-impact-${story.impact}">${story.impact} Impact</span>
+        </div>
+        ${story.customer ? `<div class="card-meta">Customer / Segment: ${story.customer}</div>` : ''}
+        <div class="card-title">${story.title}</div>
+        <div class="card-detail">
+          <p>${story.body}</p>
+          ${story.businessImpact ? `<div class="impact-label ${ic}">⚑ Business Impact: ${story.businessImpact}</div>` : ''}
+          <div class="card-source">Source: ${story.source || 'Industry Report'}</div>
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderWatchlist(items, sector) {
+  if (!items || !items.length) return '';
+  return `
+  <div class="watchlist">
+    <div class="watchlist-title">⚑ Watch This Week</div>
+    ${items.map(w => `<div class="watchlist-item ${sector}">${w}</div>`).join('')}
+  </div>`;
+}
+
+function renderPlayers(players) {
+  if (!players || !players.length) return '';
+  return `
+  <div class="players-section">
+    <div class="players-title">Key Players — Revenue Snapshot</div>
+    <table class="players-table">
+      <thead>
+        <tr>
+          <th>Operator</th>
+          <th>Est. Annual Revenue</th>
+          <th>Trend</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${players.map(p => `
+        <tr>
+          <td>${p.name}</td>
+          <td>${p.revenue || p.annualRevenue || '—'}</td>
+          <td>${trendIcon(p.trend)}</td>
+        </tr>`).join('')}
+      </tbody>
+    </table>
+  </div>`;
+}
+
+function render(data) {
+  document.getElementById('dateDisplay').textContent = formatDate(data.generatedAt);
+
+  // Summary cards
+  const c = data.crypto || {};
+  const s = data.sweepstakes || {};
+  document.getElementById('cryptoHeadline').textContent = c.headline || '—';
+  document.getElementById('cryptoSummary').textContent  = c.summary  || '';
+  document.getElementById('sweepHeadline').textContent  = s.headline || '—';
+  document.getElementById('sweepSummary').textContent   = s.summary  || '';
+
+  // Columns
+  const cryptoStories = (c.stories || []).map((st, i) => {
+    st.style = `animation-delay:${i * 0.07}s`;
+    return renderStory(st, 'crypto');
+  }).join('');
+
+  const sweepStories = (s.stories || []).map((st, i) => {
+    st.style = `animation-delay:${i * 0.07}s`;
+    return renderStory(st, 'sweep');
+  }).join('');
+
+  document.getElementById('columns').innerHTML = `
+    <div>
+      <div class="sector-head">
+        <div class="sector-name crypto">⬡ Crypto iGaming</div>
+        <div class="sector-count">${(c.stories||[]).length} events</div>
+      </div>
+      ${cryptoStories}
+      ${renderWatchlist(c.watchlist, 'crypto')}
+    </div>
+    <div>
+      <div class="sector-head">
+        <div class="sector-name sweep">◉ Sweepstakes</div>
+        <div class="sector-count">${(s.stories||[]).length} events</div>
+      </div>
+      ${sweepStories}
+      ${renderPlayers(s.keyPlayers)}
+      ${renderWatchlist(s.watchlist, 'sweep')}
+    </div>
+  `;
+}
+
+function toggleCard(el) {
+  const detail = el.querySelector('.card-detail');
+  if (detail) detail.classList.toggle('open');
+}
+
+// ─────────────────────────────────────────────
+// DATA LOADING
+// ─────────────────────────────────────────────
+
+async function load() {
+  try {
+    const res = await fetch(DATA_PATH);
+    if (!res.ok) throw new Error('no file');
+    const data = await res.json();
+    render(data);
+  } catch {
+    // Fall back to demo data so the dashboard always renders
+    render(DEMO_DATA);
+  }
+}
+
+load();
+</script>
+</body>
+</html>

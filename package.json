@@ -1,0 +1,16 @@
+{
+  "name": "market-intel",
+  "version": "1.0.0",
+  "description": "Daily crypto iGaming + sweepstakes market intelligence feed",
+  "type": "module",
+  "scripts": {
+    "crypto": "node scrape_crypto.js",
+    "sweeps": "node scrape_sweeps.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.90.0"
+  }
+}

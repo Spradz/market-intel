@@ -1,0 +1,11 @@
+# Secrets — never commit
+.env
+
+# Node
+node_modules/
+
+# Runtime logs
+logs/*.log
+
+# macOS
+.DS_Store
