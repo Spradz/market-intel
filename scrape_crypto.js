@@ -3,21 +3,11 @@
  * CRYPTO IGAMING MARKET INTELLIGENCE
  * Claude Code automation script
  *
- * Usage:
- *   node scrape_crypto.js
- *
- * Environment variables required (set in .env or shell):
- *   ANTHROPIC_API_KEY      — your Anthropic API key
- *   SLACK_WEBHOOK_CRYPTO   — incoming webhook URL for #igaming-intel
- *
- * Output:
- *   - Writes ./data/brief.json (merged with sweeps data if present)
- *   - Posts a formatted Slack notification to #igaming-intel
- *
- * Schedule (cron — runs 07:00 AWST / 23:00 UTC previous day):
+ * Schedule (cron — runs 07:00 AWST / 23:00 UTC):
  *   0 23 * * * cd ~/projects/market-intel/dashboard && node scrape_crypto.js >> logs/crypto.log 2>&1
  */
 
+import "dotenv/config";
 import Anthropic from "@anthropic-ai/sdk";
 import fs from "fs";
 import path from "path";
@@ -25,7 +15,6 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// ── CONFIG ──────────────────────────────────────────────────────────────────
 const DATA_DIR   = path.join(__dirname, "data");
 const BRIEF_FILE = path.join(DATA_DIR, "brief.json");
 
@@ -36,7 +25,6 @@ const SLACK_CHANNEL = process.env.SLACK_CRYPTO_CHANNEL || "#igaming-intel";
 if (!ANTHROPIC_KEY) { console.error("❌  ANTHROPIC_API_KEY not set"); process.exit(1); }
 if (!SLACK_WEBHOOK) { console.error("❌  SLACK_WEBHOOK_CRYPTO not set"); process.exit(1); }
 
-// ── PROMPT ───────────────────────────────────────────────────────────────────
 const TODAY = new Date().toLocaleDateString("en-GB", {
   weekday: "long", year: "numeric", month: "long", day: "numeric"
 });
@@ -52,26 +40,44 @@ Search the web for the latest news across the Crypto iGaming market. Cover:
 - Enforcement actions, licensing changes, or country-level restrictions
 - Noteworthy industry conference or event news (ICE, SiGMA, etc.)
 
-Return ONLY a JSON object — no markdown fences, no preamble:
-{
-  "headline": "one punchy ≤12-word headline for the day's biggest story",
-  "summary": "2-3 sentence executive overview of today's key themes",
-  "stories": [
-    {
-      "title": "story title",
-      "category": "one of: Regulatory | M&A | Product | Market Trend | Enforcement | Industry Event",
-      "impact": "one of: High | Medium | Low",
-      "customer": "operator segment affected, e.g. 'Aggregator Partners' or 'LatAm Operators'",
-      "body": "3-4 sentence story summary",
-      "businessImpact": "1-2 sentence analysis of material impact to a slot game studio or aggregator",
-      "source": "publication name"
-    }
-  ],
-  "watchlist": ["2-4 short strings — things to monitor this week"]
-}
-Return 4-6 stories. JSON only.`;
+RECENCY RULES — strictly enforce:
+- Only include stories published within the last 30 days from today (${TODAY})
+- If a story is older than 60 days, discard it unless it is actively shaping a current event (e.g. a court case still in progress, a law that just took effect)
+- If referencing an older event for context, clearly state it is background — do not present it as current news
+- If no fresh stories exist for a topic, omit that topic rather than filling with dated content
 
-// ── FETCH INTELLIGENCE ───────────────────────────────────────────────────────
+After researching, call the submit_intelligence function with 4-6 stories.`;
+
+const SUBMIT_TOOL = {
+  name: "submit_intelligence",
+  description: "Submit the compiled crypto iGaming market intelligence report",
+  input_schema: {
+    type: "object",
+    properties: {
+      headline: { type: "string", description: "One punchy ≤12-word headline taken directly from the title of your first (highest-impact) story" },
+      summary:  { type: "string", description: "2-3 sentence executive overview of today's key themes" },
+      stories: {
+        type: "array",
+        items: {
+          type: "object",
+          properties: {
+            title:          { type: "string" },
+            category:       { type: "string", enum: ["Regulatory","M&A","Product","Market Trend","Enforcement","Industry Event"] },
+            impact:         { type: "string", enum: ["High","Medium","Low"] },
+            customer:       { type: "string" },
+            body:           { type: "string" },
+            businessImpact: { type: "string" },
+            source:         { type: "string" }
+          },
+          required: ["title","category","impact","body","source"]
+        }
+      },
+      watchlist: { type: "array", items: { type: "string" } }
+    },
+    required: ["headline","summary","stories","watchlist"]
+  }
+};
+
 async function fetchCryptoIntel() {
   console.log(`[${new Date().toISOString()}] 🔍  Fetching Crypto iGaming intelligence…`);
 
@@ -79,21 +85,17 @@ async function fetchCryptoIntel() {
 
   const response = await client.messages.create({
     model: "claude-opus-4-7",
-    max_tokens: 4096,
-    tools: [{ type: "web_search_20250305", name: "web_search" }],
+    max_tokens: 8192,
+    tools: [{ type: "web_search_20250305", name: "web_search" }, SUBMIT_TOOL],
     messages: [{ role: "user", content: PROMPT }]
   });
 
-  const textBlock = response.content.find(b => b.type === "text");
-  if (!textBlock) throw new Error("No text block in response");
+  const toolUse = response.content.find(b => b.type === "tool_use" && b.name === "submit_intelligence");
+  if (!toolUse) throw new Error("Model did not call submit_intelligence — no structured data returned");
 
-  let raw = textBlock.text.trim()
-    .replace(/^```json\s*/i, "").replace(/^```\s*/i, "").replace(/\s*```$/i, "").trim();
-
-  return JSON.parse(raw);
+  return toolUse.input;
 }
 
-// ── WRITE JSON ───────────────────────────────────────────────────────────────
 function writeBrief(cryptoData) {
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
 
@@ -102,17 +104,14 @@ function writeBrief(cryptoData) {
     try { existing = JSON.parse(fs.readFileSync(BRIEF_FILE, "utf8")); } catch {}
   }
 
-  const brief = {
+  fs.writeFileSync(BRIEF_FILE, JSON.stringify({
     generatedAt: new Date().toISOString(),
     crypto: cryptoData,
     sweepstakes: existing.sweepstakes || null
-  };
-
-  fs.writeFileSync(BRIEF_FILE, JSON.stringify(brief, null, 2));
+  }, null, 2));
   console.log(`[${new Date().toISOString()}] ✅  Brief written to ${BRIEF_FILE}`);
 }
 
-// ── SLACK NOTIFICATION ───────────────────────────────────────────────────────
 async function postToSlack(data) {
   const impactEmoji = { High: "🔴", Medium: "🟡", Low: "🟢" };
   const categoryEmoji = {
@@ -139,27 +138,12 @@ async function postToSlack(data) {
   const payload = {
     text: `⬡ *Crypto iGaming Brief — ${TODAY}*`,
     blocks: [
-      {
-        type: "header",
-        text: { type: "plain_text", text: `⬡ Crypto iGaming Brief · ${TODAY}`, emoji: true }
-      },
-      {
-        type: "section",
-        text: { type: "mrkdwn", text: `*${data.headline}*\n${data.summary}` }
-      },
+      { type: "header", text: { type: "plain_text", text: `⬡ Crypto iGaming Brief · ${TODAY}`, emoji: true } },
+      { type: "section", text: { type: "mrkdwn", text: `*${data.headline}*\n${data.summary}` } },
       { type: "divider" },
       ...storyBlocks,
-      ...(watchlistText ? [
-        { type: "divider" },
-        {
-          type: "section",
-          text: { type: "mrkdwn", text: `*⚑ Watch This Week*\n${watchlistText}` }
-        }
-      ] : []),
-      {
-        type: "context",
-        elements: [{ type: "mrkdwn", text: `Automated via Claude Code · ${new Date().toISOString()}` }]
-      }
+      ...(watchlistText ? [{ type: "divider" }, { type: "section", text: { type: "mrkdwn", text: `*⚑ Watch This Week*\n${watchlistText}` } }] : []),
+      { type: "context", elements: [{ type: "mrkdwn", text: `Automated via Claude Code · ${new Date().toISOString()}` }] }
     ]
   };
 
@@ -173,7 +157,6 @@ async function postToSlack(data) {
   console.log(`[${new Date().toISOString()}] 📨  Posted to Slack (${SLACK_CHANNEL})`);
 }
 
-// ── MAIN ─────────────────────────────────────────────────────────────────────
 (async () => {
   try {
     const data = await fetchCryptoIntel();

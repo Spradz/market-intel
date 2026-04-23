@@ -404,12 +404,14 @@ const DEMO_DATA = {
       }
     ],
     keyPlayers: [
-      { name: "VGW (Chumba/LuckyLand)", revenue: "~$600M est.", trend: "Stable" },
+      { name: "Stake.us", parent: "Stake", revenue: "~$400M est.", trend: "Growing" },
+      { name: "Shuffle", revenue: "~$200M est.", trend: "Growing" },
       { name: "Pulsz", revenue: "~$380M est.", trend: "Growing" },
-      { name: "High 5 Casino", revenue: "~$150M est.", trend: "Growing" },
+      { name: "CrownCoins", parent: "Sunflower", revenue: "~$150M est.", trend: "Growing" },
+      { name: "High5", revenue: "~$150M est.", trend: "Growing" },
       { name: "McLuck", revenue: "~$80M est.", trend: "Growing" },
-      { name: "WOW Vegas", revenue: "~$60M est.", trend: "Stable" },
-      { name: "Fortune Coins", revenue: "~$40M est.", trend: "Growing" }
+      { name: "Legendz", revenue: "No current data found", trend: "Unknown" },
+      { name: "Lonestar", revenue: "No current data found", trend: "Unknown" }
     ],
     watchlist: [
       "Michigan AG investigation timeline and VGW legal response",
@@ -434,7 +436,7 @@ function impactClass(impact) {
 }
 
 function trendIcon(trend) {
-  if (!trend) return '';
+  if (!trend || trend === 'Unknown') return '<span class="trend-flat">? Unknown</span>';
   if (trend === 'Growing')    return '<span class="trend-up">↑ Growing</span>';
   if (trend === 'Contracting') return '<span class="trend-down">↓ Contracting</span>';
   return '<span class="trend-flat">→ Stable</span>';
@@ -475,6 +477,7 @@ function renderWatchlist(items, sector) {
 
 function renderPlayers(players) {
   if (!players || !players.length) return '';
+  const hasParent = players.some(p => p.parent);
   return `
   <div class="players-section">
     <div class="players-title">Key Players — Revenue Snapshot</div>
@@ -482,6 +485,7 @@ function renderPlayers(players) {
       <thead>
         <tr>
           <th>Operator</th>
+          ${hasParent ? '<th>Parent Company</th>' : ''}
           <th>Est. Annual Revenue</th>
           <th>Trend</th>
         </tr>
@@ -490,7 +494,8 @@ function renderPlayers(players) {
         ${players.map(p => `
         <tr>
           <td>${p.name}</td>
-          <td>${p.revenue || p.annualRevenue || '—'}</td>
+          ${hasParent ? `<td style="color:var(--muted);font-size:12px">${p.parent || '—'}</td>` : ''}
+          <td>${p.revenue || '—'}</td>
           <td>${trendIcon(p.trend)}</td>
         </tr>`).join('')}
       </tbody>
