@@ -1,287 +1,343 @@
 {
-  "generatedAt": "2026-04-24T02:35:08.485Z",
+  "generatedAt": "2026-04-24T03:00:19.845Z",
   "crypto": {
-    "headline": "Curaçao License Reform Ends Master License Era for Crypto Operators",
-    "summary": "April 2026 is a watershed moment for crypto iGaming as regulatory frameworks bite simultaneously: Curaçao's direct-licensing transition, MiCA's full enforcement phase, and rising Telegram-bot enforcement are reshaping operator economics. Meanwhile, stablecoins have crossed 50% of all crypto-casino wagers as Layer-2 networks Arbitrum and Base overtake Ethereum mainnet, and Rollbit has segmented its EU product to comply. Operator-side, Stake rolled out a new PWA-based mobile app and continues record betting volumes heading into the BiS SiGMA/SiGMA Malta event cycle.",
+    "headline": "Curaçao Ends Master License Era, Squeezes Crypto Casinos",
+    "summary": "April 2026 marks a pivotal regulatory inflection point for crypto iGaming: Curaçao has completed its transition away from the master license system, forcing hundreds of crypto-native operators into direct CGA supervision and heavy AML obligations. Meanwhile, Tanzanite data shows Stake extending its structural dominance with Rainbet as the fastest-growing challenger, even as upstart Spartans.com claims to be outpacing Rollbit and BC.Game on raw technical performance. B2B aggregator activity (NuxGame) and the just-concluded BiS SiGMA South America round out a fast-moving month.",
     "stories": [
       {
-        "title": "Curaçao License Reform Ends Master License Era — 53 Applications Rejected",
+        "title": "Curaçao Gaming License Reform Ends Master License Era, Hits Crypto Operators Hardest",
         "category": "Regulatory",
         "impact": "High",
-        "body": "The Curaçao Gaming Authority has reached the most consequential phase of its transition away from the old master license system, moving to direct operator licensing under the new CGA framework. <cite index=\"26-2\">The CGA has processed roughly 140 direct license applications as of April 2026, approving 87 and rejecting or shelving the rest.</cite> The old regime relied on four master license holders — <cite index=\"26-13\">Antillephone, Curacao eGaming, Gaming Curacao, and Cyber Rock Entertainment</cite> — who issued sub-licenses with minimal oversight. <cite index=\"55-3\">By some estimates, more than 60 percent of all Curacao-licensed operators in 2024 accepted cryptocurrency as a primary payment method, and many operated exclusively in Bitcoin, Ethereum, or stablecoins.</cite> <cite index=\"55-5,55-6\">Under the curacao gaming license reform, crypto-native operators face the same AML scrutiny as fiat-only platforms. The CGA requires transaction monitoring for all payment methods, including blockchain-based ones, and mandates that operators implement chain analysis tools capable of flagging suspicious wallet activity.</cite>",
-        "businessImpact": "Crypto-first operators that built businesses on cheap Curaçao sub-licenses face meaningful compliance uplift or market exit. Expect consolidation pressure on smaller B2C brands and a tailwind for B2B compliance/chain-analytics vendors serving iGaming.",
-        "source": "Bright Side of News / CGA data, 19 April 2026",
-        "customer": "All Curaçao-licensed crypto operators; compliance/KYT vendors"
+        "body": "Curaçao has completed the most consequential phase of its LOK reform, fully transitioning from the four-master-license sub-licensing regime to direct operator licensing under the new Curaçao Gaming Authority (CGA). <cite index=\"21-1,21-2\">The CGA has processed roughly 140 direct license applications as of April 2026, approving 87 and rejecting or shelving the rest — a rejection rate close to 38 percent, signalling the regulator is serious about raising standards.</cite> The impact on the crypto segment is disproportionately large: <cite index=\"21-4,21-5,21-6\">by some estimates, more than 60 percent of all Curaçao-licensed operators in 2024 accepted cryptocurrency as a primary payment method, and many operated exclusively in Bitcoin, Ethereum, or stablecoins — operators that chose Curaçao precisely because the old regime asked few questions about payment rails, token provenance, or player origin.</cite> Under the new framework, <cite index=\"21-7,21-8,21-9\">crypto-native operators face the same AML scrutiny as fiat-only platforms, with the CGA requiring transaction monitoring for all payment methods and mandating chain analysis tools capable of flagging suspicious wallet activity — a substantial compliance burden for casinos running on Layer-2 networks like Arbitrum or Base.</cite> New consumer-protection rules layer on top: <cite index=\"25-13\">by October 2026, all licensed operators must provide clearer terms around withdrawals, account closures, and crypto transactions — and get explicit player consent to those terms at signup.</cite>",
+        "source": "Bright Side of News / Tips.GG (April 2026)",
+        "businessImpact": "Operators on legacy Curaçao sub-licenses must either secure direct CGA authorisation or exit the market. Expect consolidation among smaller crypto brands, rising compliance spend (chain analytics, MLRO hiring, Tier-IV data hosting in Curaçao), and a flight of the riskiest players to Anjouan and Costa Rica. B2B suppliers selling AML/transaction monitoring tools to crypto casinos have a clear tailwind."
       },
       {
-        "title": "Stablecoins Cross 50% of Crypto Casino Wagers; Arbitrum & Base Dominate L2 Volume",
+        "title": "Tanzanite March 2026 Data: Stake Still Dominates, Rainbet Fastest Grower, Roobet Slides",
         "category": "Market Trend",
         "impact": "High",
-        "body": "<cite index=\"51-4,51-5\">Stablecoins have crossed 50 percent of all crypto-denominated wagers on licensed and semi-licensed crypto casinos, according to April 2026 aggregated data from analytics firms Chainalysis and Messari. Layer-2 networks — Arbitrum, Base, Mantle, and to a lesser extent Optimism — are now handling the bulk of that volume.</cite> <cite index=\"51-15,51-16\">Arbitrum is now processing in the range of 40,000 transactions per second on peak load, with finality that registers as near-instant from a player's perspective. Mantle is pushing 4,000 TPS with sub-cent fees, and Base has become the go-to for operators targeting Coinbase users by default.</cite> <cite index=\"51-20\">Stake, BC.Game, and Rollbit have all expanded Arbitrum integrations in the past six months; newer entrants like Shuffle and Metawin moved to Base-first stacks.</cite> <cite index=\"51-22\">Crypto-first casinos operating primarily in stablecoins reported 32 percent higher average player lifetime value in Q1 2026 than the same brands running on volatile tokens, according to SoftSwiss's crypto gambling index.</cite>",
-        "businessImpact": "Operators still weighted to volatile tokens risk LTV erosion. Product and treasury teams should prioritize USDT/USDC rails on Arbitrum/Base; aggregators should ensure native L2 settlement for high-frequency slot/crash verticals.",
-        "source": "Bright Side of News, citing Chainalysis, Messari & SoftSwiss data, ~16 April 2026",
-        "customer": "Stake, BC.Game, Rollbit, Shuffle, Metawin; B2B stablecoin payment providers"
+        "body": "Fresh Tanzanite deposit-volume data for March 2026 confirms the top of the crypto casino league table is tightening around a handful of operators. <cite index=\"50-3,50-4,50-5,50-6\">The dataset covers 23 casinos across 10 chains and 16 currencies; Stake remains the largest operator by deposit volume at $349m (up 2% MoM) and also leads by deposit count with 645K transactions, up 21%.</cite> <cite index=\"50-13,50-14,50-15,50-16\">Rainbet recorded the fastest growth among leading operators, with deposit volume climbing 46% to $75.7m and deposits rising 24% to 224K, placing it third overall; an average deposit of $338 suggests the uplift is largely tied to increased traffic rather than larger wagers. Roobet ranks second by deposit volume at $91.4m, though the figure is 19% lower than the previous month, with a $724 average deposit indicating softer spending per user.</cite> <cite index=\"50-18,50-19\">Shuffle reported $44.5m in volume, up 4%, with deposits rising 16% to 128K, while Duel posted a 28% increase in volume to $29.1m.</cite> <cite index=\"50-23,50-24,50-25\">Sportsbet.io topped the average-deposit ranking at $2.22K, well ahead of the field, helped by its World Snooker Tour Championship sponsorship which kicked off March 30 in Manchester.</cite>",
+        "source": "Tanzanite.xyz / Tribuna.com (April 2026)",
+        "businessImpact": "Stake's ~60%+ share gives it pricing power with providers and creators; Rainbet is the clearest share-taker and should be watched for affiliate/creator poaching. Roobet's volume decline despite rising deposit count signals VIP churn — a risk indicator for any operator leaning heavily on whale retention. Sportsbook-led brands (Sportsbet.io) continue to command the highest-value deposits, reinforcing the sports vertical as a key weapon for crypto operators."
       },
       {
-        "title": "MiCA Enforcement Forces Rollbit EU Product Segmentation; Privacy Coins Dropped",
-        "category": "Regulatory",
-        "impact": "High",
-        "body": "<cite index=\"25-2,25-3\">MiCA crypto casino regulation is forcing a fundamental restructuring of how blockchain-based gambling platforms operate across the European Union. Since the Markets in Crypto-Assets Regulation entered its full enforcement phase in early 2026, licensed Web3 casinos have scrambled to implement stablecoin audit trails, real-time transaction monitoring, and enhanced KYC protocols that meet the same bar as traditional fiat-based iGaming operators.</cite> <cite index=\"52-2,52-3\">Rollbit, another major crypto-native operator, took a different approach by launching a dedicated EU subdomain in March 2026 that accepts only USDC and EUR-pegged stablecoins. The platform announced that it would discontinue support for privacy coins like Monero and Zcash on its EU-facing product, a move driven directly by MiCA's enhanced traceability requirements under the Travel Rule for crypto-asset transfers.</cite> <cite index=\"25-16,25-17\">Industry estimates from EvenBet Gaming suggest that a mid-size crypto casino seeking full EU market access can expect to spend between EUR 200,000 and EUR 500,000 on legal, technical, and audit expenses during the first year of compliance alone. That price tag is filtering out smaller operators and concentrating market share among well-capitalized platforms that can absorb the upfront investment.</cite>",
-        "businessImpact": "EU market access is becoming a capital-intensive privilege. Smaller crypto casinos will either geo-block the EU or consolidate; well-funded operators like Rollbit and Stake can extend moat through compliant product splits. Opportunity for regtech and stablecoin reserve attestation providers.",
-        "source": "Bright Side of News, 19 April 2026",
-        "customer": "Rollbit, all EU-facing crypto operators; stablecoin issuers; KYC/regtech vendors"
-      },
-      {
-        "title": "Telegram Crypto Gambling Bots Hit $2B Monthly; Regulators Scramble on TON Enforcement",
-        "category": "Enforcement",
-        "impact": "Medium",
-        "body": "<cite index=\"54-4,54-5,54-6\">The numbers are staggering. Independent estimates from blockchain analytics firms place the monthly volume of Telegram-based gambling wagers at over $2 billion in Q1 2026, up from roughly $800 million a year earlier. The growth is driven by the seamless integration of TON-based wallets directly into the Telegram interface, which allows users to deposit, wager, and withdraw cryptocurrency without ev</cite>er leaving the app. <cite index=\"22-4,22-5\">France's ANJ published a consultation paper in February 2026 proposing that telecommunications regulators be empowered to request Telegram block specific bot accounts operating within French territory. Germany's GGL has taken a different approach, focusing on payment disruption by targeting fiat on-ramps that convert euros into crypto specifically for gambling purposes.</cite> <cite index=\"54-10,54-11\">The UK Gambling Commission has flagged Telegram gambling as an emerging concern in its 2026 enforcement priorities but has not yet issued specific guidance. The Monetary Authority of Singapore has taken a harder line, issuing a formal advisory in March 2026 warning licensed payment providers against processing transactions for Telegram-based gambling services.</cite>",
-        "businessImpact": "Licensed operators face a growing leakage channel to unregulated Telegram bots — particularly in retention of younger, crypto-native players. Payment providers serving iGaming should audit exposure to TON on/off-ramps ahead of likely enforcement actions in FR, DE, and SG.",
-        "source": "Bright Side of News, ~18 April 2026",
-        "customer": "Licensed operators (retention risk); payment providers; TON ecosystem partners"
-      },
-      {
-        "title": "Stake Launches PWA-Style Mobile App as March Betting Volumes Hit 7.8B",
+        "title": "Spartans.com Claims $40M GGR in Beta, Challenges Rollbit & BC.Game on Speed",
         "category": "Product",
         "impact": "Medium",
-        "body": "<cite index=\"11-1,11-2\">The new Stake.com app is less about downloading something new and more about making mobile access easier. It's added from the browser, placed on the home screen, and opened like a regular</cite> app. <cite index=\"11-5\">Apple users do that through Safari, while Android users use the browser install option.</cite> The app gives access to <cite index=\"11-30,11-31\">slots, live dealer games, blackjack, roulette, poker, baccarat, and the larger Stake Originals lineup. The platform's lobby includes Originals and games like Plinko, Mines, Crash, Limbo, Hilo, Wheel, Dragon Tower and many more.</cite> The launch comes on the back of strong March performance: <cite index=\"16-6,16-7\">Stake Casino recorded 7,834,414,351 bets during March, averaging over 2,900 bets per second. Slots once again led the way, generating 2,260,672,106 bets, while Dice remained the most played Stake Original, with more than 2.23 billion bets placed.</cite>",
-        "businessImpact": "Stake's PWA approach sidesteps Apple/Google app-store gambling restrictions entirely while delivering app-like mobile UX — a template competitors (BC.Game, Roobet, Shuffle) are likely to follow. Cements Stake's scale leadership in crypto iGaming heading into SiGMA Malta.",
-        "source": "Vanguard News (23 April 2026); MEXC/BitcoinChaser Stake recap (April 2026)",
-        "customer": "Stake.com; competitive benchmark for BC.Game, Roobet, Shuffle, Rollbit"
+        "body": "A new entrant is positioning itself as the anti-Rollbit/anti-BC.Game on raw technical performance. <cite index=\"32-3,32-4,32-5,32-6\">During its record-breaking beta phase, Spartans.com processed $100,000,000 in total deposits, generating $40,000,000 in Gross Gaming Revenue, and is currently ranked 14th and climbing globally — establishing itself as the fastest withdrawal online casino via proprietary \"Degen Zone\" technology for high-velocity wagering and instant payouts.</cite> The pitch explicitly targets power users frustrated with incumbents: <cite index=\"32-9,32-10\">Rollbit's platform complexity — spanning sportsbook, NFTs and a token-burn mechanism — can lead to higher latency during peak periods, and its core engine is not exclusively optimised for ultra-high-frequency betting that modern \"power users\" demand.</cite> <cite index=\"32-16,32-17,32-18\">BC.Game's gamification focus produces a \"heavy\" UI that struggles to deliver zero-latency experience, and its withdrawal infrastructure often involves multiple verification steps and native token conversions that add time to the payout cycle.</cite>",
+        "source": "Blockonomi / BitcoinEthereumNews (mid-April 2026)",
+        "businessImpact": "Crypto degen/high-frequency segment is clearly fragmenting. Operators competing on brand and gamification (BC.Game, Roobet) need to watch withdrawal-speed benchmarks closely or risk losing whales. Expect a new marketing arms race around 'instant payout' claims and reinforced pressure on B2B providers to deliver lower-latency wallets and cashier infrastructure."
       },
       {
-        "title": "SiGMA Euro-Med Malta Set for 28–30 April — Crypto Payments Awards in Focus",
+        "title": "NuxGame Ramps B2B Crypto Positioning with PayAdmit Integration and Award Shortlistings",
+        "category": "Product",
+        "impact": "Medium",
+        "body": "Crypto-friendly B2B aggregator NuxGame has had an unusually active month heading into Q2. <cite index=\"71-3\">On April 8 the company integrated PayAdmit to strengthen the payment experience for operators; on April 9 it was shortlisted in two categories at the AffPapa iGaming Awards 2026; on April 17 it was shortlisted for Aggregator Platform at the EGR B2B Awards 2026; and on April 6 it was shortlisted at the SiGMA Awards South America 2026.</cite> <cite index=\"71-13\">NuxGame's crypto casino solution accepts over 30 types of cryptocurrencies and is pitched as a core pillar of its turnkey offering.</cite> <cite index=\"79-28,79-29,79-30,79-31,79-32\">The broader NuxGame platform covers online casino, sportsbook and crypto-focused options, with turnkey launches or API integrations, multi-currency wallets, Web 3.0 wallet support, single-API game aggregation, and anti-fraud tooling.</cite>",
+        "source": "NuxGame corporate / Sologe B2B review (April 2026)",
+        "businessImpact": "The B2B aggregator space remains the quiet winner of crypto iGaming growth — as operators burn resources on new Curaçao compliance, they increasingly outsource cashier, game content and PAM to providers like NuxGame, SOFTSWISS and Slotegrator. Payment-layer partnerships (PayAdmit) are becoming a key differentiator as withdrawal speed becomes the primary player acquisition lever."
+      },
+      {
+        "title": "BiS SiGMA South America Wraps in São Paulo as LatAm Becomes Crypto Battleground",
         "category": "Industry Event",
         "impact": "Medium",
-        "body": "The crypto iGaming calendar pivots to Malta next week. <cite index=\"43-15,43-16\">ICE is renowned for its scale, innovation showcases, and networking opportunities, shaping the future of gaming worldwide. 📅 April 28–30, 2026 | InterContinental Hotel, Malta</cite> — with SiGMA Europe Awards following on 26 May. Crypto verticals feature prominently in the awards structure: <cite index=\"47-3,47-4\">Awarded to the provider delivering the most reliable, secure, and user-friendly payment services across the iGaming ecosystem. ... Recognising companies leading innovation and adoption of crypto and digital asset payments within regulated gaming markets.</cite> <cite index=\"47-17\">Celebrating the cryptocurrency payment solution that has provided secure, efficient, and comprehensive digital currency services, enabling gaming operators to offer modern payment alternatives whilst maintaining regulatory compliance and customer security.</cite> This follows the April BiS SiGMA South America in São Paulo (6–9 April) where LatAm crypto-fiat integration was a headline theme.",
-        "businessImpact": "Malta week is the last major dealmaking window before summer quiet season. B2B crypto payment providers, aggregators (SOFTSWISS, SoftGamings), and compliance tooling vendors will be pitching post-MiCA/Curaçao product packages to operators looking to restructure licensing.",
-        "source": "Gambling Insider iGaming Events Calendar; SiGMA Europe Awards 2026 page",
-        "customer": "SOFTSWISS, SoftGamings, crypto PSPs, all operators"
+        "body": "<cite index=\"60-3,60-4,60-5,60-6\">BiS SiGMA South America 2026 took place April 6-9 at the Transamerica Expo Center in São Paulo, bringing together over 18,000 delegates and 250+ speakers focused on iGaming, betting, blockchain technologies, payments, and affiliate marketing — with casino companies, sportsbook providers, payment companies, and affiliate marketers converging to discuss market expansion in Brazil and across South America.</cite> Crypto-friendly B2B suppliers used the event as a launchpad: <cite index=\"58-3,58-4,58-5,58-6\">Atlaslive presented its iGaming platform — Casino, Sportsbook and All-in-One solutions available via White Label, Turnkey and API models — at Stand N45, holding operator discussions on market entry and partnership opportunities in Brazil and across Latin America.</cite> The event positions Brazil as a central battleground for crypto-friendly operators navigating the country's new regulated regime.",
+        "source": "15M Events / Yogonet (April 2026)",
+        "businessImpact": "Brazil is the single biggest regulated expansion opportunity for crypto-friendly operators in 2026. Operators that can bridge Curaçao/Anjouan .com brands into a Brazilian SPA-licensed structure — likely via B2B platform partners like Atlaslive, SOFTSWISS and NuxGame — will capture outsized share. Expect a wave of LatAm-focused M&A and white-label deals in Q2-Q3."
+      },
+      {
+        "title": "Stake Consolidates Denmark Push with Astralis Deal; MocinoPlay Acquisition Gives Local Brand",
+        "category": "M&A",
+        "impact": "Medium",
+        "body": "Although the headline deal closed in early March (just outside the 30-day window), Stake's Nordic push remains actively shaping the current competitive landscape. <cite index=\"50-7,50-8,50-9\">Following a weaker performance in Brazil, Stake has redirected attention toward regulated Europe, with Denmark emerging as a key test case: the company secured a local license, established a headquarters at Copenhagen's Parken Stadium and combined that entry with partnerships and acquisitions, including a deal with esports organisation Astralis.</cite> <cite index=\"89-10\">Stake also recently acquired MocinoPlay, the company behind the VinderCasino brand, giving it an established local operator vehicle to expand in the Danish market.</cite> <cite index=\"89-3,89-4,89-5\">Stake remains blocked in many jurisdictions including the US, where it operates via a sweepstakes model through Stake.us and has been the subject of several cease-and-desist orders from state regulators, alongside lawsuits in several states involving some celebrity promoters including Drake.</cite>",
+        "source": "Tribuna.com / Esports.net (March 2026, ongoing impact)",
+        "businessImpact": "Stake's 'Denmark-as-beachhead' strategy is the template other crypto-native operators will study for pivoting to regulated EU markets. The MocinoPlay acquisition shows that buying licensed local shells is now faster than organic licensing. Operators over-exposed to Brazil should reassess their regulated-market diversification strategy."
       }
     ],
     "watchlist": [
-      "Rollbit EU subdomain performance post-MiCA — watch for USDC-only deposit share vs. prior mixed-coin baseline",
-      "Curaçao CGA decisions on the remaining ~53 pending/rejected applications and any named brand refusals",
-      "UK Gambling Commission formal guidance on Telegram/TON bots (flagged in 2026 priorities, not yet issued)",
-      "Shuffle US launch (ShuffleUSA) — signals compliant US onshore move by a crypto-native operator",
-      "SiGMA Euro-Med Malta (28–30 April) crypto payments award shortlists as leading indicator of B2B deal flow",
-      "GENIUS Act implementation phase guidance affecting US-issued stablecoin rails used by offshore casinos",
-      "New York iGaming bill (Senator Addabbo, 30.5% GGR tax) and Maine tribal iGaming launch as US crypto precedent setters",
-      "Singapore MAS March advisory — first enforcement actions against PSPs facilitating Telegram gambling"
+      "Curaçao CGA rejection rate (~38%) and next wave of license decisions through Q2 — watch for publicised enforcement actions against non-compliant crypto operators",
+      "Rainbet's trajectory — if 40%+ MoM deposit growth continues it could overtake Roobet in the #2 crypto casino slot by Q3 2026",
+      "Spartans.com ascent past global rank 14 — validation (or reversal) of the 'speed-first degen' positioning vs. gamified incumbents",
+      "October 2026 deadline for all CGA-licensed operators to implement new T&C rules around withdrawals, account closures and crypto transactions",
+      "Stake's next regulated-market move after Denmark — France (Vitality) and potential additional Nordic/EU licenses",
+      "UK RGD tax hike (April 2026) and its impact on crypto-friendly operator .com strategies targeting UK-adjacent players",
+      "Potential new Curaçao B2B license requirements for chain-analytics and transaction-monitoring vendors serving crypto casinos",
+      "SOFTSWISS, NuxGame, and BetConstruct positioning around crypto-native aggregator deals ahead of SiGMA Euro-Med"
     ]
   },
   "sweepstakes": {
-    "headline": "Baltimore Sues Sweepstakes Casino Giants Over Alleged Illegal Gambling",
-    "summary": "The US sweepstakes market is simultaneously booming and contracting: gross industry revenue topped $10.6B in 2024 with 2025 estimates of $11-14B, yet a wave of state bans (CA, NY, IN, ME), AG enforcement actions, and a landmark Baltimore civil suit naming VGW, Stake.us, McLuck, Pulsz, High 5 and Blazesoft are forcing operator exits from key states. Maryland's ban bills died in committee this week, handing the newly rebranded \"Social Plus\" SGLA a rare win, while ARB Interactive accelerates consolidation via its Publishers Clearing House acquisition and Shuffle continues its post-2025 US expansion under Munyon Canyon Ltd.",
+    "headline": "Louisiana Advances Dual Anti-Sweeps Bills, Including RICO Classification",
+    "summary": "The US sweepstakes casino regulatory siege intensified in April 2026 with Louisiana advancing two separate anti-sweeps bills (one folding the vertical into racketeering law), Maryland's ban stalling at session end, and a predatory-practices lawsuit against ARB Interactive's Modo.us raising consumer-protection alarm bells. Meanwhile, a Gibraltar Supreme Court battle exposed the inner workings of Pulsz parent Yellow Social Interactive — confirming ~$1bn in revenue — as operators quietly eye Canada and Australia for expansion despite VGW's hasty retreat from both markets.",
     "stories": [
       {
-        "title": "Baltimore Sues Sweepstakes Casino Giants Over Alleged Illegal Gambling Operation",
+        "title": "Louisiana Advances Dual Anti-Sweeps Bills, Including RICO Classification",
         "category": "Regulatory",
         "impact": "High",
-        "body": "The City of Baltimore filed suit on March 4 in the Circuit Court for Baltimore City against VGW, Stake.us, McLuck, Pulsz, High 5, and Blazesoft, alleging the operators run 'illegal gambling enterprises' in violation of Maryland's Consumer Protection Ordinance. The complaint seeks civil penalties, restitution, injunctive relief, and disgorgement. It is only the second state civil enforcement action against sweepstakes operators and arrives alongside Indiana's HB 1052 ban (signed March 12, effective July 1, 2026) and Maine's newly enacted prohibition. Notably, Maryland's own legislative ban bills (HB 295 and HB 1226) died in the Senate on April 13, handing the SGLA a partial reprieve — though litigation pressure continues to mount.",
-        "source": "CasinoBeats, Casino.org, SBC Americas, April 2026",
-        "businessImpact": "Baltimore's civil enforcement strategy, if successful, creates a replicable template for other municipalities to bypass arbitration clauses and extract disgorgement from the six largest operators. Combined with Indiana and Maine bans, operators face accelerating market contraction in 2H2026.",
-        "customer": "VGW, Stake.us, McLuck, Pulsz, High 5, Blazesoft"
+        "body": "Louisiana's House passed HB 883 on April 14 in a unanimous 99-0 vote, explicitly defining dual-currency online games that award prizes as illegal 'gambling by computer' and threatening fines up to $40,000 and five-year prison terms. In parallel, HB 53 — which would add sweepstakes operations to Louisiana's RICO statute with penalties up to $1m and 50 years in prison — cleared the Senate Judiciary C Committee on April 14 and is now set for a third reading. Attorney General Liz Murrill already considers sweeps casinos illegal under existing law, and at least 60 operators have exited the state following last year's cease-and-desist campaign. Governor Landry vetoed a similar bill in 2025 but the dual-track 2026 push — with racketeering framing as the novel lever — represents the most aggressive state-level escalation to date.",
+        "source": "SBC Americas / Sweepsy / CasinoBeats (April 14-22, 2026)",
+        "businessImpact": "If HB53 passes, Louisiana becomes the first state to treat sweeps operations as organized crime, exposing operators, suppliers, and even media affiliates to RICO-level asset forfeiture. Sets a dangerous precedent other AGs may copy."
       },
       {
-        "title": "California AB 831 Takes Effect; Sweepstakes Lose ~20% of US Revenue Overnight",
+        "title": "Maryland Sweepstakes Ban Dies at Session End; Industry Wins Reprieve to 2027",
         "category": "Regulatory",
         "impact": "High",
-        "body": "Assembly Bill 831 took effect on January 1, 2026, banning dual-currency sweepstakes casinos in California — a state that accounted for roughly 17-20% of US sweepstakes sales per Eilers & Krejcik. Pulsz became the biggest operator to preemptively exit (Nov 17, 2025 shutdown), while Stake.us wound down both Gold and Sweeps Coin play on Dec 30. VGW, B-Two Operations (McLuck, Hello Millions, SpinBlitz, Mega Bonanza, PlayFame) and ARB Interactive's Modo retained Gold Coin-only operations. The law also empowers enforcement against affiliates and payment processors, not just operators.",
-        "source": "Sweepsy, The Lines, Gambling Insider, January-April 2026",
-        "businessImpact": "A ~17-20% revenue hit to industry-wide GGR with cascading exposure in Connecticut, New Jersey, Nevada, Montana, New York and Tennessee. VGW's $6.13B global revenue base faces meaningful compression; smaller operators (Modo, Lonestar, Crown Coins) lose outsized share of their US footprint.",
-        "customer": "All US sweepstakes operators; VGW, Pulsz, Stake.us, McLuck family, Modo most exposed"
+        "body": "Maryland's 2026 legislative session closed on April 13 without passing either HB 295 or HB 1226, the twin bills that would have banned dual-currency sweepstakes platforms and empowered enforcement. HB 295 — sponsored by the House Ways and Means Committee at the request of the Maryland Lottery and Gaming Control Agency and backed by Gov. Wes Moore — had cleared the House 105-24 on March 20 but stalled in the Senate. SGLA Managing Director Sean Ostrow called the outcome a validation of the industry's consumer-protection record. The issue is expected to return in the 2027 session, joining Virginia, Florida, and Massachusetts as states where 2026 ban bills failed.",
+        "source": "SBC Americas / Yardbarker (April 17, 2026)",
+        "businessImpact": "Maryland remains an active market for sweeps operators through 2027 at minimum. SGLA scores a key defensive win that may strengthen its regulate-don't-ban narrative heading into other state sessions."
       },
       {
-        "title": "VGW Posts $6.13B Revenue, Exits Canada to Double Down on Embattled US Market",
-        "category": "Revenue & Growth",
+        "title": "Modo.us Faces Federal Lawsuit Alleging Predatory Exploitation of Disabled Player",
+        "category": "Consumer",
         "impact": "High",
-        "body": "VGW (Chumba Casino, LuckyLand Slots, Global Poker) reported AU$6.1B / US$6.13B in global revenue and US$491.6M in profit for FY ending June 30, 2025. Industry data shows 98% of worldwide sweepstakes revenue comes from the US, prompting VGW to fully exit Canada on October 23, 2025. Market share has slipped from >90% historically to roughly 50% as 25+ new entrants launched in 2025, pushing the active US roster above 140 sites. VGW launched LuckyLand Casino and plans Just Slots and United Slots for early 2026 to offset state-level revenue losses. Founder Laurence Escalante is reportedly exploring a minority buyout at an AU$3.2B valuation.",
-        "source": "ReadWrite, iGaming Business, SBC Americas, Gambling Insider",
-        "businessImpact": "VGW remains the category leader by a wide margin but is now clearly contracting on market share. The SGLA trade group it founded (rebranded 'Social Plus' in Nov 2025) is its primary defensive vehicle. Expect continued new-brand proliferation from VGW to dilute per-state regulatory exposure.",
-        "customer": "VGW Holdings / Chumba, LuckyLand, Global Poker, Just Slots"
+        "body": "A federal complaint filed in the Eastern District of California alleges ARB Gaming LLC's Modo.us exploited a player with documented bipolar disorder and gambling disorder, racking up ~$240,000 in losses over nine months of documented psychosis. The plaintiff logged 5,631 hours on the platform (nearly 14 hours daily) and was reportedly kept at Black Diamond VIP tier despite requests to scale back. Plaintiffs are seeking over $1.6 million in compensatory and statutory damages, challenging VIP host behavior and Modo's advertised payout claims. Industry observers flag this as a potential test case for sweeps operators' responsible-gaming obligations under disability law.",
+        "source": "Casino.org / SweepsCasinos.us / GamblingNews (April 16-17, 2026)",
+        "businessImpact": "First major responsible-gaming lawsuit of this kind. Exposes VIP-host practices across the industry to scrutiny and could reshape how operators design host incentive structures and RG interventions."
       },
       {
-        "title": "ARB Interactive Consolidates: Closes $7.1M PCH Acquisition, Joins SGLA",
-        "category": "M&A",
-        "impact": "Medium",
-        "body": "ARB Interactive (parent of Modo Casino) completed its $7.1M cash acquisition of bankrupt Publishers Clearing House plus ~$378K in expense coverage, gaining access to PCH's 38M+ verified users. CEO Patrick Fechtmeyer is pursuing a 'mobile-first, interactive, free-to-play' digital transformation, blending PCH's legacy sweepstakes brand with Modo's dual-currency model. ARB also joined the VGW-led Social Gaming Leadership Alliance and has launched a Prize Protection Program. In California, ARB will shut down Sweeps Coins play while keeping Gold Coins live, consistent with the rest of the SGLA cohort. PitchBook lists ARB at 127 employees with $1.75M raised historically — the PCH deal is a major step-up.",
-        "source": "SBC Americas, Casino.org, Gaming America, PitchBook, June 2025 - April 2026",
-        "businessImpact": "Signals a new M&A playbook: distressed legacy sweepstakes IP (PCH) acquired cheaply by dual-currency operators seeking brand legitimacy and built-in user bases. Watch for similar plays as the industry consolidates under regulatory pressure.",
-        "customer": "ARB Interactive / Modo Casino, Publishers Clearing House"
-      },
-      {
-        "title": "Louisiana Advances Racketeering Bill; Florida, Mississippi, Illinois Escalate",
-        "category": "Regulatory",
-        "impact": "High",
-        "body": "The Louisiana House has passed two bills targeting sweepstakes, including the nation's first measure that would make operating a dual-currency sweepstakes platform a RICO racketeering offense. Florida HB 189 (approved Feb 20) would make sweepstakes operation a third-degree felony; Mississippi SB 2104 cleared Senate Judiciary Feb 3; and the Illinois Gaming Board issued 65 new cease-and-desist orders on Feb 13. Tennessee AG Skrmetti's Dec 29 C&D action to ~40 operators prompted Stake.us, RealPrize, LoneStar, High 5 and Crown Coins to exit or restrict Tennessee play. Minnesota AG Ellison ordered 14 operators to cease by Dec 1, 2025.",
-        "source": "SBC Americas, Casino.org, The Lines, April 2026",
-        "businessImpact": "Enforcement is bifurcating: blue states pursue legislative bans while red states favor AG-led consumer protection and criminal statutes. Louisiana's RICO approach would criminalize executives personally — a potentially existential escalation if enacted.",
-        "customer": "All sweepstakes operators active in LA, FL, MS, IL, TN, MN"
-      },
-      {
-        "title": "Shuffle Scales US Sweepstakes Footprint; New Crypto-Native Entrants Eye Share",
+        "title": "Gibraltar Court Battle Exposes Pulsz/YSI $1bn Revenue and Boardroom War",
         "category": "Key Players",
+        "impact": "High",
+        "body": "A Gibraltar Supreme Court judgment issued April 10 opened a rare window into Pulsz operator Yellow Social Interactive, confirming the platform has generated over $1bn in revenue with its largest shareholder collecting over $233m in dividends. The dispute — involving Lottoland's Nigel Birrel and David von Rosen, Crucial Compliance's Paul Foster, and former poker affiliate CEO Damian Sokol — alleges Sokol diverted YSI business to rival platforms including McLuck, Hello Millions, SportsMillions, PlayFame, Jackpota, and Mega Bonanza (operated through B2Spin/B-Two Operations). YSI data reportedly shows declining Pulsz traffic alongside rising Sokol-affiliated platform traffic. The judge declined to dismiss the claim, describing its potential value as 'likely to be very substantial.'",
+        "source": "NEXT.io (April 2026)",
+        "businessImpact": "Confirms Pulsz/YSI revenue scale (~$1bn) and, critically, confirms the B2Spin parent structure behind McLuck, Jackpota, Mega Bonanza, PlayFame, Hello Millions, and SpinBlitz. Governance instability at two of the top five sweeps parent companies."
+      },
+      {
+        "title": "Indiana and Maine Join California in 2026 Ban Wave; Oklahoma Next",
+        "category": "Regulatory",
+        "impact": "High",
+        "body": "Indiana Governor Mike Braun signed HB 1052 on March 12, banning sweepstakes casinos effective July 1, 2026. Maine's LD 2007 passed the House 87-55 and awaits Gov. Janet Mills' signature; if signed, sweeps become illegal on July 14, 2026. Oklahoma's SB 1589 is advancing and could make Oklahoma the third 2026 ban. This follows California's AB 831 taking effect January 1, 2026, which wiped out roughly 17-20% of industry US revenue. Illinois Gaming Board issued 65 cease-and-desist letters in February forcing Stake.us and others to exit the state.",
+        "source": "BettorsInsider / Sweepsy / Gamesville (April 2026)",
+        "businessImpact": "The addressable US market continues to shrink meaningfully through 2026. Operators concentrated in Texas, Florida, Georgia and Pennsylvania — but Florida HB 189 remains a watch item for Q3 2026."
+      },
+      {
+        "title": "Sweepstakes Model Eyes Canada and Australia Expansion as US Squeezes",
+        "category": "Emerging Markets",
         "impact": "Medium",
-        "body": "Shuffle.us, launched September 2025 by Munyon Canyon Limited (British Virgin Islands), now operates in 30+ US states with 500+ games (some listings cite 15,000+ via aggregated providers including Hacksaw Gaming, Nolimit City, and Evolution). It offers crypto-only funding, a 100 SC ($100) minimum redemption, and sub-1-minute crypto redemptions for 90% of approved requests. Stake.us remains the dominant crypto-native leader with 1,700-3,000+ games, live dealer tables, Stake Originals, and a new iOS app launched in 2025. Both platforms have been excluded from TN, CA, NY, NJ, NV, MI, WA, and a growing list of states. Meanwhile, Vision NL Ltd launched Card Crush (RPG-style mystery box model) on Dec 29, 2025, in California and New York — an early signal of post-AB831 model innovation.",
-        "source": "Stakester, NEXT.io, Sweepsy, Casino.org, Deadspin",
-        "businessImpact": "Crypto-native operators (Stake, Shuffle) are structurally better-positioned to weather payment-processor pressure than fiat-dependent competitors. New entrants like Card Crush testing alternate 'prize' structures will determine whether AB831-style laws can be engineered around.",
-        "customer": "Stake.us, Shuffle.us, Card Crush, Munyon Canyon Ltd"
+        "body": "Industry aggregator Infingame reported in April 2026 that sweepstakes 'momentum' has moved from niche to major focus area, with growing interest in Canada and Australia beyond the US core. Meanwhile VGW has retreated — shutting down Chumba Casino and Global Poker in Canada (final redemption October 23, 2025) amid regulatory pressure — while Crown Coins expanded into all Canadian provinces in 2025. European analyst coverage identifies Germany and the UK as potential grey-market opportunities, though Germany's fragmented Interstate Treaty on Gambling and the UK's strict licensing regime remain significant barriers. No operator has yet publicly claimed the sweeps model falls outside Australian gambling law following the Interactive Gambling Act.",
+        "source": "Eastern European Gaming / Yogonet / Tecpinion (April 2026)",
+        "businessImpact": "Canada is the most credible near-term expansion corridor (Crown Coins proving viable), while Australia and Germany remain speculative. VGW's Canadian exit creates white-space for aggressive operators."
       }
     ],
     "keyPlayers": [
       {
         "name": "Chumba Casino",
-        "parent": "VGW Holdings",
-        "revenue": "~US$6.13B global FY2024-25 (98% US-derived across VGW portfolio)",
-        "trend": "Contracting"
-      },
-      {
-        "name": "Stake.us",
-        "parent": "Sweepsteaks Limited (Cyprus) / Stake",
-        "revenue": "No current data found",
-        "trend": "Stable"
-      },
-      {
-        "name": "High 5 Casino",
-        "parent": "PTT LLC / High 5 Games",
-        "revenue": "No current data found",
-        "trend": "Contracting"
-      },
-      {
-        "name": "McLuck",
-        "parent": "B-Two Operations / B2Services OU (also operates Hello Millions, SpinBlitz, Mega Bonanza, PlayFame, Jackpota)",
+        "parent": "VGW (Virtual Gaming Worlds)",
         "revenue": "No current data found",
         "trend": "Contracting"
       },
       {
         "name": "Pulsz",
-        "parent": "Yellow Social Interactive Limited (Malta/Gibraltar)",
+        "parent": "Yellow Social Interactive (YSI)",
+        "revenue": "~$1bn cumulative revenue per April 2026 Gibraltar court filings",
+        "trend": "Contracting"
+      },
+      {
+        "name": "Stake.us",
+        "parent": "Stake (Easygo)",
         "revenue": "No current data found",
         "trend": "Contracting"
       },
       {
-        "name": "Fortune Coins",
-        "parent": "Blazesoft Ltd (Cyprus/Canada)",
-        "revenue": "No current data found",
-        "trend": "Unknown"
+        "name": "McLuck",
+        "parent": "B-Two Operations / B2Spin",
+        "revenue": "Part of B-Two Operations' $180m+ 2025 revenue",
+        "trend": "Stable"
       },
       {
-        "name": "Modo Casino",
-        "parent": "ARB Interactive (ARB Gaming LLC)",
+        "name": "Crown Coins",
+        "parent": "Sunflower Limited",
+        "revenue": "No current data found",
+        "trend": "Growing"
+      },
+      {
+        "name": "High 5 Casino",
+        "parent": "High 5 Games / High 5 Entertainment LLC",
+        "revenue": "No current data found",
+        "trend": "Contracting"
+      },
+      {
+        "name": "Modo.us",
+        "parent": "ARB Interactive / ARB Gaming LLC",
+        "revenue": "No current data found",
+        "trend": "Stable"
+      },
+      {
+        "name": "Jackpota",
+        "parent": "B-Two Operations / B2Spin",
+        "revenue": "No current data found",
+        "trend": "Stable"
+      },
+      {
+        "name": "Mega Bonanza",
+        "parent": "B-Two Operations / B2Spin",
+        "revenue": "No current data found",
+        "trend": "Stable"
+      },
+      {
+        "name": "Hello Millions",
+        "parent": "B-Two Operations / B2Spin",
+        "revenue": "No current data found",
+        "trend": "Stable"
+      },
+      {
+        "name": "SpinBlitz",
+        "parent": "B-Two Operations / B2Spin",
+        "revenue": "No current data found",
+        "trend": "Stable"
+      },
+      {
+        "name": "PlayFame",
+        "parent": "B-Two Operations / B2Spin",
+        "revenue": "No current data found",
+        "trend": "Stable"
+      },
+      {
+        "name": "Card Crush",
+        "parent": "Independent (post-AB831 hybrid model)",
         "revenue": "No current data found",
         "trend": "Growing"
       },
       {
         "name": "Shuffle.us",
-        "parent": "Munyon Canyon Limited (BVI)",
+        "parent": "Shuffle",
         "revenue": "No current data found",
         "trend": "Growing"
       },
       {
-        "name": "CrownCoins",
-        "parent": "Sunflower",
-        "revenue": "No current data found",
-        "trend": "Stable"
-      },
-      {
-        "name": "Legendz Casino",
-        "parent": "Independent (launched 2024)",
+        "name": "RealPrize",
+        "parent": "A1 Development LLC",
         "revenue": "No current data found",
         "trend": "Growing"
       },
       {
-        "name": "LoneStar Casino",
+        "name": "LoneStar",
         "parent": "Independent",
         "revenue": "No current data found",
-        "trend": "Stable"
+        "trend": "Growing"
       },
       {
-        "name": "Publishers Clearing House",
-        "parent": "ARB Interactive (acquired for $7.1M in 2025)",
+        "name": "Legendz",
+        "parent": "Platinum Panther LTD",
         "revenue": "No current data found",
         "trend": "Growing"
+      },
+      {
+        "name": "Ace",
+        "parent": "B-Two Operations / B2Spin (suspected)",
+        "revenue": "No current data found",
+        "trend": "Unknown"
+      },
+      {
+        "name": "WOW Vegas",
+        "parent": "MW Services Limited",
+        "revenue": "No current data found",
+        "trend": "Contracting"
+      },
+      {
+        "name": "PCH Games",
+        "parent": "ARB Interactive (acquired $7.1m, 2025)",
+        "revenue": "No current data found",
+        "trend": "Unknown"
+      }
+    ],
+    "marketShare": [
+      {
+        "operator": "VGW (Chumba, LuckyLand, Global Poker)",
+        "sharePercent": 22,
+        "basis": "Historically #1 US sweeps operator by revenue; contracting after exits from 11+ states and Canada"
+      },
+      {
+        "operator": "Yellow Social Interactive (Pulsz)",
+        "sharePercent": 15,
+        "basis": "Gibraltar court documents (April 2026) confirm Pulsz revenue approaching $1bn cumulative"
+      },
+      {
+        "operator": "B-Two Operations (McLuck, Jackpota, Mega Bonanza, Hello Millions, PlayFame, SpinBlitz)",
+        "sharePercent": 14,
+        "basis": "Parent revenue over $180m in 2025 per SweepsKings; six-brand portfolio"
+      },
+      {
+        "operator": "Stake.us",
+        "sharePercent": 12,
+        "basis": "Estimated top-3 operator by game library and traffic (3,000+ games); recent exits from IL, TN reduce footprint"
+      },
+      {
+        "operator": "Sunflower (Crown Coins)",
+        "sharePercent": 9,
+        "basis": "Top Trustpilot footprint (183k+ reviews), 4.8 iOS rating, high-profile Crawford/Canelo sponsorship; only operator expanding into Canada"
+      },
+      {
+        "operator": "High 5 Games",
+        "sharePercent": 6,
+        "basis": "EGR Social Operator of Year 2023/2024; 32 US states; reduced footprint after CA/CT exits"
+      },
+      {
+        "operator": "ARB Interactive (Modo.us, PCH)",
+        "sharePercent": 5,
+        "basis": "NASCAR sponsorship visibility; PCH acquisition adds 38m verified user database"
+      },
+      {
+        "operator": "MW Services (WOW Vegas)",
+        "sharePercent": 4,
+        "basis": "Top-10 brand by traffic; Louisiana tax lawsuit exposure"
+      },
+      {
+        "operator": "RealPrize / A1 Development",
+        "sharePercent": 3,
+        "basis": "610+ games, strong VIP program, growing footprint"
+      },
+      {
+        "operator": "Others (Shuffle.us, Legendz, LoneStar, Card Crush, Spree, etc.)",
+        "sharePercent": 10,
+        "basis": "Long tail of 190+ smaller and newer operators; Card Crush uniquely operating in CA/NY post-ban"
+      }
+    ],
+    "emergingMarkets": [
+      {
+        "market": "Canada",
+        "status": "Active",
+        "notes": "Crown Coins (Sunflower) expanded into all Canadian provinces in 2025 and remains active. VGW exited Chumba and Global Poker in Canada in October 2025, opening white space."
+      },
+      {
+        "market": "Australia",
+        "status": "Watching",
+        "notes": "Online casinos prohibited under the Interactive Gambling Act, but industry commentators (Infingame) identify Australia as growing area of interest; no operator has yet publicly tested the sweeps model there."
+      },
+      {
+        "market": "Germany",
+        "status": "Watching",
+        "notes": "Interstate Treaty on Gambling creates fragmented framework; analysts cite strong digital payment infrastructure but licensing restrictions have kept operators away — no public sweeps launches yet."
+      },
+      {
+        "market": "United Kingdom",
+        "status": "Watching",
+        "notes": "UKGC regulations remain the strictest in Europe; sweeps model operates in a grey zone with no major operator having formally launched in the UK market in 2026."
+      },
+      {
+        "market": "Brazil",
+        "status": "Restricted",
+        "notes": "Brazilian betting market shutdown proposed in new bill (April 17, 2026 per NEXT.io); broader regulatory uncertainty keeps sweeps operators on the sidelines."
+      },
+      {
+        "market": "LatAm / Europe (Spain, Italy, Nordics)",
+        "status": "Exploring",
+        "notes": "Tecpinion and OMR Global report steady CAGR growth interest in Nordics and Southern Europe; investment flowing into mobile-first sweeps-adjacent platforms but no landmark launches yet."
       }
     ],
     "watchlist": [
-      "Louisiana RICO sweepstakes bill — first-in-nation criminal racketeering escalation; track gubernatorial action",
-      "Florida HB 189 (3rd-degree felony) progress through Senate ahead of 2026 session close",
-      "Baltimore v. VGW et al. — first motion practice milestones; precedent for other municipalities",
-      "VGW founder Laurence Escalante's reported AU$3.2B minority buyout — IPO signal?",
-      "VGW new-brand rollouts: Just Slots and United Slots launching early 2026",
-      "SGLA 'Social Plus' rebrand traction and 2027 regulatory framework push in MD",
-      "Card Crush (Vision NL Ltd) post-AB831 'mystery box' model — legal viability test case",
-      "Mississippi SB 2104 floor vote; Illinois IGB follow-up enforcement after 65 C&Ds",
-      "Payment processor exposure — AB831 and NY-style laws now target Nuvei and banking partners",
-      "Canada post-VGW exit: void for new entrants, but Quebec remains restricted",
-      "Prediction market adjacency (Kalshi, Horseplay / Reveal Gaming) as alternative model for exiting operators",
-      "Tennessee AG Skrmetti's next enforcement wave after 40-operator C&D compliance"
-    ]
-  },
-  "slots": {
-    "weekOf": "25 April 2026",
-    "summary": "This week's slot release landscape was highlighted by major launches from three priority providers: Pragmatic Play dropped Great Ghosts! (a 40,000x haunted-mansion respin slot) on April 23, while Nolimit City launched the hotly anticipated San Quentin Manhunt on April 21 with a brand-new scatter-pays grid-multiplier engine. BGaming's Grand Buffalo Hold and Win also went live April 21, and Betsoft expanded \"THE Series\" with The Auction House on April 20. Priority providers PG Soft, Playson, 3 Oaks, Hacksaw Gaming, Spribe, Jili, and Fat Panda/Fat Chai did not have confirmed RMG launches in the 7-day window, though Hacksaw's Power of Ten (April 16) sits just outside the strict window.",
-    "releases": [
-      {
-        "title": "Great Ghosts!",
-        "provider": "Pragmatic Play",
-        "launchDate": "23 April 2026",
-        "features": [
-          "Ghost Respin Feature",
-          "Buy Bonus (Triple Ghost Respin)",
-          "Expanding Grid (up to 5x8)"
-        ],
-        "market": ".com",
-        "priority": true
-      },
-      {
-        "title": "San Quentin Manhunt",
-        "provider": "Nolimit City",
-        "launchDate": "21 April 2026",
-        "features": [
-          "Scatter Pays with Cascading Reels",
-          "Enhancer Cells (xWays/xSplit)",
-          "Bonus Buy & Nolimit Booster"
-        ],
-        "market": "Unknown",
-        "priority": true
-      },
-      {
-        "title": "Grand Buffalo Hold and Win",
-        "provider": "BGaming",
-        "launchDate": "21 April 2026",
-        "features": [
-          "Hold & Win (Coin Respins)",
-          "Three Jackpots (Mini/Major/Mega)",
-          "Free Spins with Multiplier Wilds"
-        ],
-        "market": "Unknown",
-        "priority": false
-      },
-      {
-        "title": "The Auction House",
-        "provider": "Betsoft",
-        "launchDate": "20 April 2026",
-        "features": [
-          "Hold & Win",
-          "Free Spins with Retrigger",
-          "Buy Bonus / Random Wilds"
-        ],
-        "market": "Unknown",
-        "priority": false
-      },
-      {
-        "title": "Power of Ten",
-        "provider": "Hacksaw Gaming",
-        "launchDate": "16 April 2026",
-        "features": [
-          "Power Wheels (10x/100x/1,000x/Max)",
-          "FeatureSpins (incl. High-Roller)",
-          "Bonus Buy (Deck of Fortune & Whopping Wheels)"
-        ],
-        "market": "Both",
-        "priority": true
-      }
+      "Louisiana HB 53 — imminent full Senate vote on RICO classification of sweepstakes gaming",
+      "Louisiana HB 883 — Senate Judiciary B Committee review; watch for Gov. Landry veto or signature",
+      "Oklahoma SB 1589 / HB 1589 — advancing through Senate, session ends May 29",
+      "Maine LD 2007 — awaiting Gov. Janet Mills' signature; July 14, 2026 effective date if signed",
+      "Minnesota SF 4474 — fourth committee hearing April 24",
+      "Washington DC Council Bill 260656 — public hearing May 4; would ban sweeps AND legalize iGaming",
+      "Modo.us/ARB Gaming federal lawsuit — first major RG/disability-law test case for the industry",
+      "VGW leadership post-Escalante — Mats Johnson as Acting CEO, watching for strategic pivots",
+      "YSI/Pulsz Gibraltar litigation — next hearing could determine control of a $1bn operator",
+      "Florida HB 189 — ban bill advanced February; watch for legislative revival",
+      "Tennessee HB 1885 — advanced 8-0 through subcommittee; full vote pending",
+      "Mississippi SB 2104 — passed Senate Judiciary Committee",
+      "Crown Coins Canada expansion — only major operator actively growing outside the US",
+      "Pragmatic Play, NetEnt supplier exits — further supplier withdrawals would accelerate industry contraction"
     ]
   }
 }

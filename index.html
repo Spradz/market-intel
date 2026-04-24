@@ -309,14 +309,9 @@
   .tanzanite-frame-wrap {
     position: relative; width: 100%; border-radius: 8px; overflow: hidden;
     border: 1px solid var(--border); background: var(--surface);
-    min-height: 420px;
-  }
-  .tanzanite-frame-wrap iframe {
-    width: 100%; height: 420px; border: none; display: block;
-    background: transparent;
   }
   .tanzanite-fallback {
-    display: none; padding: 40px 20px; text-align: center;
+    display: none; padding: 20px; text-align: center;
   }
   .tanzanite-fallback p { font-size: 13px; color: var(--muted); margin-bottom: 14px; line-height: 1.6; }
   .tanzanite-link {
@@ -650,7 +645,7 @@ function renderEmergingMarkets(markets) {
     <tr>
       <td>${m.market}</td>
       <td><span class="status-badge status-${m.status}">${m.status}</span></td>
-      <td style="color:var(--muted);font-size:12px">${m.notes}</td>
+      <td style="color:#B8B8D0;font-size:12px">${m.notes}</td>
     </tr>`).join('');
   return `
   <div class="emerging-section">
