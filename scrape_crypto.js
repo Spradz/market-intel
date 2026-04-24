@@ -31,7 +31,7 @@ const TODAY = new Date().toLocaleDateString("en-GB", {
 
 const PROMPT = `You are a senior iGaming industry analyst. Today is ${TODAY}.
 
-Search the web for the latest news across the Crypto iGaming market. Cover:
+Search the web for the latest news across the Crypto iGaming market. Also check https://www.tanzanite.xyz/centralized/volume for the latest crypto casino deposit volume data and reference any notable trends or operator movements shown there. Cover:
 - Regulatory developments affecting crypto gambling operators globally
 - Major platform launches, acquisitions, or partnerships
 - Key operator moves (Stake, Rollbit, BC.Game, Roobet, Shuffle, Duelbits, etc.)

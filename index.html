@@ -213,6 +213,79 @@
   .trend-down { color: var(--high);   }
   .trend-flat { color: var(--medium); }
 
+  /* ── PIE CHART ── */
+  .pie-section { margin-top: 20px; }
+  .pie-section .players-title { margin-bottom: 12px; }
+  .pie-wrap { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+  .pie-legend { display: flex; flex-direction: column; gap: 5px; }
+  .pie-legend-item { display: flex; align-items: center; gap: 7px; }
+  .pie-legend-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+  .pie-legend-label { font-size: 12px; color: #C8C8DC; }
+  .pie-legend-pct { font-size: 11px; color: var(--muted); margin-left: 2px; }
+
+  /* ── EMERGING MARKETS ── */
+  .emerging-section { margin-top: 20px; }
+  .emerging-title {
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 10px;
+  }
+  .emerging-table { width: 100%; border-collapse: collapse; }
+  .emerging-table th {
+    font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--muted); text-align: left; padding: 6px 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .emerging-table td {
+    font-size: 12px; padding: 7px 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    color: #E8E8F0; vertical-align: top;
+  }
+  .emerging-table tr:last-child td { border-bottom: none; }
+  .status-badge {
+    font-size: 10px; font-weight: 500; padding: 2px 7px; border-radius: 3px;
+    text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap;
+  }
+  .status-Active     { color: var(--low);    background: rgba(105,240,174,0.12); }
+  .status-Exploring  { color: var(--medium); background: rgba(255,202,40,0.12);  }
+  .status-Restricted { color: var(--high);   background: rgba(255,82,82,0.12);   }
+  .status-Banned     { color: #FF5252;       background: rgba(255,82,82,0.18);   }
+  .status-Watching   { color: #90CAF9;       background: rgba(144,202,249,0.12); }
+
+  /* ── SLOTS TABLE ── */
+  .slots-section { margin-top: 32px; }
+  .slots-head {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 14px; padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .slots-name {
+    font-family: var(--head-font); font-size: 15px; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase; color: #CE93D8;
+  }
+  .slots-count { font-size: 11px; color: var(--muted); }
+  .slots-summary { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 14px; }
+  .slots-table { width: 100%; border-collapse: collapse; }
+  .slots-table th {
+    font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--muted); text-align: left; padding: 6px 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .slots-table td {
+    font-size: 13px; padding: 9px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    color: #E8E8F0; vertical-align: top;
+  }
+  .slots-table tr:last-child td { border-bottom: none; }
+  .slots-table tr.priority-row td:first-child { color: #E1AAFF; font-weight: 500; }
+  .slots-table tr:hover td { background: rgba(255,255,255,0.04); }
+  .feature-tag {
+    display: inline-block; font-size: 10px; padding: 2px 6px; border-radius: 3px;
+    background: rgba(206,147,216,0.22); color: #E1AAFF;
+    margin: 2px 2px 2px 0; white-space: nowrap;
+    border: 1px solid rgba(206,147,216,0.25);
+  }
+  .priority-star { color: #E1AAFF; margin-right: 4px; font-size: 11px; }
+
   /* ── WATCHLIST ── */
   .watchlist { margin-top: 20px; }
   .watchlist-title {
@@ -226,6 +299,34 @@
   }
   .watchlist-item.crypto { border-left: 2px solid var(--crypto-d); }
   .watchlist-item.sweep  { border-left: 2px solid var(--sweep-d);  }
+
+  /* ── TANZANITE EMBED ── */
+  .tanzanite-section { margin-top: 20px; }
+  .tanzanite-title {
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 10px;
+  }
+  .tanzanite-frame-wrap {
+    position: relative; width: 100%; border-radius: 8px; overflow: hidden;
+    border: 1px solid var(--border); background: var(--surface);
+    min-height: 420px;
+  }
+  .tanzanite-frame-wrap iframe {
+    width: 100%; height: 420px; border: none; display: block;
+    background: transparent;
+  }
+  .tanzanite-fallback {
+    display: none; padding: 40px 20px; text-align: center;
+  }
+  .tanzanite-fallback p { font-size: 13px; color: var(--muted); margin-bottom: 14px; line-height: 1.6; }
+  .tanzanite-link {
+    display: inline-block; padding: 9px 20px; border-radius: 6px;
+    background: rgba(0,229,255,0.1); border: 1px solid rgba(0,229,255,0.25);
+    color: var(--crypto); font-size: 13px; font-weight: 500;
+    text-decoration: none; letter-spacing: 0.03em;
+    transition: background 0.2s;
+  }
+  .tanzanite-link:hover { background: rgba(0,229,255,0.18); }
 
   /* ── FOOTER ── */
   .footer {
@@ -413,11 +514,45 @@ const DEMO_DATA = {
       { name: "Legendz", revenue: "No current data found", trend: "Unknown" },
       { name: "Lonestar", revenue: "No current data found", trend: "Unknown" }
     ],
+    marketShare: [
+      { operator: "CrownCoins (Sunflower)", sharePercent: 32 },
+      { operator: "Stake.us", sharePercent: 22 },
+      { operator: "VGW (Chumba/LuckyLand)", sharePercent: 18 },
+      { operator: "Pulsz", sharePercent: 10 },
+      { operator: "High 5 Casino", sharePercent: 6 },
+      { operator: "Shuffle", sharePercent: 5 },
+      { operator: "Other", sharePercent: 7 }
+    ],
+    emergingMarkets: [
+      { market: "Canada", status: "Active", notes: "Several US sweepstakes operators have enabled Canadian-facing play. Ontario's AGCO has not yet moved to restrict the model, making it the most accessible non-US market." },
+      { market: "Germany", status: "Exploring", notes: "Selected operators entering based on legal opinion that sweepstakes model falls outside the State Treaty on Gambling scope. No regulatory confirmation yet — high risk appetite required." },
+      { market: "Australia", status: "Exploring", notes: "Operators entering on legal opinion that dual-currency sweepstakes model is not captured by the Interactive Gambling Act. ACMA has not yet issued guidance specific to the model." },
+      { market: "Brazil", status: "Exploring", notes: "US operators monitoring Brazil's regulated iGaming rollout for sweepstakes model applicability. No formal framework yet." },
+      { market: "UK", status: "Watching", notes: "Grey area — no explicit sweepstakes prohibition but Gambling Commission has flagged dual-currency models for review." }
+    ],
     watchlist: [
       "Michigan AG investigation timeline and VGW legal response",
       "Florida SB 1820 full Senate vote — May 2025",
       "McLuck content procurement RFP following Series B close",
       "Ontario AGCO statement on Canadian sweepstakes operators"
+    ]
+  },
+  slots: {
+    weekOf: "25 April 2026",
+    summary: "Strong week for Pragmatic Play and PG Soft with multiple high-volatility releases. Hacksaw Gaming continues its rapid-fire launch cadence with two new titles. No Limit City drops another xWays mechanic variant.",
+    releases: [
+      { title: "Sweet Bonanza 1000", provider: "Pragmatic Play", launchDate: "22 Apr 2026", features: ["Buy Bonus", "Tumble", "Multipliers"], market: "Unknown", priority: true },
+      { title: "Mahjong Wins Deluxe", provider: "PG Soft", launchDate: "21 Apr 2026", features: ["Cascading Reels", "Free Spins", "Wild Multiplier"], market: "Unknown", priority: true },
+      { title: "Jungle Delight", provider: "Jili", launchDate: "23 Apr 2026", features: ["Hold & Win", "Respin"], market: "Unknown", priority: true },
+      { title: "Diamond Cluster", provider: "3 Oaks Gaming", launchDate: "20 Apr 2026", features: ["Cluster Pays", "Free Spins"], market: "Unknown", priority: true },
+      { title: "Cash Eruption", provider: "Playson", launchDate: "22 Apr 2026", features: ["Buy Bonus", "Expanding Wilds"], market: "Unknown", priority: true },
+      { title: "Stick 'Em", provider: "Hacksaw Gaming", launchDate: "21 Apr 2026", features: ["Sticky Wilds", "High Volatility"], market: "Unknown", priority: true },
+      { title: "Tombstone RIP", provider: "No Limit City", launchDate: "19 Apr 2026", features: ["xWays", "xBomb", "Free Spins"], market: "Unknown", priority: true },
+      { title: "Dragon Slayer", provider: "Fat Panda", launchDate: "23 Apr 2026", features: ["Megaways", "Free Spins"], market: "Unknown", priority: true },
+      { title: "Moon Warriors", provider: "Spribe", launchDate: "20 Apr 2026", features: ["Crash Mechanic", "Multiplier"], market: "Unknown", priority: true },
+      { title: "Lucky Koi", provider: "Fat Chai", launchDate: "22 Apr 2026", features: ["Hold & Win", "Bonus Buy"], market: "Unknown", priority: true },
+      { title: "Neon Rush", provider: "Play'n GO", launchDate: "21 Apr 2026", features: ["Free Spins", "Wilds"], market: "Unknown", priority: false },
+      { title: "Book of Shadows 2", provider: "Nolimit City", launchDate: "20 Apr 2026", features: ["xNudge", "Free Spins"], market: "Unknown", priority: false }
     ]
   }
 };
@@ -472,6 +607,89 @@ function renderWatchlist(items, sector) {
   <div class="watchlist">
     <div class="watchlist-title">⚑ Watch This Week</div>
     ${items.map(w => `<div class="watchlist-item ${sector}">${w}</div>`).join('')}
+  </div>`;
+}
+
+function renderPieChart(marketShare) {
+  if (!marketShare || !marketShare.length) return '';
+  const colors = ['#FFB74D','#00E5FF','#69F0AE','#FF5252','#CE93D8','#80DEEA','#FFCC02','#FF8A65','#A5D6A7','#90CAF9'];
+  const total = marketShare.reduce((s, d) => s + d.sharePercent, 0);
+  let angle = -Math.PI / 2;
+  const cx = 70, cy = 70, r = 62;
+  const slices = marketShare.map((d, i) => {
+    const sweep = (d.sharePercent / total) * 2 * Math.PI;
+    const s = { ...d, start: angle, end: angle + sweep, color: colors[i % colors.length] };
+    angle += sweep;
+    return s;
+  });
+  const paths = slices.map(s => {
+    const x1 = cx + r * Math.cos(s.start), y1 = cy + r * Math.sin(s.start);
+    const x2 = cx + r * Math.cos(s.end),   y2 = cy + r * Math.sin(s.end);
+    const lg = (s.end - s.start) > Math.PI ? 1 : 0;
+    return `<path d="M${cx},${cy} L${x1.toFixed(1)},${y1.toFixed(1)} A${r},${r} 0 ${lg},1 ${x2.toFixed(1)},${y2.toFixed(1)} Z" fill="${s.color}" opacity="0.85"/>`;
+  }).join('');
+  const legend = slices.map(s =>
+    `<div class="pie-legend-item">
+      <div class="pie-legend-dot" style="background:${s.color}"></div>
+      <span class="pie-legend-label">${s.operator}<span class="pie-legend-pct"> ${s.sharePercent}%</span></span>
+    </div>`
+  ).join('');
+  return `
+  <div class="pie-section">
+    <div class="players-title">Market Share Estimate</div>
+    <div class="pie-wrap">
+      <svg width="140" height="140" viewBox="0 0 140 140" style="flex-shrink:0">${paths}</svg>
+      <div class="pie-legend">${legend}</div>
+    </div>
+  </div>`;
+}
+
+function renderEmergingMarkets(markets) {
+  if (!markets || !markets.length) return '';
+  const rows = markets.map(m => `
+    <tr>
+      <td>${m.market}</td>
+      <td><span class="status-badge status-${m.status}">${m.status}</span></td>
+      <td style="color:var(--muted);font-size:12px">${m.notes}</td>
+    </tr>`).join('');
+  return `
+  <div class="emerging-section">
+    <div class="emerging-title">🌐 Emerging Markets</div>
+    <table class="emerging-table">
+      <thead><tr><th>Market</th><th>Status</th><th>Notes</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  </div>`;
+}
+
+function renderSlotsTable(slots) {
+  if (!slots || !slots.releases || !slots.releases.length) return '';
+  const marketStyle = { '.com': '#00E5FF', 'Sweeps': '#FFB74D', 'Both': '#69F0AE', 'Unknown': '#C8C8DC' };
+  const marketBg    = { '.com': 'rgba(0,229,255,0.15)', 'Sweeps': 'rgba(255,183,77,0.18)', 'Both': 'rgba(105,240,174,0.15)', 'Unknown': 'rgba(255,255,255,0.1)' };
+  const rows = slots.releases.map(r => {
+    const features = (r.features || []).map(f => `<span class="feature-tag">${f}</span>`).join('');
+    const star = r.priority ? '<span class="priority-star">★</span>' : '';
+    const mkt = r.market || 'Unknown';
+    const mktTag = `<span class="status-badge" style="color:${marketStyle[mkt]||'#8A8AA8'};background:${marketBg[mkt]||'rgba(255,255,255,0.05)'}">${mkt}</span>`;
+    return `<tr class="${r.priority ? 'priority-row' : ''}">
+      <td>${star}${r.title}</td>
+      <td>${r.provider}</td>
+      <td style="color:#B8B8D0;font-size:12px">${r.launchDate}</td>
+      <td>${mktTag}</td>
+      <td>${features || '<span style="color:var(--muted)">—</span>'}</td>
+    </tr>`;
+  }).join('');
+  return `
+  <div class="slots-section">
+    <div class="slots-head">
+      <div class="slots-name">🎰 Competitor Slot Releases</div>
+      <div class="slots-count">${slots.releases.length} releases · week of ${slots.weekOf || '—'}</div>
+    </div>
+    ${slots.summary ? `<div class="slots-summary">${slots.summary}</div>` : ''}
+    <table class="slots-table">
+      <thead><tr><th>Game</th><th>Provider</th><th>Launch Date</th><th>Market</th><th>Key Features</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
   </div>`;
 }
 
@@ -533,6 +751,21 @@ function render(data) {
       </div>
       ${cryptoStories}
       ${renderWatchlist(c.watchlist, 'crypto')}
+      <div class="tanzanite-section">
+        <div class="tanzanite-title">📊 Crypto Casino Deposit Volume — Tanzanite</div>
+        <div class="tanzanite-frame-wrap" id="tanzaniteWrap">
+          <iframe
+            src="https://www.tanzanite.xyz/centralized/volume"
+            title="Tanzanite Crypto Casino Deposit Volume"
+            onload="document.getElementById('tanzaniteFallback').style.display='none'"
+            onerror="document.getElementById('tanzaniteWrap').querySelector('iframe').style.display='none'; document.getElementById('tanzaniteFallback').style.display='block'"
+          ></iframe>
+          <div class="tanzanite-fallback" id="tanzaniteFallback">
+            <p>Live embed unavailable — the Tanzanite site does not allow external embedding.<br>View the full deposit volume chart directly on their site.</p>
+            <a class="tanzanite-link" href="https://www.tanzanite.xyz/centralized/volume" target="_blank" rel="noopener">Open Tanzanite ↗</a>
+          </div>
+        </div>
+      </div>
     </div>
     <div>
       <div class="sector-head">
@@ -541,9 +774,12 @@ function render(data) {
       </div>
       ${sweepStories}
       ${renderPlayers(s.keyPlayers)}
+      ${renderPieChart(s.marketShare)}
+      ${renderEmergingMarkets(s.emergingMarkets)}
       ${renderWatchlist(s.watchlist, 'sweep')}
     </div>
   `;
+  document.getElementById('columns').insertAdjacentHTML('afterend', renderSlotsTable(data.slots));
 }
 
 function toggleCard(el) {

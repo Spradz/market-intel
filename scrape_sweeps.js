@@ -71,7 +71,21 @@ KEY PLAYERS OUTPUT RULES:
 - Where the brand name differs from the parent/holding company, set name = brand and parent = holding company
 - Only use revenue figures sourced from content published in the last 90 days — if no recent data exists set revenue to "No current data found" and trend to "Unknown"
 
-After researching, call the submit_intelligence function with 4-6 stories and all relevant key players.`;
+MARKET SHARE — when estimating operator share:
+- CrownCoins (Sunflower) and Stake.us are understood to be among the largest operators — prioritise finding current data on both
+- Do not omit either from the marketShare array even if exact figures are unavailable — use best available estimates with a clear basis note
+- Sort by estimated share, largest first
+
+EMERGING MARKETS — search specifically for:
+- Sweepstakes or social casino activity in countries outside the US and Canada
+- Operators entering Germany or Australia based on legal opinion that the sweepstakes model falls outside local gambling law — search for this explicitly
+- Any jurisdiction exploring, regulating, or restricting the sweepstakes model
+- Operators entering or exiting non-US markets
+- Regulatory signals from Australia, Brazil, UK, EU, Latin America, Asia-Pacific
+
+IMPORTANT — data consistency rule: every country or region mentioned in any story that has category "Emerging Markets" MUST also appear as an entry in the emergingMarkets array. Do not write an emerging markets story about a country and then omit it from the emergingMarkets table. Canada must always be included if there is any active story about it.
+
+After researching, call the submit_intelligence function with 4-6 stories, all relevant key players, a market share estimate, and any emerging market developments.`;
 
 const SUBMIT_TOOL = {
   name: "submit_intelligence",
@@ -108,6 +122,32 @@ const SUBMIT_TOOL = {
             trend:   { type: "string", enum: ["Growing","Stable","Contracting","Unknown"] }
           },
           required: ["name","revenue","trend"]
+        }
+      },
+      marketShare: {
+        type: "array",
+        description: "Estimated US sweepstakes market share by operator — percentages should sum to ~100",
+        items: {
+          type: "object",
+          properties: {
+            operator: { type: "string" },
+            sharePercent: { type: "number", description: "Estimated % of total market" },
+            basis: { type: "string", description: "Brief note on what the estimate is based on" }
+          },
+          required: ["operator", "sharePercent"]
+        }
+      },
+      emergingMarkets: {
+        type: "array",
+        description: "Sweepstakes activity or regulatory developments in markets outside the US and Canada",
+        items: {
+          type: "object",
+          properties: {
+            market:  { type: "string", description: "Country or region" },
+            status:  { type: "string", enum: ["Active", "Exploring", "Restricted", "Banned", "Watching"] },
+            notes:   { type: "string", description: "1-2 sentence summary of what is happening" }
+          },
+          required: ["market", "status", "notes"]
         }
       },
       watchlist: { type: "array", items: { type: "string" } }
