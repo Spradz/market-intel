@@ -107,6 +107,8 @@ function writeBrief(cryptoData) {
   fs.writeFileSync(BRIEF_FILE, JSON.stringify({
     generatedAt: new Date().toISOString(),
     crypto: cryptoData,
+    sweepstakes: existing.sweepstakes || null,
+    slots: existing.slots || null,
     sweepstakes: existing.sweepstakes || null
   }, null, 2));
   console.log(`[${new Date().toISOString()}] ✅  Brief written to ${BRIEF_FILE}`);

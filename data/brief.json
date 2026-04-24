@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-24T03:00:19.845Z",
+  "generatedAt": "2026-04-24T04:10:37.654Z",
   "crypto": {
     "headline": "Curaçao Ends Master License Era, Squeezes Crypto Casinos",
     "summary": "April 2026 marks a pivotal regulatory inflection point for crypto iGaming: Curaçao has completed its transition away from the master license system, forcing hundreds of crypto-native operators into direct CGA supervision and heavy AML obligations. Meanwhile, Tanzanite data shows Stake extending its structural dominance with Rainbet as the fastest-growing challenger, even as upstart Spartans.com claims to be outpacing Rollbit and BC.Game on raw technical performance. B2B aggregator activity (NuxGame) and the just-concluded BiS SiGMA South America round out a fast-moving month.",
@@ -339,5 +339,151 @@
       "Crown Coins Canada expansion — only major operator actively growing outside the US",
       "Pragmatic Play, NetEnt supplier exits — further supplier withdrawals would accelerate industry contraction"
     ]
+  },
+  "slots": {
+    "releases": [
+      {
+        "title": "Great Ghosts!",
+        "provider": "Pragmatic Play",
+        "launchDate": "23 April 2026",
+        "features": [
+          "Wild Multipliers",
+          "Six Bonus Game Options",
+          "Super Free Spins"
+        ],
+        "market": "Unknown",
+        "priority": true
+      },
+      {
+        "title": "Gates of Olympus Roulette",
+        "provider": "Pragmatic Play",
+        "launchDate": "22 April 2026",
+        "features": [
+          "Live Casino Slot IP Extension",
+          "Random Multipliers",
+          "Lucky and Bonus Numbers"
+        ],
+        "market": "Unknown",
+        "priority": true
+      },
+      {
+        "title": "San Quentin Manhunt",
+        "provider": "Nolimit City",
+        "launchDate": "21 April 2026",
+        "features": [
+          "Scatter Pays with Cascading Wins",
+          "Enhancer Cells (xWays, xSplit, Yard Dealer, Cell Search)",
+          "Sewer Escape Spins & Manhunt Spins Bonus"
+        ],
+        "market": "Unknown",
+        "priority": true
+      },
+      {
+        "title": "Must Drop JACKPOT 4 Pots of Egypt",
+        "provider": "3 Oaks Gaming",
+        "launchDate": "23 April 2026",
+        "features": [
+          "Hold & Win",
+          "Must Drop Progressive Jackpot",
+          "4 Pots Format (Boost, Collect, Multi, Mega)"
+        ],
+        "market": "Unknown",
+        "priority": true
+      },
+      {
+        "title": "Rhino Coins: Hit the Bonus",
+        "provider": "Playson",
+        "launchDate": "20 April 2026",
+        "features": [
+          "Hold & Win",
+          "Four Bonus Game Levels",
+          "Six Buy Bonus Options / Five Jackpot Tiers"
+        ],
+        "market": "Unknown",
+        "priority": true
+      },
+      {
+        "title": "Avalanche",
+        "provider": "Good Times Studios (via Hacksaw OpenRGS)",
+        "launchDate": "22 April 2026",
+        "features": [
+          "Cascades",
+          "Multipliers",
+          "Max Win Wheel / Free Spins Bonus"
+        ],
+        "market": "Unknown",
+        "priority": true
+      },
+      {
+        "title": "Grand Buffalo Hold and Win",
+        "provider": "BGaming",
+        "launchDate": "21 April 2026",
+        "features": [
+          "Hold & Win",
+          "96.70% RTP",
+          "Big Jackpot Potential"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "Legion Gold Reckoning",
+        "provider": "Play'n GO",
+        "launchDate": "23 April 2026",
+        "features": [
+          "Free Spins",
+          "Gold Theme"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "Huff N' Puff CollectR",
+        "provider": "ELK Studios",
+        "launchDate": "23 April 2026",
+        "features": [
+          "Collector Mechanic",
+          "Free Spins",
+          "Multipliers"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "Labour Day Rush",
+        "provider": "Onlyplay",
+        "launchDate": "23 April 2026",
+        "features": [
+          "Seasonal / Themed",
+          "Free Spins"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "Bling Blitz Diamond Drop",
+        "provider": "Trusty Gaming",
+        "launchDate": "23 April 2026",
+        "features": [
+          "Buy Bonus",
+          "Diamond Theme"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "The Lost Book of Mummy's Curse",
+        "provider": "Unknown Provider",
+        "launchDate": "22 April 2026",
+        "features": [
+          "Buy Bonus",
+          "Egyptian Theme"
+        ],
+        "market": "Unknown",
+        "priority": false
+      }
+    ],
+    "summary": "This week (17–24 April 2026) was heavy on franchise extensions and jackpot/Hold & Win innovations. Priority providers dominated headlines: Nolimit City dropped the extreme-volatility San Quentin Manhunt (46,532x max win, new Scatter Pays engine with Enhancer Cells), Pragmatic Play launched Great Ghosts! and extended its slot IP into live casino with Gates of Olympus Roulette, 3 Oaks Gaming added Must Drop JACKPOT 4 Pots of Egypt, and Playson debuted Rhino Coins: Hit the Bonus with six Buy Bonus options. Market deployment was largely unspecified across releases — no explicit .com vs Sweeps confirmations were found in source announcements. Notable absences this week: no new releases identified from PG Soft (last launch Perfect Strike on 13 April), Jili/Tada, Fat Panda, Spribe, or Fat Chai within the 7-day window.",
+    "weekOf": "24 April 2026"
   }
 }
