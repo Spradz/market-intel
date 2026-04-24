@@ -608,20 +608,26 @@ function renderWatchlist(items, sector) {
 function renderPieChart(marketShare) {
   if (!marketShare || !marketShare.length) return '';
   const colors = ['#FFB74D','#00E5FF','#69F0AE','#FF5252','#CE93D8','#80DEEA','#FFCC02','#FF8A65','#A5D6A7','#90CAF9'];
-  const total = marketShare.reduce((s, d) => s + d.sharePercent, 0);
+  const total = marketShare.reduce((sum, d) => sum + d.sharePercent, 0);
   let angle = -Math.PI / 2;
-  const cx = 70, cy = 70, r = 62;
+  const cx = 90, cy = 90, r = 78;
   const slices = marketShare.map((d, i) => {
     const sweep = (d.sharePercent / total) * 2 * Math.PI;
-    const s = { ...d, start: angle, end: angle + sweep, color: colors[i % colors.length] };
+    const mid = angle + sweep / 2;
+    const sl = { ...d, start: angle, end: angle + sweep, mid, color: colors[i % colors.length] };
     angle += sweep;
-    return s;
+    return sl;
   });
   const paths = slices.map(s => {
     const x1 = cx + r * Math.cos(s.start), y1 = cy + r * Math.sin(s.start);
     const x2 = cx + r * Math.cos(s.end),   y2 = cy + r * Math.sin(s.end);
     const lg = (s.end - s.start) > Math.PI ? 1 : 0;
     return `<path d="M${cx},${cy} L${x1.toFixed(1)},${y1.toFixed(1)} A${r},${r} 0 ${lg},1 ${x2.toFixed(1)},${y2.toFixed(1)} Z" fill="${s.color}" opacity="0.85"/>`;
+  }).join('');
+  const labels = slices.filter(s => s.sharePercent >= 5).map(s => {
+    const lx = cx + (r * 0.65) * Math.cos(s.mid);
+    const ly = cy + (r * 0.65) * Math.sin(s.mid);
+    return `<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="middle" dominant-baseline="middle" fill="#0C0F1A" font-size="11" font-weight="700" font-family="Outfit,sans-serif">${s.sharePercent}%</text>`;
   }).join('');
   const legend = slices.map(s =>
     `<div class="pie-legend-item">
@@ -631,9 +637,9 @@ function renderPieChart(marketShare) {
   ).join('');
   return `
   <div class="pie-section">
-    <div class="players-title">Market Share Estimate</div>
+    <div class="players-title">Market Share Estimate <span style="font-size:10px;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">— AI-estimated from web sources, not audited figures</span></div>
     <div class="pie-wrap">
-      <svg width="140" height="140" viewBox="0 0 140 140" style="flex-shrink:0">${paths}</svg>
+      <svg width="180" height="180" viewBox="0 0 180 180" style="flex-shrink:0">${paths}${labels}</svg>
       <div class="pie-legend">${legend}</div>
     </div>
   </div>`;

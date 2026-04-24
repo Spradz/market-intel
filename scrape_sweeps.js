@@ -33,6 +33,7 @@ const PROMPT = `You are a senior gambling and social gaming analyst specialising
 
 Search the web for the latest intelligence on the US sweepstakes casino market and any other emerging sweepstakes markets globally. Priority sources to check first:
 - https://sweepchecker.com — operator tracking, ratings, and status changes
+- https://next.io/win/us/ — latest US sweepstakes operator news, player stats, and growth reports (e.g. Stake.us publishes monthly player highlights here)
 - https://ekgamingllc.com — Eilers & Krejcik Gaming research; also search for any news articles citing EKG data or reports on sweepstakes market size and operator revenue
 - https://slotslaunch.com — for any sweepstakes-specific game launches
 - General news search for each operator
@@ -74,7 +75,8 @@ KEY PLAYERS OUTPUT RULES:
 - Always include Stake.us and Shuffle regardless of news volume
 - Where the brand name differs from the parent/holding company, set name = brand and parent = holding company
 - Only use revenue figures sourced from content published in the last 30 days — if no recent data exists set revenue to "No current data found" and trend to "Unknown"
-- Only assign trend as Growing, Stable, or Contracting when you have a specific source to back it up (e.g. funding news, revenue filing, market exit) — otherwise use "Unknown"
+- Only assign trend as Growing, Stable, or Contracting when you have a specific source to back it up (e.g. funding news, revenue filing, player growth stats) — otherwise use "Unknown"
+- Do not infer Contracting purely from state-level exits — an operator can exit certain states while growing overall revenue and player base. Look for actual revenue or player growth data before assigning a trend.
 
 MARKET SHARE — when estimating operator share:
 - CrownCoins (Sunflower) and Stake.us are understood to be among the largest operators — prioritise finding current data on both
