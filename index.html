@@ -754,15 +754,9 @@ function render(data) {
       <div class="tanzanite-section">
         <div class="tanzanite-title">📊 Crypto Casino Deposit Volume — Tanzanite</div>
         <div class="tanzanite-frame-wrap" id="tanzaniteWrap">
-          <iframe
-            src="https://www.tanzanite.xyz/centralized/volume"
-            title="Tanzanite Crypto Casino Deposit Volume"
-            onload="document.getElementById('tanzaniteFallback').style.display='none'"
-            onerror="document.getElementById('tanzaniteWrap').querySelector('iframe').style.display='none'; document.getElementById('tanzaniteFallback').style.display='block'"
-          ></iframe>
-          <div class="tanzanite-fallback" id="tanzaniteFallback">
-            <p>Live embed unavailable — the Tanzanite site does not allow external embedding.<br>View the full deposit volume chart directly on their site.</p>
-            <a class="tanzanite-link" href="https://www.tanzanite.xyz/centralized/volume" target="_blank" rel="noopener">Open Tanzanite ↗</a>
+          <div class="tanzanite-fallback" id="tanzaniteFallback" style="display:block">
+            <p>Tanzanite blocks external embedding.<br>View the live crypto casino deposit volume chart directly on their site.</p>
+            <a class="tanzanite-link" href="https://www.tanzanite.xyz/centralized/volume" target="_blank" rel="noopener">Open Tanzanite Deposit Volume ↗</a>
           </div>
         </div>
       </div>
