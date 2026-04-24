@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-23T15:01:39.704Z",
+  "generatedAt": "2026-04-24T02:35:08.485Z",
   "crypto": {
     "headline": "Curaçao License Reform Ends Master License Era for Crypto Operators",
     "summary": "April 2026 is a watershed moment for crypto iGaming as regulatory frameworks bite simultaneously: Curaçao's direct-licensing transition, MiCA's full enforcement phase, and rising Telegram-bot enforcement are reshaping operator economics. Meanwhile, stablecoins have crossed 50% of all crypto-casino wagers as Layer-2 networks Arbitrum and Base overtake Ethereum mainnet, and Rollbit has segmented its EU product to comply. Operator-side, Stake rolled out a new PWA-based mobile app and continues record betting volumes heading into the BiS SiGMA/SiGMA Malta event cycle.",
@@ -216,6 +216,72 @@
       "Canada post-VGW exit: void for new entrants, but Quebec remains restricted",
       "Prediction market adjacency (Kalshi, Horseplay / Reveal Gaming) as alternative model for exiting operators",
       "Tennessee AG Skrmetti's next enforcement wave after 40-operator C&D compliance"
+    ]
+  },
+  "slots": {
+    "weekOf": "25 April 2026",
+    "summary": "This week's slot release landscape was highlighted by major launches from three priority providers: Pragmatic Play dropped Great Ghosts! (a 40,000x haunted-mansion respin slot) on April 23, while Nolimit City launched the hotly anticipated San Quentin Manhunt on April 21 with a brand-new scatter-pays grid-multiplier engine. BGaming's Grand Buffalo Hold and Win also went live April 21, and Betsoft expanded \"THE Series\" with The Auction House on April 20. Priority providers PG Soft, Playson, 3 Oaks, Hacksaw Gaming, Spribe, Jili, and Fat Panda/Fat Chai did not have confirmed RMG launches in the 7-day window, though Hacksaw's Power of Ten (April 16) sits just outside the strict window.",
+    "releases": [
+      {
+        "title": "Great Ghosts!",
+        "provider": "Pragmatic Play",
+        "launchDate": "23 April 2026",
+        "features": [
+          "Ghost Respin Feature",
+          "Buy Bonus (Triple Ghost Respin)",
+          "Expanding Grid (up to 5x8)"
+        ],
+        "market": ".com",
+        "priority": true
+      },
+      {
+        "title": "San Quentin Manhunt",
+        "provider": "Nolimit City",
+        "launchDate": "21 April 2026",
+        "features": [
+          "Scatter Pays with Cascading Reels",
+          "Enhancer Cells (xWays/xSplit)",
+          "Bonus Buy & Nolimit Booster"
+        ],
+        "market": "Unknown",
+        "priority": true
+      },
+      {
+        "title": "Grand Buffalo Hold and Win",
+        "provider": "BGaming",
+        "launchDate": "21 April 2026",
+        "features": [
+          "Hold & Win (Coin Respins)",
+          "Three Jackpots (Mini/Major/Mega)",
+          "Free Spins with Multiplier Wilds"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "The Auction House",
+        "provider": "Betsoft",
+        "launchDate": "20 April 2026",
+        "features": [
+          "Hold & Win",
+          "Free Spins with Retrigger",
+          "Buy Bonus / Random Wilds"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "Power of Ten",
+        "provider": "Hacksaw Gaming",
+        "launchDate": "16 April 2026",
+        "features": [
+          "Power Wheels (10x/100x/1,000x/Max)",
+          "FeatureSpins (incl. High-Roller)",
+          "Bonus Buy (Deck of Fortune & Whopping Wheels)"
+        ],
+        "market": "Both",
+        "priority": true
+      }
     ]
   }
 }

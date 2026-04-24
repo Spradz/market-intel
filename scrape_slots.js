@@ -25,7 +25,7 @@ const SLACK_WEBHOOK = process.env.SLACK_WEBHOOK_SLOTS;
 const SLACK_CHANNEL = process.env.SLACK_SLOTS_CHANNEL || "#slots-intel";
 
 if (!ANTHROPIC_KEY) { console.error("❌  ANTHROPIC_API_KEY not set"); process.exit(1); }
-if (!SLACK_WEBHOOK) { console.error("❌  SLACK_WEBHOOK_SLOTS not set"); process.exit(1); }
+if (!SLACK_WEBHOOK) { console.warn("⚠️   SLACK_WEBHOOK_SLOTS not set — skipping Slack post"); }
 
 const TODAY = new Date().toLocaleDateString("en-GB", {
   weekday: "long", year: "numeric", month: "long", day: "numeric"
@@ -180,7 +180,7 @@ async function postToSlack(data) {
   try {
     const data = await fetchSlotsIntel();
     writeBrief(data);
-    await postToSlack(data);
+    if (SLACK_WEBHOOK) await postToSlack(data);
     console.log(`[${new Date().toISOString()}] ✅  Slots job complete`);
   } catch (err) {
     console.error(`[${new Date().toISOString()}] ❌  Error:`, err.message);
