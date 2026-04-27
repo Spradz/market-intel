@@ -46,15 +46,6 @@
     background-size: 48px 48px;
   }
 
-  /* ── SCAN LINE ANIMATION ── */
-  body::after {
-    content: '';
-    position: fixed; top: -100%; left: 0; right: 0;
-    height: 200px; z-index: 0; pointer-events: none;
-    background: linear-gradient(to bottom, transparent, rgba(0,229,255,0.025) 50%, transparent);
-    animation: scan 8s linear infinite;
-  }
-  @keyframes scan { to { top: 120%; } }
 
   /* ── LAYOUT ── */
   .shell { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding: 32px 24px 64px; }
