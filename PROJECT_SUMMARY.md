@@ -3,7 +3,7 @@
 ## Overview
 An automated daily market intelligence system for an iGaming slot game studio. Tracks crypto iGaming, sweepstakes casino markets, and competitor slot releases. Delivers a live web dashboard and Slack notifications every morning at 7am AWST.
 
-**Live URL:** https://Spradz.github.io/market-intel/
+**Live URL:** https://our-intel.com
 **Repository:** https://github.com/Spradz/market-intel
 **Local files:** `~/projects/market-intel/dashboard/`
 
@@ -152,7 +152,7 @@ Two cards (Crypto / Sweepstakes) showing headline and 2-3 sentence summary for t
 ## Pending / Future Work
 
 - [ ] **Font contrast** — body text (#E8E8EE on #0C0F1A) could be brighter for readability
-- [ ] **Custom domain** — resolves corporate firewall false-positive blocks on github.io; requires buying a domain and adding CNAME record pointing to Spradz.github.io
+- [x] **Custom domain** — our-intel.com live on HTTPS via Cloudflare DNS + GitHub Pages
 - [ ] **Trend column validation** — currently inference-based; will improve as next.io + sweepchecker data flows through
 - [ ] **Pie chart data accuracy** — AI-estimated; will improve as EKG citations and operator filings surface
 - [ ] **Cloud scheduler** — move cron to GitHub Actions so scraper runs even if Mac is offline

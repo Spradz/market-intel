@@ -779,7 +779,7 @@ function toggleCard(el) {
 
 async function load() {
   try {
-    const res = await fetch(DATA_PATH);
+    const res = await fetch(DATA_PATH + '?v=' + Date.now());
     if (!res.ok) throw new Error('no file');
     const data = await res.json();
     render(data);
