@@ -1,69 +1,67 @@
 {
-  "generatedAt": "2026-04-26T15:30:42.973Z",
+  "generatedAt": "2026-04-28T01:47:53.965Z",
   "crypto": {
-    "headline": "Stablecoins Cross 50% of Crypto Casino Wagers as Layer-2s Take Over",
-    "summary": "April 2026 marks a structural inflection in crypto iGaming: stablecoins now drive the majority of wagers, MiCA enforcement is reshaping EU operator stacks, and the leaderboard is fragmenting as Spartans surges past legacy crypto-natives. Tanzanite's tracked deposit data shows Stake still dominant at $349m for March (645K deposits, +21% MoM), with Rainbet the fastest grower (+46%) while Roobet softens (-19%). Regulatory pressure is intensifying around prediction markets in the US and Telegram-based gambling globally.",
+    "headline": "NY AG Sues Coinbase, Gemini Over Prediction Markets",
+    "summary": "Regulatory pressure on crypto-adjacent gambling intensified this week as New York's Attorney General sued Coinbase and Gemini over prediction markets, while Crypto.com paired with NYSE-listed High Roller Technologies to push CFTC-regulated event contracts. Meanwhile, Tanzanite's March deposit data shows Stake extending its lead with $349M and Rainbet posting the fastest growth (+46%), even as Roobet slipped 19%. Telegram-based gambling bots emerged as the regulator's new headache, with monthly volumes now estimated above $2B.",
     "stories": [
       {
-        "title": "Stablecoins Cross 50% of Crypto Casino Wagers as Arbitrum and Base Take Over",
-        "category": "Market Trend",
-        "impact": "High",
-        "body": "April 2026 aggregated data from Chainalysis and Messari shows stablecoins have crossed 50% of all crypto-denominated wagers on licensed and semi-licensed crypto casinos, with Layer-2 networks Arbitrum, Base, Mantle, and Optimism handling the bulk of that volume. The shift is being driven by both volatility avoidance (USDT/USDC keep a $100 buy-in worth $100 three hours later) and regulatory pressure: MiCA effectively forces stablecoin segregation on EU-facing licensees, while US GENIUS Act guidance gave operators long-awaited legal clarity. Stake, BC.Game, and Rollbit have all expanded Arbitrum integrations in the past six months, while newer entrants like Shuffle and Metawin moved to Base-first stacks. SoftSwiss's crypto gambling index reports crypto-first casinos operating primarily in stablecoins saw 32% higher average player lifetime value in Q1 2026 than peers running on volatile tokens.",
-        "businessImpact": "Operators still defaulting to BTC/ETH-denominated bankrolls are now structurally disadvantaged on retention metrics. Aggregators and payment partners with native L2 + stablecoin rails (Base, Arbitrum) are positioned to capture migration; those without face a forced re-architecture in 2026.",
-        "source": "BrightSideOfNews / SoftSwiss crypto gambling index (April 2026)"
-      },
-      {
-        "title": "Tanzanite March Data: Stake Hits $349m, Rainbet Up 46%, Roobet Drops 19%",
-        "category": "Market Trend",
-        "impact": "High",
-        "body": "Tanzanite's March 2026 dataset, covering 23 casinos across 10 chains and 16 currencies, confirms Stake as the runaway leader with $349m in deposit volume (+2% MoM) and 645K deposits (+21%). Rainbet was the fastest grower among leading operators, deposit volume climbing 46% to $75.7m and deposits up 24% to 224K, placing it third overall on a $338 average deposit that suggests traffic-led — not whale-led — growth. Roobet ranked second at $91.4m but fell 19% MoM, with deposit count up only 5% and average deposit at $724 indicating softer spend per user. Shuffle posted $44.5m (+4%, deposits +16% to 128K), and Duel rose 28% to $29.1m on a high $1,010 average deposit. Stake's March result coincides with a regulated-Europe pivot: it secured a Denmark license, set up an HQ at Copenhagen's Parken Stadium, and announced a partnership with esports org Astralis after weaker performance in Brazil.",
-        "businessImpact": "The operator stack is bifurcating: Stake's deposit-count growth signals share gains in regulated markets, while Roobet's softening points to creator-driven liquidity rotating elsewhere. Rainbet's traffic-led surge makes it the clearest M&A or partnership target in the mid-tier. Stake's Denmark move telegraphs that even crypto-native leaders now see regulated EU as the long-game battleground.",
-        "source": "Tanzanite.xyz via Tribuna.com (March 2026 data, published April 2026)"
-      },
-      {
-        "title": "New York AG Sues Coinbase and Gemini Over Prediction Markets as Gambling",
+        "title": "New York AG Sues Coinbase and Gemini, Calling Prediction Markets Illegal Gambling",
         "category": "Enforcement",
         "impact": "High",
-        "body": "NY Attorney General Letitia James sued Coinbase and Gemini this past week, alleging their prediction markets violate state gambling laws, fall within the state's gambling definition, and run afoul of tax obligations and under-21 restrictions. Coinbase chief legal officer Paul Grewal countered that prediction markets are federally regulated national exchanges under the CFTC. The suit follows Kalshi's prior litigation against New York and the CFTC's own lawsuits earlier this month against Arizona, Connecticut, and Illinois over state-level prediction market restrictions. The industry has gained an ally in newly confirmed CFTC chair Michael Selig, who argues exclusive federal jurisdiction. Separately, Singapore's MAS issued a March 2026 advisory warning licensed payment providers against processing transactions for Telegram-based gambling, France's ANJ proposed bot-blocking powers, and the Philippines' PAGCOR shut down 35 Telegram-based gambling rings in Q1 2026 — many run by former POGO affiliates.",
-        "businessImpact": "The CFTC-vs-states standoff will define whether prediction markets remain a parallel rail to crypto sportsbooks or get pulled inside state gambling perimeters. Operators with prediction-market roadmaps need contingency plans for state-by-state blocks. The global Telegram/TON crackdown also signals payment-rail enforcement is the new frontline, putting pressure on fiat on-ramps that touch crypto gambling flows.",
-        "source": "The Hill, BrightSideOfNews (April 2026)"
+        "body": "<cite index=\"31-8,31-9,31-10,31-11\">New York Attorney General Letitia James sued Coinbase and Gemini, accusing the two crypto companies of violating state gambling laws with their prediction markets. James argues the platforms fall within the state's definition of gambling and are therefore running afoul of state tax obligations and gambling restrictions on New Yorkers under 21.</cite> <cite index=\"31-14\">Coinbase's chief legal officer Paul Grewal countered on X that prediction markets are federally regulated national exchanges under the CFTC.</cite> The action is part of a wider multi-state war: <cite index=\"31-7\">earlier this month, the CFTC sued Arizona, Connecticut and Illinois over their efforts to place restrictions on prediction markets within their borders</cite>, and <cite index=\"74-2\">a separate federal lawsuit by Kalshi against Montana was filed on April 12, extending the multi-state legal battle.</cite>",
+        "businessImpact": "Prediction markets are increasingly being treated as a competitive substitute for crypto sportsbooks. The outcome of the federal-vs-state preemption fight will determine whether CFTC-licensed venues can effectively offer sports and entertainment wagering nationwide — a direct threat to offshore crypto sportsbook GGR if resolved in the industry's favor, and a regulatory chilling effect on iGaming-adjacent token products if not.",
+        "source": "The Hill / news.bitcoin.com"
       },
       {
-        "title": "Spartans.com Posts $40M GGR Beta, Climbs to #14 Globally as Rollbit and BC.Game Cede Speed Edge",
+        "title": "Crypto.com Partners With NYSE-Listed High Roller for US Prediction Markets",
+        "category": "M&A",
+        "impact": "High",
+        "body": "<cite index=\"74-11,74-12,74-13\">Crypto.com signed a definitive agreement with NYSE-listed online casino operator High Roller Technologies to offer prediction market contracts in the United States. The deal covers prediction markets across finance, sports, and entertainment, with event contracts from Crypto.com Derivatives North America (a CFTC-registered DCM) distributed through High Roller's customer-facing platform.</cite> <cite index=\"74-5,74-6,74-7\">The agreement marks High Roller's first move beyond traditional online casino operations; the Las Vegas-based company operates the High Roller and Fruta casino brands, offering more than 6,000 games from over 90 providers, and trades on NYSE under ticker ROLR.</cite> <cite index=\"71-10\">High Roller shares more than doubled intraday, surging from $5.09 to a session high of $11.74 on volume of 55.4 million shares — more than 360 times the stock's average daily trading volume.</cite>",
+        "businessImpact": "A licensed US online casino operator pivoting into CFTC-regulated event contracts validates the prediction-market route as a legitimate way for gambling brands to access US customers without state-by-state iGaming licenses. Expect more crypto exchanges to bolt on regulated casino/sportsbook brands, and more US-listed iGaming names to chase the prediction-market premium.",
+        "source": "news.bitcoin.com / KuCoin"
+      },
+      {
+        "title": "Tanzanite March Data: Stake Extends Lead at $349M, Rainbet Surges 46%, Roobet Slips",
         "category": "Market Trend",
-        "impact": "Medium",
-        "body": "Newcomer Spartans.com processed $100m in total deposits during its beta phase and generated $40m in GGR, climbing to 14th globally and positioning itself as the fastest-withdrawal crypto casino through proprietary 'Degen Zone' tech tuned for high-velocity wagering and instant payouts. Industry analysis from mid-April flags Rollbit's multifaceted ecosystem — sportsbook, NFT loans, RLB token-burn — as introducing latency during peak periods, while BC.Game's gamification-heavy UI and multi-step withdrawal flow with native token conversions add friction for high-frequency power users. Rollbit also moved in March 2026 to launch a dedicated EU subdomain accepting only USDC and EUR-pegged stablecoins, discontinuing privacy coins Monero and Zcash on its EU product to comply with MiCA Travel Rule traceability requirements.",
-        "businessImpact": "The 'speed and stablecoin compliance' axis is now the primary technical moat. Established crypto-natives like Rollbit and BC.Game face pressure to shed legacy complexity while new entrants like Spartans capture degen-tier liquidity. Rollbit's MiCA-driven EU subdomain split is a template other operators will copy — expect more bifurcated EU/RoW product stacks through 2026.",
-        "source": "Blockonomi/BitcoinEthereumNews, BrightSideOfNews MiCA analysis (April 2026)"
+        "impact": "High",
+        "body": "Tanzanite's March 2026 dataset, <cite index=\"47-3,47-4\">covering 23 casinos operating across 10 chains and supporting 16 currencies</cite>, shows clear stratification at the top of the crypto casino market. <cite index=\"47-5,47-6\">Stake remains the largest operator by deposit volume at $349m, a 2% increase month-on-month, and also leads by deposit count with 645K transactions, up 21%.</cite> <cite index=\"47-16,47-17,47-18,47-19\">Rainbet recorded the fastest growth among leading operators, with deposit volume climbing 46% to $75.7m and deposits rising 24% to 224K, placing it third overall, while Roobet ranks second by volume at $91.4m — though that figure is 19% lower than the previous month, with a $724 average deposit suggesting softer spending per user.</cite> <cite index=\"47-21,47-22\">Shuffle reported $44.5m in volume (up 4%) with deposits rising 16% to 128K, while Duel posted a 28% volume increase to $29.1m with a relatively high $1.01K average deposit.</cite> Notably, <cite index=\"47-7,47-8,47-9\">Stake's March result came alongside a strategic redirect: after a weaker performance in Brazil, the company has shifted attention toward regulated Europe with Denmark as a key test case, securing a local license, establishing a Copenhagen HQ at Parken Stadium, and combining the entry with partnerships and acquisitions including a deal with esports organisation Astralis.</cite>",
+        "businessImpact": "The data confirms Stake's structural dominance is widening, not narrowing — a problem for mid-tier operators relying on crypto bull-market tailwinds. Roobet's double-digit decline and shrinking ARPU is a leading indicator of churn, while Rainbet's volume-and-frequency growth profile suggests it is actively poaching share. Stake's pivot to regulated EU licensing (Denmark) signals the crypto-casino category's flagship is hedging away from pure offshore exposure.",
+        "source": "Tribuna.com / Tanzanite.xyz"
       },
       {
-        "title": "Telegram Crypto Gambling Hits $2B Monthly as TON-Powered Bots Outpace Regulators",
+        "title": "Telegram Crypto Gambling Bots Hit $2B Monthly as Regulators Scramble",
         "category": "Regulatory",
         "impact": "High",
-        "body": "Independent blockchain analytics estimates place monthly Telegram-based gambling wagers at over $2 billion in Q1 2026, up from roughly $800 million a year earlier — driven by seamless TON wallet integration directly inside the Telegram interface. The growth is creating a regulatory blind spot that traditional enforcement (domain seizures, payment processor pressure, hosting takedowns) cannot reach. The UK Gambling Commission flagged Telegram gambling in its 2026 enforcement priorities without issuing specific guidance; Singapore's MAS issued a March 2026 advisory targeting payment providers; France's ANJ published a February consultation proposing telco-level bot blocking; Germany's GGL is pursuing fiat on-ramp disruption; and the Philippines' PAGCOR has shut down 35 Telegram gambling rings in Q1 2026. TON's tens-of-thousands TPS throughput with sub-second finality makes it technically superior to Ethereum mainnet for real-time gambling, deepening the competitive threat to licensed operators.",
-        "businessImpact": "Licensed crypto casinos face a structural acquisition headwind: the cheapest, frictionless gambling experience is now inside an encrypted messenger, not on the open web. Operators need creator-led acquisition strategies and deeper VIP retention to defend against the Telegram funnel. Expect the UK, EU, and APAC to escalate to ISP-level and payments-level enforcement through H2 2026.",
-        "source": "BrightSideOfNews (April 2026), Monetary Authority of Singapore advisory"
+        "body": "<cite index=\"36-2,36-3\">Telegram crypto gambling bots regulation is emerging as one of the most urgent blind spots in global iGaming oversight, with governments from the EU to Southeast Asia grappling with the fact that an encrypted messaging platform with over 950 million monthly active users has quietly become one of the world's largest unregulated gambling distribution channels — powered by TON blockchain integration and a growing ecosystem of third-party casino bots that operate with minimal licensing accountability.</cite> <cite index=\"36-5,36-6\">Independent estimates from blockchain analytics firms place the monthly volume of Telegram-based gambling wagers at over $2 billion in Q1 2026, up from roughly $800 million a year earlier, driven by seamless integration of TON-based wallets directly into the Telegram interface.</cite> Enforcement is fragmenting by jurisdiction: <cite index=\"36-11\">the Monetary Authority of Singapore has taken a harder line, issuing a formal advisory in March 2026 warning licensed payment providers against processing transactions for Telegram-based gambling services</cite>, while <cite index=\"36-13,36-14,36-15\">France's ANJ published a consultation paper in February 2026 proposing telecoms regulators be empowered to request Telegram block specific bot accounts, Germany's GGL is targeting fiat on-ramps that convert euros into crypto for gambling, and PAGCOR's anti-illegal gambling task force reported shutting down 35 Telegram-based gambling rings in Q1 2026 — many run by former POGO affiliates who pivoted from offshore websites after the nationwide POGO ban.</cite>",
+        "businessImpact": "Telegram/TON-native gambling is now a material competitor for low-deposit crypto casino traffic, particularly in SEA and LatAm. Licensed operators should expect (a) heavier AML scrutiny on TON deposits, (b) stablecoin on-ramp restrictions in EU markets, and (c) opportunity to acquire displaced players as enforcement tightens. The Singapore MAS advisory is the template likely to spread to other Asian regulators in 2026.",
+        "source": "BrightSideOfNews"
       },
       {
-        "title": "SOFTSWISS Sportsbook Wins SiGMA South America 2026; Game Aggregator Hits 40,000+ Titles",
+        "title": "Stake Launches Lightweight PWA Mobile App; Builds on March Record of 7.8B Bets",
+        "category": "Product",
+        "impact": "Medium",
+        "body": "<cite index=\"11-3,11-4,11-5\">Stake.com on April 23 launched a new mobile app that is added from the browser, placed on the home screen, and opened like a regular app — Apple users via Safari, Android users via the browser install option.</cite> <cite index=\"11-6,11-7,11-8\">The setup gives the mobile version of Stake a faster route onto users' phones with no app store hunting, no long downloads, and no software package; users open the site once, save it, and from then on it lives on the home screen.</cite> The PWA approach sidesteps Apple/Google store gambling restrictions entirely. The mobile push lands on the back of a record month: <cite index=\"17-6,17-7,17-8,17-9\">Stake Casino recorded 7,834,414,351 bets during March, averaging over 2,900 bets per second, with slots generating 2.26 billion bets and Dice remaining the most-played Stake Original at over 2.23 billion bets; the biggest casino win of the month came from Le Fisherman, paying out $9.7 million, and the highest single bet placed was over $1.1 million on Sugar Rush 1000.</cite>",
+        "businessImpact": "PWA distribution is becoming the standard crypto-casino mobile strategy because it bypasses iOS/Android gambling policies that block crypto-native apps. Competitors without a strong web product will lose mobile share. Stake's bet volume confirms the platform is still scaling player engagement despite increasing 'Stake alternatives' search interest noted by analysts.",
+        "source": "Vanguard / BitcoinChaser"
+      },
+      {
+        "title": "SiGMA South America São Paulo Wraps as Brazil Becomes Crypto iGaming Battleground",
         "category": "Industry Event",
         "impact": "Medium",
-        "body": "SOFTSWISS — the first iGaming platform to introduce cryptocurrency in 2013 and now claiming 1,400+ iGaming brands on its software ecosystem — won Best Sportsbook Innovative Feature at the SiGMA Awards South America 2026 on April 8. Its Game Aggregator now bundles 40,000+ titles from 300+ studios via a single API, and the company's BGaming arm logged 1,845 new partnerships in 2025. Looking ahead, SiGMA Asia (Manila, May 31 – June 3, 2026) and SiGMA Europe Awards (Malta, May 26) are the next major calendar dates, with crypto integration, MiCA compliance, and Asia-Pacific market access dominating expected agendas. SiGMA's Asia event has explicit speaker tracks on crypto integration and is endorsed by PAGCOR, against the backdrop of PAGCOR's aggressive Telegram-bot enforcement and a Philippines iGaming sector that hit $6.6B GGR in 2025.",
-        "businessImpact": "B2B aggregators with crypto-native rails and MiCA-ready stacks (SOFTSWISS, BGaming) are consolidating share as operators rationalize provider lists ahead of EU compliance deadlines and the 2026 FIFA World Cup. SiGMA Asia is shaping up as the key deal-making venue for crypto-friendly Asia-Pacific expansion; operators not represented risk losing the regulator-led market access conversation.",
-        "source": "SOFTSWISS, SiGMA World, SiGMA Asia summit page (April 2026)"
+        "body": "<cite index=\"57-3,57-4,57-5,57-6\">SiGMA South America 2026 took place April 6-9 at Transamerica Expo Center in São Paulo, bringing together over 18,000 delegates and 250+ speakers focused on iGaming, betting, blockchain technologies, payments, and affiliate marketing, with casino companies, sportsbook providers, payment companies, and affiliate marketers converging to discuss market expansion in Brazil and across South America.</cite> The event lands at a critical moment for crypto operators: <cite index=\"1-22\">Industry projections for 25-40 billion USD in annual crypto-casino transaction volume by 2028 assume continued licensing progress under Curacao, Anjouan, Malta, and Isle of Man regimes, MiCA-aligned EU growth, and the maturation of Brazil's regulated iGaming market, which launched under its January 2025 framework.</cite> Looking ahead, <cite index=\"54-15,54-16\">ICE / SiGMA Europe-adjacent events continue with the InterContinental Malta hosting on April 28-30, 2026</cite>, keeping the conference cycle dense for crypto B2B deal-making through Q2.",
+        "businessImpact": "Brazil's regulated framework is now the single largest swing factor for crypto-native operator strategy in 2026. Operators that secured local licensing (or partnerships with locally-licensed brands) ahead of SiGMA SA are positioned to convert offshore Brazilian players into compliant volume; those who didn't are now competing with land-based-affiliated brands for affiliate inventory. Expect Q2 to bring additional Brazil-focused white-label and aggregator deals announced out of the conference.",
+        "source": "15M / iGaming Brazil / Gambling Insider"
       }
     ],
     "watchlist": [
-      "NY AG vs Coinbase/Gemini ruling and CFTC jurisdictional response on prediction markets",
-      "MiCA enforcement actions against non-compliant crypto casinos serving EU players (Q2 2026)",
-      "Stake's Denmark/Astralis regulated-Europe playbook and whether Brazil performance recovers",
-      "Rainbet's continuing growth trajectory and potential M&A interest from mid-tier consolidators",
-      "Spartans.com post-beta scaling and whether Rollbit/BC.Game respond with tech overhauls",
-      "Telegram/TON gambling enforcement: UK Gambling Commission guidance and EU coordinated response",
-      "SiGMA Asia (May 31 – June 3, Manila) deal flow and PAGCOR regulatory signals",
-      "Stablecoin reserve audit cadence under MiCA Article 58 and impact on USDT-dependent operators",
-      "Tanzanite April 2026 deposit data release for confirmation of Roobet decline and Rainbet acceleration",
-      "UK iGaming tax (RGD April 2026 increase) impact on crypto operator black-market migration"
+      "NY v. Coinbase/Gemini ruling and CFTC preemption fight outcome",
+      "High Roller (NYSE: ROLR) share price and follow-on iGaming/crypto exchange partnerships",
+      "Roobet's Q2 deposit data — second consecutive month of decline would confirm structural churn",
+      "Stake Denmark rollout and Astralis activation as proxy for crypto-casino EU regulated pivot",
+      "Singapore MAS / France ANJ / Germany GGL enforcement actions on Telegram-TON gambling rails",
+      "Brazil post-SiGMA SA: new operator licenses and crypto payment processor partnerships",
+      "Bluff platform mainnet launch following $21M raise (former Stake/Bet365/Bodog execs)",
+      "MiCA stablecoin reserve enforcement and impact on USDT/USDC wagering on EU-facing operators"
     ]
   },
   "sweepstakes": {
@@ -305,11 +303,13 @@
     ]
   },
   "slots": {
+    "weekOf": "28 April 2026",
+    "summary": "A heavyweight release week led by tier-1 studios. Pragmatic Play closed the week with Dragon Pots Megaways (April 27) following the April 22-23 launches of Big Bass Trophy Catch and Gates of Olympus Roulette, while Nolimit City dropped its long-awaited San Quentin Manhunt on April 21. Hacksaw Gaming added Marlin Masters Atlantis (April 23), Playson rolled out Rhino Coins: Hit the Bonus with a studio-first six-tier Buy Bonus (April 21), and BGaming closes the week with Royal Beellion Hold & Win (April 28).",
     "releases": [
       {
         "title": "Dragon Pots Megaways",
         "provider": "Pragmatic Play",
-        "launchDate": "27 April 2026 (announced this week)",
+        "launchDate": "27 April 2026",
         "features": [
           "Megaways",
           "Free Spins",
@@ -321,11 +321,11 @@
       {
         "title": "Big Bass Trophy Catch",
         "provider": "Pragmatic Play",
-        "launchDate": "Week of 20 April 2026",
+        "launchDate": "22 April 2026",
         "features": [
           "Free Spins",
-          "Cash Collect",
-          "5x3 reels"
+          "Modifiers",
+          "5,000x Win Potential"
         ],
         "market": "Unknown",
         "priority": true
@@ -335,9 +335,21 @@
         "provider": "Nolimit City",
         "launchDate": "21 April 2026",
         "features": [
-          "xWays / xSplit",
-          "Enhancer Cells (Multiplier Blocks)",
-          "Bonus Buy / Free Spins"
+          "Scatter Pays / Cascading",
+          "Multiplier Blocks & Enhancer Cells",
+          "Bonus Buy"
+        ],
+        "market": "Unknown",
+        "priority": true
+      },
+      {
+        "title": "Marlin Masters Atlantis",
+        "provider": "Hacksaw Gaming",
+        "launchDate": "23 April 2026",
+        "features": [
+          "LootLines mechanic",
+          "Fisherman Cash Collect",
+          "10,000x Jackpots"
         ],
         "market": "Unknown",
         "priority": true
@@ -345,39 +357,51 @@
       {
         "title": "Rhino Coins: Hit the Bonus",
         "provider": "Playson",
-        "launchDate": "20 April 2026",
+        "launchDate": "21 April 2026",
         "features": [
-          "Six-tier Bonus Buy",
-          "Hold & Win / Sticky symbols",
-          "Jackpots (up to 15,000x)"
+          "Six-level Bonus Buy",
+          "Hold & Win / Coin & Rhino Bonus Games",
+          "15,000x Royal Jackpot"
         ],
         "market": "Unknown",
         "priority": true
+      },
+      {
+        "title": "Royal Beellion Hold & Win",
+        "provider": "BGaming",
+        "launchDate": "28 April 2026",
+        "features": [
+          "Hold & Win Bonus",
+          "Expanding Wilds",
+          "5,000x Max Win"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "The Flintstones: Rock Around the Pots",
+        "provider": "Blueprint Gaming",
+        "launchDate": "23 April 2026",
+        "features": [
+          "Expanding Wilds",
+          "Cash Collect",
+          "Hold & Win Bonus"
+        ],
+        "market": "Unknown",
+        "priority": false
       },
       {
         "title": "Grand Buffalo Hold and Win",
         "provider": "BGaming",
         "launchDate": "21 April 2026",
         "features": [
-          "Hold & Win",
-          "Jackpots",
-          "96.70% RTP"
-        ],
-        "market": "Unknown",
-        "priority": false
-      },
-      {
-        "title": "Shadow Pirates",
-        "provider": "Just Slots",
-        "launchDate": "Week 17, April 2026",
-        "features": [
-          "2XCOIN mechanic (debut)"
+          "TRUEWAYS mechanic",
+          "Collect Feature / Mega Jackpot",
+          "Free Spins with retriggers"
         ],
         "market": "Unknown",
         "priority": false
       }
-    ],
-    "weekOf": "26 April 2026",
-    "summary": "Week 17 (20-26 April 2026) saw a moderate but high-quality release slate dominated by priority providers. Nolimit City delivered a flagship with San Quentin Manhunt (46,532x max win), Playson debuted its first-ever six-tier Bonus Buy system in Rhino Coins: Hit the Bonus, and Pragmatic Play queued up Dragon Pots Megaways for a 27 April rollout while continuing momentum on Big Bass Trophy Catch and the launch of its Missions gamification suite. PG Soft, Hacksaw Gaming, 3 Oaks, Spribe, Jili, Fat Panda and Fat Chai had no confirmed new slot launches within this 7-day window."
+    ]
   }
 }
