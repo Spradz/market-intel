@@ -33,25 +33,25 @@ const TODAY = new Date().toLocaleDateString("en-GB", {
 
 const PROMPT = `You are a senior iGaming slot analyst tracking competitor game releases. Today is ${TODAY}.
 
-Search the following sources for new slot game releases published in the last 7 days:
-- https://slotslaunch.com/calendar
-- https://slotcatalog.com/en/New-Slots
-- https://www.pragmaticplay.com/en/games/
-- Search generally for "new slot releases [current week/month]" to catch additional launches
+Start by visiting each of these pages directly and reading their content in full:
+1. https://slotslaunch.com/calendar — the release calendar; read all entries for the current week
+2. https://slotcatalog.com/en/New-Slots — new slot listings; read all titles shown
+3. https://www.pragmaticplay.com/en/games/ — Pragmatic Play's own game library; identify any titles added in the last 7 days
 
-PRIORITY PROVIDERS — always search for these first and list their releases at the top:
+Use your remaining searches to look up any priority providers not already covered by those pages.
+
+PRIORITY PROVIDERS — focus on these; always list their releases first:
 1. Pragmatic Play
 2. PG Soft
 3. Jili / Tada Games
-4. 3 Oaks Gaming
-5. Playson
-6. Hacksaw Gaming
-7. No Limit City
-8. Fat Panda
-9. Spribe
-10. Fat Chai
+4. Playson
+5. Hacksaw Gaming
+6. No Limit City
+7. Fat Panda
+8. Spribe
+9. Fat Chai
 
-Also capture releases from any other notable providers you find.
+Also capture releases from 3 Oaks Gaming and any other notable providers found on the above pages.
 
 For each release collect:
 - Game title
@@ -104,7 +104,7 @@ async function fetchSlotsIntel() {
   const response = await client.messages.create({
     model: "claude-opus-4-7",
     max_tokens: 8192,
-    tools: [{ type: "web_search_20250305", name: "web_search" }, SUBMIT_TOOL],
+    tools: [{ type: "web_search_20250305", name: "web_search", max_uses: 10, allowed_domains: ["slotslaunch.com","slotcatalog.com","pragmaticplay.com"] }, SUBMIT_TOOL],
     messages: [{ role: "user", content: PROMPT }]
   });
 

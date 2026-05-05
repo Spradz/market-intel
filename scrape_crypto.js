@@ -86,7 +86,7 @@ async function fetchCryptoIntel() {
   const response = await client.messages.create({
     model: "claude-opus-4-7",
     max_tokens: 8192,
-    tools: [{ type: "web_search_20250305", name: "web_search" }, SUBMIT_TOOL],
+    tools: [{ type: "web_search_20250305", name: "web_search", max_uses: 10, allowed_domains: ["gamblinginsider.com","focusgn.com","sigma.world","igamingbusiness.com","igamingexpert.com","tanzanite.xyz"] }, SUBMIT_TOOL],
     messages: [{ role: "user", content: PROMPT }]
   });
 
