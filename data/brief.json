@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-05T04:29:24.309Z",
+  "generatedAt": "2026-05-05T04:48:36.673Z",
   "crypto": {
     "headline": "Stake launches in Mexico ahead of 2026 World Cup",
     "summary": "Crypto-native operators are doubling down on regulated market expansion ahead of the 2026 FIFA World Cup, with Stake launching in Mexico and BC.GAME going live in Nigeria. Meanwhile, enforcement against unlicensed prediction markets is intensifying across Singapore and Hong Kong, and BC.GAME is deepening its token economy with the new BC Engine continuous rewards model. The vertical's strategic pivot from offshore-first to regulated-first remains the defining theme.",
@@ -269,105 +269,152 @@
     ]
   },
   "slots": {
-    "weekOf": "28 April 2026",
-    "summary": "A heavyweight release week led by tier-1 studios. Pragmatic Play closed the week with Dragon Pots Megaways (April 27) following the April 22-23 launches of Big Bass Trophy Catch and Gates of Olympus Roulette, while Nolimit City dropped its long-awaited San Quentin Manhunt on April 21. Hacksaw Gaming added Marlin Masters Atlantis (April 23), Playson rolled out Rhino Coins: Hit the Bonus with a studio-first six-tier Buy Bonus (April 21), and BGaming closes the week with Royal Beellion Hold & Win (April 28).",
     "releases": [
       {
-        "title": "Dragon Pots Megaways",
+        "title": "Launch to Riches",
         "provider": "Pragmatic Play",
-        "launchDate": "27 April 2026",
-        "features": [
-          "Megaways",
-          "Free Spins",
-          "Buy Bonus"
-        ],
-        "market": "Unknown",
-        "priority": true
-      },
-      {
-        "title": "Big Bass Trophy Catch",
-        "provider": "Pragmatic Play",
-        "launchDate": "22 April 2026",
+        "launchDate": "4 May 2026",
         "features": [
           "Free Spins",
-          "Modifiers",
-          "5,000x Win Potential"
+          "Multipliers",
+          "Scatter Bonus Game"
         ],
         "market": "Unknown",
         "priority": true
       },
       {
-        "title": "San Quentin Manhunt",
-        "provider": "Nolimit City",
-        "launchDate": "21 April 2026",
+        "title": "Heartbreakers",
+        "provider": "Pragmatic Play",
+        "launchDate": "Late April / Early May 2026",
         "features": [
-          "Scatter Pays / Cascading",
-          "Multiplier Blocks & Enhancer Cells",
-          "Bonus Buy"
+          "Themed Slot",
+          "Performance-style visuals"
         ],
         "market": "Unknown",
         "priority": true
       },
       {
-        "title": "Marlin Masters Atlantis",
-        "provider": "Hacksaw Gaming",
-        "launchDate": "23 April 2026",
+        "title": "Coming Soon Title (TBA)",
+        "provider": "Push Gaming",
+        "launchDate": "6 May 2026",
         "features": [
-          "LootLines mechanic",
-          "Fisherman Cash Collect",
-          "10,000x Jackpots"
-        ],
-        "market": "Unknown",
-        "priority": true
-      },
-      {
-        "title": "Rhino Coins: Hit the Bonus",
-        "provider": "Playson",
-        "launchDate": "21 April 2026",
-        "features": [
-          "Six-level Bonus Buy",
-          "Hold & Win / Coin & Rhino Bonus Games",
-          "15,000x Royal Jackpot"
-        ],
-        "market": "Unknown",
-        "priority": true
-      },
-      {
-        "title": "Royal Beellion Hold & Win",
-        "provider": "BGaming",
-        "launchDate": "28 April 2026",
-        "features": [
-          "Hold & Win Bonus",
-          "Expanding Wilds",
-          "5,000x Max Win"
+          "TBA"
         ],
         "market": "Unknown",
         "priority": false
       },
       {
-        "title": "The Flintstones: Rock Around the Pots",
-        "provider": "Blueprint Gaming",
-        "launchDate": "23 April 2026",
+        "title": "TBA Release",
+        "provider": "Tom Horn Gaming",
+        "launchDate": "5 May 2026",
         "features": [
-          "Expanding Wilds",
-          "Cash Collect",
-          "Hold & Win Bonus"
+          "TBA"
         ],
         "market": "Unknown",
         "priority": false
       },
       {
-        "title": "Grand Buffalo Hold and Win",
-        "provider": "BGaming",
-        "launchDate": "21 April 2026",
+        "title": "TBA Release",
+        "provider": "Evoplay",
+        "launchDate": "5 May 2026",
         "features": [
-          "TRUEWAYS mechanic",
-          "Collect Feature / Mega Jackpot",
-          "Free Spins with retriggers"
+          "TBA"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "TBA Release",
+        "provider": "R Franco",
+        "launchDate": "5 May 2026",
+        "features": [
+          "TBA"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "TBA Release",
+        "provider": "TrueLab",
+        "launchDate": "5 May 2026",
+        "features": [
+          "TBA"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "TBA Release",
+        "provider": "Triple Cherry",
+        "launchDate": "5 May 2026",
+        "features": [
+          "TBA"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "TBA Release",
+        "provider": "Mascot Gaming",
+        "launchDate": "4 May 2026",
+        "features": [
+          "TBA"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "TBA Release",
+        "provider": "BGaming",
+        "launchDate": "4 May 2026",
+        "features": [
+          "TBA"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "TBA Release",
+        "provider": "CT Interactive",
+        "launchDate": "3 May 2026",
+        "features": [
+          "TBA"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "TBA Release",
+        "provider": "OctoPlay",
+        "launchDate": "1 May 2026",
+        "features": [
+          "TBA"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "TBA Release",
+        "provider": "YUGO Workshop",
+        "launchDate": "1 May 2026",
+        "features": [
+          "TBA"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "TBA Release",
+        "provider": "Vivid Gaming",
+        "launchDate": "1 May 2026",
+        "features": [
+          "TBA"
         ],
         "market": "Unknown",
         "priority": false
       }
-    ]
+    ],
+    "summary": "This week's release landscape (29 April – 5 May 2026) is dominated by Pragmatic Play with Launch to Riches debuting on 4 May — a space-themed slot featuring rocket collect symbols, asteroid grid bonuses, free spins with mystery symbols, and up to 10x multipliers. Heartbreakers, a glamorous performer-themed Pragmatic Play title, also features as a recent release. None of the other priority providers (PG Soft, Jili/Tada, Playson, Hacksaw Gaming, Nolimit City, Fat Panda, Spribe, Fat Chai) had confirmed launches on the slotslaunch calendar or their own channels within the last 7 days; mid-tier studios including Tom Horn Gaming, Evoplay, R Franco, TrueLab, Triple Cherry, Mascot Gaming, BGaming, OctoPlay and Push Gaming filled out the calendar with TBA titles. Market deployment is Unknown across all entries as no source explicitly confirmed RMG vs Sweeps deployment.",
+    "weekOf": "5 May 2026"
   }
 }
