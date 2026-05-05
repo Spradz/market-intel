@@ -1,12 +1,10 @@
 #!/usr/bin/env node
 /**
  * COMPETITOR SLOT RELEASES INTELLIGENCE
- * Weekly scraper — new slot releases by competitor studios
+ * Daily scraper — new slot releases by competitor studios (delta only)
  *
- * Schedule (cron — runs 07:30 AWST / 23:30 UTC every Monday):
- *   30 23 * * 0 cd ~/projects/market-intel/dashboard && node scrape_slots.js >> logs/slots.log 2>&1
- *
- * NOTE: Add SLACK_WEBHOOK_SLOTS to .env before enabling cron
+ * Schedule (cron — runs 07:30 AWST / 23:30 UTC daily):
+ *   30 23 * * * set -a && . /Users/sprads/projects/market-intel/dashboard/.env && set +a && /Users/sprads/.nvm/versions/node/v20.20.2/bin/node /Users/sprads/projects/market-intel/dashboard/scrape_slots.js >> /Users/sprads/projects/market-intel/dashboard/logs/slots.log 2>&1 && cd /Users/sprads/projects/market-intel/dashboard && git add data/brief.json && git commit -m "Auto-update slots brief.json [$(date +%Y-%m-%d)]" >> /Users/sprads/projects/market-intel/dashboard/logs/slots.log 2>&1 && git push >> /Users/sprads/projects/market-intel/dashboard/logs/slots.log 2>&1
  */
 
 import "dotenv/config";
@@ -31,10 +29,23 @@ const TODAY = new Date().toLocaleDateString("en-GB", {
   weekday: "long", year: "numeric", month: "long", day: "numeric"
 });
 
-const PROMPT = `You are a senior iGaming slot analyst tracking competitor game releases. Today is ${TODAY}.
+function loadExistingReleases() {
+  if (!fs.existsSync(BRIEF_FILE)) return [];
+  try {
+    const d = JSON.parse(fs.readFileSync(BRIEF_FILE, "utf8"));
+    return d.slots?.releases || [];
+  } catch { return []; }
+}
+
+function buildPrompt(knownTitles) {
+  const skipList = knownTitles.length
+    ? `\nALREADY PUBLISHED — these titles are already on the dashboard, do NOT include them:\n${knownTitles.map(t => `- ${t}`).join("\n")}\n`
+    : "";
+
+  return `You are a senior iGaming slot analyst tracking competitor game releases. Today is ${TODAY}.
 
 Start by visiting each of these pages directly and reading their content in full:
-1. https://slotslaunch.com/calendar — the release calendar; read all entries for the current week
+1. https://slotslaunch.com/calendar — the release calendar; read all entries for the past 7 days
 2. https://slotcatalog.com/en/New-Slots — new slot listings; read all titles shown
 3. https://www.pragmaticplay.com/en/games/ — Pragmatic Play's own game library; identify any titles added in the last 7 days
 
@@ -52,32 +63,36 @@ PRIORITY PROVIDERS — focus on these; always list their releases first:
 9. Fat Chai
 
 Also capture releases from 3 Oaks Gaming and any other notable providers found on the above pages.
-
-For each release collect:
+${skipList}
+For each NEW release collect:
 - Game title
 - Provider name
 - Launch date (as specific as possible)
 - Up to 3 key features (e.g. Buy Bonus, Megaways, Cascading Reels, Free Spins, Multipliers, Tumble, Hold & Win, etc.)
 - Market deployment: only record if explicitly confirmed by the source. Map as follows — "RMG", ".com", "real money" → .com / "Sweeps", "Sweepstakes", "Social", "social casino" → Sweeps / confirmed on both → Both. If not explicitly stated, use "Unknown". Do not speculate.
-- List ALL releases found per provider — do not limit to one title per provider. If a provider released three games this week, list all three.
+- List ALL releases found per provider — do not limit to one title per provider.
 
 RECENCY RULES:
 - Only include games released or officially announced in the last 7 days from today (${TODAY})
-- If a launch date is unclear, include it only if the announcement is clearly this week
+- If a launch date is unclear, include it only if the announcement is clearly within the last 7 days
 - Do not include games announced months ago that have not yet launched
 
-After researching, call the submit_slots function with all releases found.`;
+If no new releases are found beyond what is already published, return an empty releases array.
+
+After researching, call the submit_slots function with only the NEW releases found.`;
+}
 
 const SUBMIT_TOOL = {
   name: "submit_slots",
-  description: "Submit the compiled weekly slot release intelligence",
+  description: "Submit newly discovered slot releases not yet on the dashboard",
   input_schema: {
     type: "object",
     properties: {
-      weekOf: { type: "string", description: "Week ending date, e.g. '25 April 2026'" },
-      summary: { type: "string", description: "2-3 sentence overview of this week's release landscape" },
+      asOf: { type: "string", description: "Today's date, e.g. '5 May 2026'" },
+      summary: { type: "string", description: "1-2 sentence summary of what is new today, or 'No new releases found' if empty" },
       releases: {
         type: "array",
+        description: "Only NEW releases not already published. Empty array if nothing new.",
         items: {
           type: "object",
           properties: {
@@ -85,19 +100,20 @@ const SUBMIT_TOOL = {
             provider:   { type: "string", description: "Provider / studio name" },
             launchDate: { type: "string", description: "Launch or announcement date" },
             features:   { type: "array", items: { type: "string" }, description: "Up to 3 key mechanics or features" },
-            market:     { type: "string", enum: [".com", "Sweeps", "Both", "Unknown"], description: "Confirmed deployment market. Map RMG/real money → .com, Sweeps/Sweepstakes/Social → Sweeps, confirmed on both → Both. Default Unknown if not explicitly stated." },
+            market:     { type: "string", enum: [".com", "Sweeps", "Both", "Unknown"], description: "Confirmed deployment market. Default Unknown if not explicitly stated." },
             priority:   { type: "boolean", description: "true if provider is on the priority watch list" }
           },
           required: ["title", "provider", "launchDate"]
         }
       }
     },
-    required: ["weekOf", "summary", "releases"]
+    required: ["asOf", "summary", "releases"]
   }
 };
 
-async function fetchSlotsIntel() {
+async function fetchSlotsIntel(knownTitles) {
   console.log(`[${new Date().toISOString()}] 🎰  Fetching Slot Releases intelligence…`);
+  console.log(`[${new Date().toISOString()}] 📋  ${knownTitles.length} titles already published — checking for delta`);
 
   const client = new Anthropic({ apiKey: ANTHROPIC_KEY });
 
@@ -105,7 +121,7 @@ async function fetchSlotsIntel() {
     model: "claude-opus-4-7",
     max_tokens: 8192,
     tools: [{ type: "web_search_20250305", name: "web_search", max_uses: 10, allowed_domains: ["slotslaunch.com","slotcatalog.com","pragmaticplay.com"] }, SUBMIT_TOOL],
-    messages: [{ role: "user", content: PROMPT }]
+    messages: [{ role: "user", content: buildPrompt(knownTitles) }]
   });
 
   const toolUse = response.content.find(b => b.type === "tool_use" && b.name === "submit_slots");
@@ -114,26 +130,44 @@ async function fetchSlotsIntel() {
   return toolUse.input;
 }
 
-function writeBrief(slotsData) {
+function mergeBrief(newData, existingReleases, knownTitlesSet) {
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
 
-  let existing = {};
+  let brief = {};
   if (fs.existsSync(BRIEF_FILE)) {
-    try { existing = JSON.parse(fs.readFileSync(BRIEF_FILE, "utf8")); } catch {}
+    try { brief = JSON.parse(fs.readFileSync(BRIEF_FILE, "utf8")); } catch {}
   }
 
-  fs.writeFileSync(BRIEF_FILE, JSON.stringify({
-    generatedAt: new Date().toISOString(),
-    crypto:       existing.crypto       || null,
-    sweepstakes:  existing.sweepstakes  || null,
-    slots:        slotsData
-  }, null, 2));
-  console.log(`[${new Date().toISOString()}] ✅  Brief written to ${BRIEF_FILE}`);
+  // Filter to genuinely new titles (model may still hallucinate known ones)
+  const truly_new = (newData.releases || []).filter(
+    r => !knownTitlesSet.has(r.title.toLowerCase().trim())
+  );
+
+  // Prepend new releases, then trim anything older than 30 days
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - 30);
+
+  const merged = [...truly_new, ...existingReleases].filter(r => {
+    const d = new Date(r.launchDate);
+    return isNaN(d.getTime()) || d >= cutoff;
+  });
+
+  brief.generatedAt = new Date().toISOString();
+  brief.slots = {
+    asOf:     newData.asOf,
+    summary:  newData.summary,
+    releases: merged
+  };
+
+  fs.writeFileSync(BRIEF_FILE, JSON.stringify(brief, null, 2));
+  console.log(`[${new Date().toISOString()}] ✅  Brief updated — ${truly_new.length} new release(s) added (${merged.length} total)`);
+
+  return truly_new;
 }
 
-async function postToSlack(data) {
-  const priorityReleases = (data.releases || []).filter(r => r.priority);
-  const otherReleases    = (data.releases || []).filter(r => !r.priority);
+async function postToSlack(newReleases, summary, asOf) {
+  const priority = newReleases.filter(r => r.priority);
+  const other    = newReleases.filter(r => !r.priority);
 
   function releaseRow(r) {
     const features = (r.features || []).length ? `\n> ${r.features.join(" · ")}` : "";
@@ -141,35 +175,29 @@ async function postToSlack(data) {
   }
 
   const blocks = [
-    { type: "header", text: { type: "plain_text", text: `🎰 Slot Releases — Week of ${data.weekOf}`, emoji: true } },
-    { type: "section", text: { type: "mrkdwn", text: data.summary } },
+    { type: "header", text: { type: "plain_text", text: `🎰 New Slot Releases — ${asOf}`, emoji: true } },
+    { type: "section", text: { type: "mrkdwn", text: summary } },
     { type: "divider" }
   ];
 
-  if (priorityReleases.length) {
-    blocks.push({
-      type: "section",
-      text: { type: "mrkdwn", text: `*⭐ Priority Providers*\n${priorityReleases.map(releaseRow).join("\n")}` }
-    });
+  if (priority.length) {
+    blocks.push({ type: "section", text: { type: "mrkdwn", text: `*⭐ Priority Providers*\n${priority.map(releaseRow).join("\n")}` } });
   }
 
-  if (otherReleases.length) {
+  if (other.length) {
     blocks.push({ type: "divider" });
-    blocks.push({
-      type: "section",
-      text: { type: "mrkdwn", text: `*Other Releases*\n${otherReleases.map(releaseRow).join("\n")}` }
-    });
+    blocks.push({ type: "section", text: { type: "mrkdwn", text: `*Other Releases*\n${other.map(releaseRow).join("\n")}` } });
   }
 
   blocks.push({
     type: "context",
-    elements: [{ type: "mrkdwn", text: `Automated via Claude Code · ${new Date().toISOString()} · Sources: SlotsLaunch, SlotCatalog, provider sites` }]
+    elements: [{ type: "mrkdwn", text: `Automated via Claude Code · ${new Date().toISOString()} · Sources: SlotsLaunch, SlotCatalog, Pragmatic Play` }]
   });
 
   const res = await fetch(SLACK_WEBHOOK, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ text: `🎰 Slot Releases — Week of ${data.weekOf}`, blocks })
+    body: JSON.stringify({ text: `🎰 New Slot Releases — ${asOf}`, blocks })
   });
 
   if (!res.ok) throw new Error(`Slack post failed: ${res.status} ${await res.text()}`);
@@ -178,9 +206,19 @@ async function postToSlack(data) {
 
 (async () => {
   try {
-    const data = await fetchSlotsIntel();
-    writeBrief(data);
-    if (SLACK_WEBHOOK) await postToSlack(data);
+    const existingReleases = loadExistingReleases();
+    const knownTitles      = existingReleases.map(r => r.title);
+    const knownTitlesSet   = new Set(knownTitles.map(t => t.toLowerCase().trim()));
+
+    const data       = await fetchSlotsIntel(knownTitles);
+    const newReleases = mergeBrief(data, existingReleases, knownTitlesSet);
+
+    if (newReleases.length === 0) {
+      console.log(`[${new Date().toISOString()}] ℹ️   No new releases found — Slack post skipped`);
+    } else if (SLACK_WEBHOOK) {
+      await postToSlack(newReleases, data.summary, data.asOf);
+    }
+
     console.log(`[${new Date().toISOString()}] ✅  Slots job complete`);
   } catch (err) {
     console.error(`[${new Date().toISOString()}] ❌  Error:`, err.message);
