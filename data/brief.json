@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-05T04:48:36.673Z",
+  "generatedAt": "2026-05-06T01:12:14.010Z",
   "crypto": {
     "headline": "Stake launches in Mexico ahead of 2026 World Cup",
     "summary": "Crypto-native operators are doubling down on regulated market expansion ahead of the 2026 FIFA World Cup, with Stake launching in Mexico and BC.GAME going live in Nigeria. Meanwhile, enforcement against unlicensed prediction markets is intensifying across Singapore and Hong Kong, and BC.GAME is deepening its token economy with the new BC Engine continuous rewards model. The vertical's strategic pivot from offshore-first to regulated-first remains the defining theme.",
@@ -269,7 +269,43 @@
     ]
   },
   "slots": {
+    "asOf": "6 May 2026",
+    "summary": "Found several new releases from priority providers in the last 7 days, led by Pragmatic Play's Mr Null's Wicked Wares (4 May), Jelly Express and Chicken+, plus Hacksaw Gaming's Le Digger (announced for 7 May), and notable launches from BGaming and NetEnt.",
     "releases": [
+      {
+        "title": "Le Digger",
+        "provider": "Hacksaw Gaming",
+        "launchDate": "7 May 2026",
+        "features": [
+          "Cluster Pays",
+          "6 Reels",
+          "Dinosaur Theme"
+        ],
+        "market": "Unknown",
+        "priority": true
+      },
+      {
+        "title": "Mr Null's Wicked Wares",
+        "provider": "Pragmatic Play",
+        "launchDate": "4 May 2026",
+        "features": [
+          "Mystery Symbols",
+          "Growing Multipliers",
+          "5,000x Max Win"
+        ],
+        "market": "Unknown",
+        "priority": true
+      },
+      {
+        "title": "Clash of Gods: Anubis vs Hades",
+        "provider": "BGaming",
+        "launchDate": "4 May 2026",
+        "features": [
+          "Mythology Theme"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
       {
         "title": "Launch to Riches",
         "provider": "Pragmatic Play",
@@ -283,13 +319,25 @@
         "priority": true
       },
       {
-        "title": "Sweet Bonanza 2500",
+        "title": "Jelly Express",
         "provider": "Pragmatic Play",
-        "launchDate": "30 Apr 2026",
+        "launchDate": "Late Apr / Early May 2026",
         "features": [
-          "Buy Bonus",
-          "Tumble",
-          "Multipliers up to 2500x"
+          "Wild Multipliers",
+          "Free Spins",
+          "Special Bets"
+        ],
+        "market": "Unknown",
+        "priority": true
+      },
+      {
+        "title": "Chicken+",
+        "provider": "Pragmatic Play",
+        "launchDate": "Late Apr / Early May 2026",
+        "features": [
+          "Arcade Crash-style",
+          "Risk Levels",
+          "Multipliers"
         ],
         "market": "Unknown",
         "priority": true
@@ -306,127 +354,28 @@
         "priority": true
       },
       {
-        "title": "Coming Soon Title (TBA)",
-        "provider": "Push Gaming",
-        "launchDate": "6 May 2026",
+        "title": "Divine Fortune Gold",
+        "provider": "NetEnt",
+        "launchDate": "30 April 2026",
         "features": [
-          "TBA"
+          "Progressive Jackpot",
+          "Free Spins"
         ],
         "market": "Unknown",
         "priority": false
       },
       {
-        "title": "TBA Release",
-        "provider": "Tom Horn Gaming",
-        "launchDate": "5 May 2026",
+        "title": "Sweet Bonanza 2500",
+        "provider": "Pragmatic Play",
+        "launchDate": "30 Apr 2026",
         "features": [
-          "TBA"
+          "Buy Bonus",
+          "Tumble",
+          "Multipliers up to 2500x"
         ],
         "market": "Unknown",
-        "priority": false
-      },
-      {
-        "title": "TBA Release",
-        "provider": "Evoplay",
-        "launchDate": "5 May 2026",
-        "features": [
-          "TBA"
-        ],
-        "market": "Unknown",
-        "priority": false
-      },
-      {
-        "title": "TBA Release",
-        "provider": "R Franco",
-        "launchDate": "5 May 2026",
-        "features": [
-          "TBA"
-        ],
-        "market": "Unknown",
-        "priority": false
-      },
-      {
-        "title": "TBA Release",
-        "provider": "TrueLab",
-        "launchDate": "5 May 2026",
-        "features": [
-          "TBA"
-        ],
-        "market": "Unknown",
-        "priority": false
-      },
-      {
-        "title": "TBA Release",
-        "provider": "Triple Cherry",
-        "launchDate": "5 May 2026",
-        "features": [
-          "TBA"
-        ],
-        "market": "Unknown",
-        "priority": false
-      },
-      {
-        "title": "TBA Release",
-        "provider": "Mascot Gaming",
-        "launchDate": "4 May 2026",
-        "features": [
-          "TBA"
-        ],
-        "market": "Unknown",
-        "priority": false
-      },
-      {
-        "title": "TBA Release",
-        "provider": "BGaming",
-        "launchDate": "4 May 2026",
-        "features": [
-          "TBA"
-        ],
-        "market": "Unknown",
-        "priority": false
-      },
-      {
-        "title": "TBA Release",
-        "provider": "CT Interactive",
-        "launchDate": "3 May 2026",
-        "features": [
-          "TBA"
-        ],
-        "market": "Unknown",
-        "priority": false
-      },
-      {
-        "title": "TBA Release",
-        "provider": "OctoPlay",
-        "launchDate": "1 May 2026",
-        "features": [
-          "TBA"
-        ],
-        "market": "Unknown",
-        "priority": false
-      },
-      {
-        "title": "TBA Release",
-        "provider": "YUGO Workshop",
-        "launchDate": "1 May 2026",
-        "features": [
-          "TBA"
-        ],
-        "market": "Unknown",
-        "priority": false
-      },
-      {
-        "title": "TBA Release",
-        "provider": "Vivid Gaming",
-        "launchDate": "1 May 2026",
-        "features": [
-          "TBA"
-        ],
-        "market": "Unknown",
-        "priority": false
+        "priority": true
       }
-    ],
-    "summary": "This week's release landscape (29 April – 5 May 2026) is dominated by Pragmatic Play with Launch to Riches debuting on 4 May — a space-themed slot featuring rocket collect symbols, asteroid grid bonuses, free spins with mystery symbols, and up to 10x multipliers. Heartbreakers, a glamorous performer-themed Pragmatic Play title, also features as a recent release. None of the other priority providers (PG Soft, Jili/Tada, Playson, Hacksaw Gaming, Nolimit City, Fat Panda, Spribe, Fat Chai) had confirmed launches on the slotslaunch calendar or their own channels within the last 7 days; mid-tier studios including Tom Horn Gaming, Evoplay, R Franco, TrueLab, Triple Cherry, Mascot Gaming, BGaming, OctoPlay and Push Gaming filled out the calendar with TBA titles. Market deployment is Unknown across all entries as no source explicitly confirmed RMG vs Sweeps deployment.",
-    "weekOf": "5 May 2026"
+    ]
   }
 }

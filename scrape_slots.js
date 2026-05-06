@@ -143,14 +143,26 @@ function mergeBrief(newData, existingReleases, knownTitlesSet) {
     r => !knownTitlesSet.has(r.title.toLowerCase().trim())
   );
 
-  // Prepend new releases, then trim anything older than 30 days
-  const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - 30);
+  function isKnown(r) {
+    const title = r.title.toLowerCase().trim();
+    const date  = (r.launchDate || "").toLowerCase().trim();
+    if (title.includes("tba") || title.includes("coming soon")) return false;
+    if (date === "" || date.includes("tba") || date.includes("to be announced")) return false;
+    if (new Date(r.launchDate).toString() === "Invalid Date" && date.includes("tba")) return false;
+    return true;
+  }
 
-  const merged = [...truly_new, ...existingReleases].filter(r => {
-    const d = new Date(r.launchDate);
-    return isNaN(d.getTime()) || d >= cutoff;
-  });
+  // Merge, strip TBAs, sort newest-first, keep top 15
+  const merged = [...truly_new, ...existingReleases]
+    .filter(isKnown)
+    .sort((a, b) => {
+      const da = new Date(a.launchDate), db = new Date(b.launchDate);
+      if (isNaN(da) && isNaN(db)) return 0;
+      if (isNaN(da)) return 1;
+      if (isNaN(db)) return -1;
+      return db - da;
+    })
+    .slice(0, 15);
 
   brief.generatedAt = new Date().toISOString();
   brief.slots = {
