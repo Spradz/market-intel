@@ -1,0 +1,45 @@
+name: Daily Market Intelligence
+
+on:
+  schedule:
+    - cron: '0 23 * * *'   # 23:00 UTC daily = 07:00 AWST
+  workflow_dispatch:         # allow manual trigger from GitHub UI
+
+jobs:
+  run-intel:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install --omit=dev 2>/dev/null || true
+
+      - name: Run crypto intelligence scraper
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_CRYPTO }}
+        run: node scrape_crypto.js
+
+      - name: Run sweepstakes intelligence scraper
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_SWEEP }}
+        run: node scrape_sweeps.js
+
+      - name: Commit and push data/brief.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/brief.json
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "Auto-update brief.json $(date -u '+%Y-%m-%d')"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
