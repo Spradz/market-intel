@@ -24,13 +24,13 @@ jobs:
       - name: Run crypto intelligence scraper
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_CRYPTO }}
+          SLACK_WEBHOOK_CRYPTO: ${{ secrets.SLACK_WEBHOOK_CRYPTO }}
         run: node scrape_crypto.js
 
       - name: Run sweepstakes intelligence scraper
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_SWEEP }}
+          SLACK_WEBHOOK_SWEEP: ${{ secrets.SLACK_WEBHOOK_SWEEP }}
         run: node scrape_sweeps.js
 
       - name: Commit and push data/brief.json
