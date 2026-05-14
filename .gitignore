@@ -1,19 +1,19 @@
-# Dependencies
-node_modules/
-
-# Environment
+# Secrets — never commit
 .env
 .env.local
 .env.*.local
 
-# Logs
-logs/
-*.log
+# Node
+node_modules/
 
-# OS
+# Runtime logs
+logs/*.log
+
+# macOS
 .DS_Store
 Thumbs.db
 
 # Data — exclude raw cache but track the final brief
 data/
 !data/brief.json
+!data/.gitkeep

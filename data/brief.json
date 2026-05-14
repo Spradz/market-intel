@@ -1,0 +1,390 @@
+{
+  "generatedAt": "2026-05-08T07:57:00.997Z",
+  "crypto": {
+    "headline": "Stake Goes Live in Mexico Ahead of World Cup",
+    "summary": "Crypto-native operators are accelerating their pivot to regulated markets, with Stake launching in Mexico under a SEGOB-permitted structure ahead of the FIFA World Cup, while a New York lawsuit alleging underage gambling — naming Coinbase as the crypto rails — heads to a May 19 hearing. On the B2B side, SOFTSWISS Game Aggregator was named Game Aggregator of the Year at SBC Awards Europe 2026, reinforcing its dominant position in crypto-friendly aggregation. Meanwhile, US enforcement against sweepstakes/dual-currency models continues to tighten with Maine's ban and Tennessee's SB 2136, pressuring offshore crypto-adjacent operators.",
+    "stories": [
+      {
+        "title": "Stake Goes Live in Mexico Ahead of FIFA World Cup",
+        "category": "Market Trend",
+        "impact": "High",
+        "body": "<cite index=\"13-3,13-4,13-5\">Stake has gone live in Mexico via its Stake.mx domain, operating as an agent under intermediary Uno Capali's licence agreement with SEGOB, the country's gambling regulator.</cite> The launch deliberately precedes Mexico co-hosting the 2026 FIFA World Cup alongside the US and Canada. <cite index=\"13-6,13-7\">Stake is already live in several LatAm markets, having entered Colombia in 2023 and Peru the following year, and also holds a licence in Brazil.</cite> Notably, <cite index=\"20-6,20-7\">the Morena government has placed the industry in the Special Tax on Production and Services (IPES), increasing the gaming revenue tax from 30% to 50%, yet this tax hike doesn't appear to have deterred Stake from going live in Mexico.</cite> The move continues Stake's broader transition from an offshore crypto-native brand into a multi-jurisdiction regulated operator.",
+        "businessImpact": "Stake's Mexico entry validates the regulated-pivot thesis for crypto-native operators and signals a competitive land grab ahead of the World Cup. Crypto-friendly competitors (BC.Game, Shuffle, Rollbit) will be pressured to either accelerate licensing in LatAm or cede high-value betting volume during a once-a-decade event. The 50% IPES tax burden also sets a precedent operators will need to model into LatAm P&Ls.",
+        "source": "iGaming Business / iGaming Expert (4-5 May 2026)"
+      },
+      {
+        "title": "New York Lawsuit Targets Stake and Coinbase Over Alleged Underage Crypto Gambling",
+        "category": "Enforcement",
+        "impact": "High",
+        "body": "<cite index=\"11-2\">A New York lawsuit against Stake alleges that its global crypto casino and U.S.-facing sweepstakes platform function together to bypass regulatory safeguards and enable underage gambling, with Coinbase accused of providing the financial rails that made the activity possible.</cite> <cite index=\"11-14,11-15\">The complaint names multiple entities under the Stake umbrella as defendants, including Stake.com, Stake.us, and Easygo Entertainment, as well as founders Bijan Tehrani and Edward Craven, and alleges centralized ownership and control throughout the structure.</cite> <cite index=\"11-21,11-22\">On April 14, Judge Dakota Ramseur issued an Order to Show Cause setting a May 19 hearing date as the case moves forward in the New York Supreme Court.</cite> <cite index=\"11-23,11-24,11-25\">The New York lawsuit adds to a growing list of challenges against Stake and Stake.us, with cases in Illinois, Alabama, Missouri, California, Minnesota, Mississippi, New Mexico, Utah, Virginia, and Ohio.</cite>",
+        "businessImpact": "The naming of Coinbase as a co-defendant is a watershed moment — it signals that US plaintiffs are now targeting the on/off-ramp infrastructure rather than just operators. Every crypto casino relying on US-accessible exchanges for fiat-to-crypto conversion now faces escalated litigation risk. Expect heightened compliance scrutiny on payment processors and potential geofencing tightening across the sector ahead of the May 19 hearing.",
+        "customer": "Stake, Coinbase, and any crypto operator dependent on US exchange rails",
+        "source": "Gambling Insider (updated 16 April 2026)"
+      },
+      {
+        "title": "SOFTSWISS Game Aggregator Named Aggregator of the Year at SBC Awards Europe 2026",
+        "category": "Industry Event",
+        "impact": "Medium",
+        "body": "<cite index=\"61-3,61-4,61-5\">The SOFTSWISS Game Aggregator was named Game Aggregator of the Year at the SBC Awards Europe 2026, with the ceremony taking place on April 30, closing the SBC Summit Malta.</cite> <cite index=\"61-6,61-7\">The aggregator now offers more than 40,000 games from over 300 providers across 24 regulated jurisdictions, maintaining 99.999 per cent uptime.</cite> <cite index=\"61-9,61-10\">The win follows the launch of two new tournament features — a Tournaments Report consolidating campaign metrics and Instant Tournaments, a new engagement mechanic where players compete to reach a target multiplier rather than collecting points over time.</cite> <cite index=\"61-12\">SOFTSWISS recently introduced a Prediction Markets Platform — a fixed-odds solution offering event-based bets on real-world events in politics, economy, and technology.</cite>",
+        "businessImpact": "SOFTSWISS remains the single most important supplier for crypto-native operators (Stake, BitStarz, and 9 of the top 10 crypto brands historically run on its stack). The award and prediction markets product launch reinforce its B2B moat just as competitors like Hub88 chase differentiation through novel content (155.io's CCTV games). Operators evaluating aggregator switches should weigh the engagement features against rising single-supplier dependency risk.",
+        "customer": "SOFTSWISS",
+        "source": "Focus Gaming News (4 May 2026)"
+      },
+      {
+        "title": "Maine Bans Sweepstakes Casinos as US States Tighten Dual-Currency Crackdown",
+        "category": "Regulatory",
+        "impact": "High",
+        "body": "<cite index=\"55-3,55-4\">In the past month, Maine passed a ban on sweepstakes casinos, while lawmakers in several other states advanced similar legislation, and operators continued adjusting their eligible jurisdictions through exits and reentries.</cite> <cite index=\"55-18,55-19,55-20\">Maine officially banned sweepstakes casinos after Gov. Janet Mills signed LD 2007 into law, prohibiting \"online sweepstakes games\" defined as internet-based games that use a dual-currency system and offer casino-style outcomes; Tennessee lawmakers also passed SB 2136 banning \"online sweepstakes games\" that utilize dual-currency payment systems.</cite> <cite index=\"55-16\">Mega Frenzy announced it is shutting down on April 30, while Americana Casino may already have shut down.</cite> <cite index=\"55-7,55-8\">Platforms continue to exit Illinois, while an increasing number are reentering states that have not actively pursued the sector, reflecting a growing divide between states actively pursuing enforcement and those where operators appear more willing to reenter amid regulatory uncertainty.</cite>",
+        "businessImpact": "The dual-currency model — the same architecture underpinning many crypto-adjacent sweepstakes plays in the US — is being legislated out of viable jurisdictions one state at a time. For Stake.us and similar operators, the addressable US map is shrinking quarterly. Crypto operators contemplating US re-entry via sweepstakes wrappers should now plan for a pure-offshore-only US strategy or wait for federal-level clarity.",
+        "source": "Gambling Insider (1 May 2026)"
+      },
+      {
+        "title": "Tanzanite Cements Position as Crypto Casino Analytics Standard",
+        "category": "Market Trend",
+        "impact": "Medium",
+        "body": "<cite index=\"41-1,41-2,41-3\">In an April 20, 2026 endorsement series, executives from Stake, BC Game, BlockBet and Rainbet publicly recognized Tanzanite for analyzing and comparing global platforms not just by metrics such as volume, but also by their dedication to compliance, responsible gaming and security, with Stake's Eddie calling them an \"analytics bible for web3 gambling operators\" that has \"cornered the market for insight and analytics.\"</cite> <cite index=\"24-1\">Tanzanite's casino directory now tracks the leading crypto operators including Shuffle, BC Game, Gamdom, Duel, Winna, Sportsbet.io, Thrill, Rollbit, Spartans, BetFury, 500 Casino, Razed, MetaWin, Yeet, Duelbits, Goated, Whale.io, Chips, BlockBet, Moonroll and Bitcasino.</cite> <cite index=\"44-1\">The Tanzanite Terminal provides deposit volume and deposits analytics across casinos, tokens and chains.</cite>",
+        "businessImpact": "Public endorsements from top-tier operators (Stake, BC.Game) cement Tanzanite as the de-facto market intelligence layer for crypto iGaming. Operators not appearing or ranking poorly on Tanzanite's volume leaderboards will face increasing pressure from affiliates and partners using the data for deal flow. Expect deposit-volume transparency to become a competitive marketing axis through 2026.",
+        "customer": "Tanzanite, Stake, BC Game, BlockBet, Rainbet",
+        "source": "Tanzanite.xyz (20 April 2026)"
+      },
+      {
+        "title": "Stake Faces Compliance Scrutiny in Denmark Days After Securing Licence",
+        "category": "Regulatory",
+        "impact": "Medium",
+        "body": "Stake's regulated-market pivot is hitting friction in one of Europe's strictest jurisdictions. <cite index=\"18-3,18-4,18-5\">Stake's shift of focus into regulated markets signalled a transition in the company's strategy; however, marketing content seen by iGaming Expert indicates the operator could face regulatory issues in Denmark, just days after it secured a licence — a decision that raised eyebrows as Denmark is considered one of the toughest regulatory frameworks in Europe.</cite> <cite index=\"18-25,18-26\">Operators in Denmark are strictly limited to a list of licensed suppliers found on the gambling authority's website, and screenshots seen and verified by iGaming Expert showed that Stake is offering games that aren't licensed in the Danish market.</cite> Background context: <cite index=\"14-1\">From 1 March 2026, Stake Denmark established its new headquarters at Parken Stadium, the home of FC Copenhagen, under a five-year online casino and sports betting licence.</cite>",
+        "businessImpact": "The Denmark misstep illustrates the hardest part of the crypto-to-regulated transition: content libraries optimized for Curaçao/Anjouan don't port cleanly into tier-one markets. Compliance teams across crypto-native operators should audit per-jurisdiction supplier whitelists before launch. A Spillemyndigheden enforcement action against Stake would have ripple effects on its global regulated-market strategy and could embolden similar reviews in the Netherlands and UK.",
+        "customer": "Stake Denmark",
+        "source": "iGaming Expert (23 February 2026 — actively developing situation)"
+      }
+    ],
+    "watchlist": [
+      "19 May 2026 New York Supreme Court hearing in Stake/Coinbase underage gambling case",
+      "Tennessee SB 2136 awaiting governor's signature; Maryland HB 295/HB 1226 sweepstakes bills in Senate",
+      "Betsson's reported interest in acquiring Yolo Group's Sportsbet.io and Bitcasino.io brands",
+      "Mexico's expected gambling reform bill amid 50% IPES tax hike — impact on crypto operator entries",
+      "BC.Game Zero House Edge mechanism and BC Token settlement structure rollout through 2026",
+      "SiGMA North America debut in Mexico City (1-3 Sep 2026) — first major LatAm crypto-iGaming convergence event",
+      "Curaçao CGA enforcement campaign against locally-registered firms operating under Anjouan/Kahnawake licences",
+      "Stake Denmark — potential Spillemyndigheden enforcement on unlicensed game offerings"
+    ]
+  },
+  "sweepstakes": {
+    "headline": "Minnesota Senate Passes Bills to Ban Prediction Markets, Sweeps Casinos",
+    "summary": "The legislative pile-on against US sweepstakes casinos accelerated in the past 30 days, with Minnesota's Senate passing ban bills on April 30 (effective 1 August 2026), Maine's governor signing LD 2007 into law, and Tennessee's SB 2136 reversing course to pass the House on a second vote — all within a week. Operators are simultaneously contracting in enforcement-heavy states like Illinois while quietly re-entering states with no active legislation, and Mega Frenzy and Americana Casino both shut down at the end of April. Off the legislative front, a Gibraltar court ruling revealed Pulsz operator YSI has generated over $1bn in revenue, and Stake.us became the first major operator to introduce a redemption fee on bank transfers.",
+    "stories": [
+      {
+        "title": "Minnesota Senate Passes Bills to Ban Prediction Markets, Sweeps Casinos",
+        "category": "Regulatory",
+        "impact": "High",
+        "body": "On April 30, the Minnesota Senate approved two bills that would impose criminal sanctions on operators of prediction markets and online sweepstakes casinos in the state. SF 4474 specifically targets dual-currency online sweepstakes platforms, defining them as internet or mobile products simulating casino-style gambling with a two-currency payment structure. Liability extends broadly — financial institutions, payment processors, geolocation providers, gaming content suppliers, platform providers and media affiliates would all be prohibited from supporting sweepstakes operators in the state, with enforcement falling to the Commissioner of Public Safety and the Attorney General. Advertising or marketing such platforms would also constitute a felony, with the effective date for the criminal provisions set at 1 August 2026. The bills now go to the House, which has its own versions on file but limited time before the session ends 18 May. ARB Interactive CEO Patrick Fechtmeyer warned at a committee hearing that the bill would not eliminate the activity but instead push Minnesotans to offshore operators.",
+        "businessImpact": "Minnesota would become the seventh-plus state to enact an explicit dual-currency ban, layered on top of AG Keith Ellison's November 2025 cease-and-desist letters to 14 operators. The breadth of liability — covering payment processors and geolocation vendors — increases supplier exit risk and could be a template for other states.",
+        "source": "next.io / Gambling Insider, 1 May 2026"
+      },
+      {
+        "title": "Maine Enacts LD 2007 Sweepstakes Ban; Tennessee SB 2136 Reverses Course to Pass House",
+        "category": "Regulatory",
+        "impact": "High",
+        "body": "Maine officially banned sweepstakes casinos after Gov. Janet Mills signed LD 2007 into law in April. The legislation explicitly prohibits 'online sweepstakes games' that use dual-currency systems and offer casino-style outcomes, and is set to take effect in mid-July. Maine joins Indiana — whose ban takes effect July 1 — as the second state to enact prohibition in 2026. In Tennessee, lawmakers reversed course on SB 2136 on April 23, pushing it through the House after an earlier same-day rejection that drew just 17 'Aye' votes against 67 'Nay'; the second vote passed 69-17 following closed-door negotiations. The bill now sits in final enrollment before heading to Gov. Bill Lee, who has consistently opposed expanding gambling and is widely expected to sign. The measure takes effect immediately upon signing.",
+        "businessImpact": "Maine and Tennessee join California, Connecticut, Montana, New Jersey and New York on the explicit-ban list. Tennessee carries particular weight given AG Skrmetti's Dec 2025 cease-and-desist sweep against ~40 operators, and a fast-track effective date will trigger immediate operator exits.",
+        "source": "Gambling Insider, April 2026 Sweepstakes Casino Update; next.io 23 April 2026"
+      },
+      {
+        "title": "Mega Frenzy Shuts Down, Americana Casino Likely Closed; Operator Exit/Re-entry Patterns Diverge",
+        "category": "Key Players",
+        "impact": "Medium",
+        "body": "Mega Frenzy announced it would shut down on April 30, while Americana Casino may already have ceased operations, according to Gambling Insider's April monthly tracker. Multiple operators continued exiting Illinois — which sent cease-and-desist letters to 65 operators in February — while an increasing number are re-entering states that have not actively pursued the sector. Sweeps USA re-entered Arizona, Maryland, Massachusetts, North Carolina, Pennsylvania, Rhode Island, Tennessee, Vermont and West Virginia; Zoot re-entered Arizona, Mississippi, Nebraska, North Dakota, Pennsylvania, Rhode Island and West Virginia; and Lucky Slots reentered Tennessee, Rhode Island and Wyoming. The pattern reflects a growing divide between states actively pursuing enforcement and those where operators feel emboldened to test the waters.",
+        "businessImpact": "The shrinking content-supplier ecosystem — with Pragmatic Play having exited US sweeps entirely and Evolution/Playtech limiting content — is squeezing smaller operators. Expect further consolidation in 2H 2026.",
+        "source": "Gambling Insider, Sweepstakes Casino Update April 2026"
+      },
+      {
+        "title": "Stake.us Introduces 2% Bank Transfer Redemption Fee",
+        "category": "Consumer",
+        "impact": "Medium",
+        "body": "Effective April 17, 2026, Stake.us applied a 2% fixed fee to all Stake Cash redemptions made via Bank Transfer, citing shifting local regulatory requirements and rising payment processing costs. The fee is a cumulative deduction from the redemption total, not an add-on. Cryptocurrency redemptions remain unaffected, and all other redemption criteria — KYC verification, 3x playthrough on bonus SC, and a 40-50 SC minimum threshold — remain unchanged. Bank Transfer was only added to Stake.us in late May 2025, and the company referenced rising processing costs from third-party gateways like Breeze.",
+        "businessImpact": "First major sweeps operator to publicly impose a redemption fee. Signals payment-processor pressure on dual-currency operators and could become a template if other operators follow — likely to push more redemption activity toward crypto rails.",
+        "source": "next.io, 23 April 2026"
+      },
+      {
+        "title": "Pulsz Operator YSI Revealed as $1bn+ Revenue Business Amid Gibraltar Court Battle",
+        "category": "Key Players",
+        "impact": "High",
+        "body": "A first judgement issued in the Supreme Court of Gibraltar on April 10 offered a rare window into Yellow Social Interactive (YSI), the operator of Pulsz, revealing the company has generated over $1bn in revenue with its largest shareholder receiving over $233m in dividends to date. The dispute pits Goldmist (linked to Lottoland founder David von Rosen) against figures including former poker affiliate CEO Damian Sokol, who is alleged to have built rival platforms — McLuck, HelloMillions, SportsMillions, PlayFame, Jackpota and Megabonanza via companies including Final Boss, B2Spin and B2Services — while consulting for YSI. Goldmist claims the Pulsz platform was licensed to these rivals and YSI staff redirected to work for them, with Medialicious promoting McLuck as a 'Pulsz Casino Alternative.' The judge declined to dismiss the claim, with the potential value described as 'likely to be very substantial.'",
+        "businessImpact": "Confirms Pulsz/YSI as a top-3 US sweeps operator by revenue and provides rare hard data point on the segment's economics. The litigation could destabilize the entire B-Two Operations / B2Spin portfolio (McLuck, Pulsz, Jackpota, MegaBonanza, etc.) if courts rule on diversion claims.",
+        "source": "next.io, April 2026"
+      },
+      {
+        "title": "Indiana Ban Takes Effect July 1; Six-Figure Penalties Loom",
+        "category": "Regulatory",
+        "impact": "Medium",
+        "body": "Indiana remains on track to become the first 2026 ban to take effect, with HB 1052 — signed by Gov. Mike Braun in March — outlawing online games, contests or promotions that simulate casino, lottery or sports betting and use a dual-currency or multi-currency system to allow exchange for cash or equivalent prizes. Once live July 1, violations will be subject to six-figure civil penalties from the Indiana Gaming Commission. The law captures slots, poker, bingo, table games, lottery-style games and sports wagering, but excludes state lottery games and peer-to-peer skill-based poker. The Indiana Gaming Commission also receives expanded authority to act against unlicensed operators.",
+        "businessImpact": "Sets the practical starting gun for the 2026 ban wave; operators will need to update geo-fencing in June. The civil-penalty structure (rather than criminal) is significant as a model for other states reluctant to criminalize.",
+        "source": "iGaming Expert, March 2026; Gambling Insider"
+      }
+    ],
+    "keyPlayers": [
+      {
+        "name": "Chumba Casino / LuckyLand Slots / Global Poker",
+        "parent": "VGW (Virtual Gaming Worlds, Ocean BidCo)",
+        "revenue": "No current data found",
+        "trend": "Contracting"
+      },
+      {
+        "name": "Pulsz",
+        "parent": "Yellow Social Interactive (YSI)",
+        "revenue": "Over $1bn cumulative revenue (Gibraltar court filing, April 2026)",
+        "trend": "Unknown"
+      },
+      {
+        "name": "Stake.us",
+        "parent": "Sweepstakes Limited (Cyprus)",
+        "revenue": "No current data found",
+        "trend": "Stable"
+      },
+      {
+        "name": "High 5 Casino",
+        "parent": "High 5 Entertainment LLC",
+        "revenue": "No current data found",
+        "trend": "Unknown"
+      },
+      {
+        "name": "McLuck / Hello Millions / Jackpota / MegaBonanza / PlayFame / SportsMillions",
+        "parent": "B-Two Operations / B2Spin (linked to Damian Sokol per Gibraltar litigation)",
+        "revenue": "No current data found",
+        "trend": "Unknown"
+      },
+      {
+        "name": "CrownCoins Casino",
+        "parent": "Sunflower Limited",
+        "revenue": "No current data found",
+        "trend": "Unknown"
+      },
+      {
+        "name": "Modo",
+        "parent": "ARB Interactive",
+        "revenue": "No current data found",
+        "trend": "Unknown"
+      },
+      {
+        "name": "Legendz Casino",
+        "parent": "Legendz",
+        "revenue": "No current data found",
+        "trend": "Growing"
+      },
+      {
+        "name": "Shuffle.us",
+        "parent": "Shuffle",
+        "revenue": "No current data found",
+        "trend": "Unknown"
+      },
+      {
+        "name": "Acebet",
+        "parent": "Trey Mark Services Limited (Cyprus)",
+        "revenue": "No current data found",
+        "trend": "Growing"
+      },
+      {
+        "name": "Mega Frenzy",
+        "parent": "Unknown",
+        "revenue": "No current data found",
+        "trend": "Contracting"
+      }
+    ],
+    "marketShare": [
+      {
+        "operator": "VGW (Chumba/LuckyLand/Global Poker)",
+        "sharePercent": 35,
+        "basis": "Long-time market leader; minority share has slipped from 90%+ to ~50% per iGB/EKG analysis as 25+ new brands launched in 2025; further compressed by 2025/2026 state exits"
+      },
+      {
+        "operator": "YSI / Pulsz portfolio (Pulsz, McLuck, Jackpota, MegaBonanza, etc.)",
+        "sharePercent": 25,
+        "basis": "April 2026 Gibraltar filing shows $1bn+ cumulative revenue across the portfolio; multiple top-tier brands"
+      },
+      {
+        "operator": "Stake.us",
+        "sharePercent": 12,
+        "basis": "Consistently ranked among top-3 sweeps brands by next.io and Sigma; 2,000+ games, monthly player highlights show strong volume"
+      },
+      {
+        "operator": "High 5 Casino",
+        "sharePercent": 6,
+        "basis": "Pioneer brand since 2012, 1,500+ games, available in 30+ states"
+      },
+      {
+        "operator": "CrownCoins (Sunflower)",
+        "sharePercent": 5,
+        "basis": "Flagship product of Sunflower Ltd., live in 40+ states, 550+ games; analyst commentary identifies as a top-tier player though smaller than VGW/YSI"
+      },
+      {
+        "operator": "ARB Interactive (Modo)",
+        "sharePercent": 3,
+        "basis": "Active legal/lobbying presence; CEO testified against Minnesota ban bill"
+      },
+      {
+        "operator": "Legendz",
+        "sharePercent": 2,
+        "basis": "Live in 36 states, expanding loyalty program April 2026"
+      },
+      {
+        "operator": "Shuffle.us",
+        "sharePercent": 2,
+        "basis": "Crypto-only sweeps brand, growing game library"
+      },
+      {
+        "operator": "Other (SpinBlitz, RealPrize, MyPrize, Sweet Sweeps, Dorados, Acebet, etc.)",
+        "sharePercent": 10,
+        "basis": "Long tail of 100+ smaller brands; iGB cites 140+ active US sites in 2025"
+      }
+    ],
+    "emergingMarkets": [
+      {
+        "market": "Australia",
+        "status": "Watching",
+        "notes": "Sweepstakes model continues to operate in a grey zone as it sidesteps traditional gambling classification under Australian law, per industry commentary. No new operator entries reported in the past 30 days, but VGW (Australia-headquartered) continues to defend the model."
+      },
+      {
+        "market": "Germany",
+        "status": "Restricted",
+        "notes": "April 2026 EU Court of Justice ruling against Lottoland confirmed Germany can ban online slots and lottery betting and that players can sue to reclaim losses, reinforcing legal risk for any sweepstakes-style market entry. The GGL is also pursuing IP-blocking powers against grey-market operators."
+      },
+      {
+        "market": "Canada",
+        "status": "Active",
+        "notes": "High 5 Casino confirmed legal operation in Canada including DC. Sweepchecker and EKG flag Canada as exploring hybrid social-casino formats modelled on the US dual-currency approach, while Alberta progresses toward iGaming licensing in 2026."
+      },
+      {
+        "market": "Brazil / LatAm",
+        "status": "Watching",
+        "notes": "No fresh sweepstakes-specific market entries in the past 30 days; LatAm operators focused on regulated sportsbook ahead of World Cup 2026."
+      },
+      {
+        "market": "European Union",
+        "status": "Watching",
+        "notes": "EU Digital Casino Regulations are floated by analysts as a potential blueprint; April 2026 ECJ ruling on Lottoland strengthens member-state authority to prohibit dual-currency style models, which may limit any near-term sweepstakes expansion in EU markets."
+      }
+    ],
+    "watchlist": [
+      "Minnesota House — will it take up Senate-passed SF 4474 before 18 May session adjournment?",
+      "Tennessee Gov. Bill Lee's signature on SB 2136 — expected imminently",
+      "Louisiana HB 53 (racketeering) and HB 883 (gambling-by-computer) — both alive, May 29 crossover deadline",
+      "Oklahoma SB 1589 — through two House committees, session runs to May 29",
+      "Indiana ban takes effect July 1, 2026 — operator geo-fencing updates expected in June",
+      "Maine ban takes effect mid-July 2026",
+      "Pulsz/YSI Gibraltar litigation — next hearing could destabilize B-Two/B2Spin portfolio (McLuck, Jackpota, MegaBonanza, etc.)",
+      "Florida AG James Uthmeier subpoena program — operators awaiting next enforcement wave",
+      "Iowa SF 2289 enforcement bill — awaiting governor's signature",
+      "Whether other major operators follow Stake.us in introducing redemption fees",
+      "VGW launch of 'Just Slots' platform in early 2026 — successor to LuckyLand strategy"
+    ]
+  },
+  "slots": {
+    "asOf": "6 May 2026",
+    "summary": "Found several new releases from priority providers in the last 7 days, led by Pragmatic Play's Mr Null's Wicked Wares (4 May), Jelly Express and Chicken+, plus Hacksaw Gaming's Le Digger (announced for 7 May), and notable launches from BGaming and NetEnt.",
+    "releases": [
+      {
+        "title": "Le Digger",
+        "provider": "Hacksaw Gaming",
+        "launchDate": "7 May 2026",
+        "features": [
+          "Cluster Pays",
+          "6 Reels",
+          "Dinosaur Theme"
+        ],
+        "market": "Unknown",
+        "priority": true
+      },
+      {
+        "title": "Mr Null's Wicked Wares",
+        "provider": "Pragmatic Play",
+        "launchDate": "4 May 2026",
+        "features": [
+          "Mystery Symbols",
+          "Growing Multipliers",
+          "5,000x Max Win"
+        ],
+        "market": "Unknown",
+        "priority": true
+      },
+      {
+        "title": "Clash of Gods: Anubis vs Hades",
+        "provider": "BGaming",
+        "launchDate": "4 May 2026",
+        "features": [
+          "Mythology Theme"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "Launch to Riches",
+        "provider": "Pragmatic Play",
+        "launchDate": "4 May 2026",
+        "features": [
+          "Free Spins",
+          "Multipliers",
+          "Scatter Bonus Game"
+        ],
+        "market": "Unknown",
+        "priority": true
+      },
+      {
+        "title": "Jelly Express",
+        "provider": "Pragmatic Play",
+        "launchDate": "Late Apr / Early May 2026",
+        "features": [
+          "Wild Multipliers",
+          "Free Spins",
+          "Special Bets"
+        ],
+        "market": "Unknown",
+        "priority": true
+      },
+      {
+        "title": "Chicken+",
+        "provider": "Pragmatic Play",
+        "launchDate": "Late Apr / Early May 2026",
+        "features": [
+          "Arcade Crash-style",
+          "Risk Levels",
+          "Multipliers"
+        ],
+        "market": "Unknown",
+        "priority": true
+      },
+      {
+        "title": "Heartbreakers",
+        "provider": "Pragmatic Play",
+        "launchDate": "Late April / Early May 2026",
+        "features": [
+          "Themed Slot",
+          "Performance-style visuals"
+        ],
+        "market": "Unknown",
+        "priority": true
+      },
+      {
+        "title": "Divine Fortune Gold",
+        "provider": "NetEnt",
+        "launchDate": "30 April 2026",
+        "features": [
+          "Progressive Jackpot",
+          "Free Spins"
+        ],
+        "market": "Unknown",
+        "priority": false
+      },
+      {
+        "title": "Sweet Bonanza 2500",
+        "provider": "Pragmatic Play",
+        "launchDate": "30 Apr 2026",
+        "features": [
+          "Buy Bonus",
+          "Tumble",
+          "Multipliers up to 2500x"
+        ],
+        "market": "Unknown",
+        "priority": true
+      }
+    ]
+  }
+}
