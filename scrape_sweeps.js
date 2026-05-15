@@ -169,7 +169,7 @@ async function fetchSweepsIntel() {
   const client = new Anthropic({ apiKey: ANTHROPIC_KEY });
 
   const response = await client.messages.create({
-    model: "claude-opus-4-7",
+    model: "claude-haiku-4-5",
     max_tokens: 8192,
     tools: [{ type: "web_search_20250305", name: "web_search", max_uses: 12, allowed_domains: ["gamblinginsider.com","focusgn.com","sigma.world","igamingbusiness.com","igamingexpert.com","sweepchecker.com","next.io","ekgamingllc.com","slotslaunch.com"] }, SUBMIT_TOOL],
     messages: [{ role: "user", content: PROMPT }]

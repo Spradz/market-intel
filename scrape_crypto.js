@@ -84,7 +84,7 @@ async function fetchCryptoIntel() {
   const client = new Anthropic({ apiKey: ANTHROPIC_KEY });
 
   const response = await client.messages.create({
-    model: "claude-opus-4-7",
+    model: "claude-haiku-4-5",
     max_tokens: 8192,
     tools: [{ type: "web_search_20250305", name: "web_search", max_uses: 10, allowed_domains: ["gamblinginsider.com","focusgn.com","sigma.world","igamingbusiness.com","igamingexpert.com","tanzanite.xyz"] }, SUBMIT_TOOL],
     messages: [{ role: "user", content: PROMPT }]
